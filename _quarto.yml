@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ChoCho66"
+  navbar:
+    right:
+      - about.qmd
+      - index.qmd
+      - slides.qmd
+      # - icon: Post
+      #   href: index.qmd
+      - icon: github
+        href: https://github.com/ChoCho66
+      # - icon: twitter
+      #   href: https://twitter.com
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+
+
+
