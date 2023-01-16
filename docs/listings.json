@@ -1,16 +1,16 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/slides.html",
     "items": [
       "/slides/slide-test2.html",
       "/slides/slide-test1.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
     ]
   }
 ]
