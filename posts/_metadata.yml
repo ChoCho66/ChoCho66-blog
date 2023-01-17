@@ -5,8 +5,24 @@
 freeze: true
 
 # Enable banner style title blocks
-title-block-banner: true
+# title-block-banner: true
 
 toc: true
 toc-location: left
+
 bibliography: ../references.bib
+
+# filters:
+#   - reference.lua
+ 
+# format: 
+#   html:
+#     code-copy: false
+#     css: reference.css
+    
+# search: false
+
+comments:
+  giscus:
+    repo: ChoCho66/ChoCho66-blog
+    # category: Blog
