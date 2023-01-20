@@ -1,11 +1,14 @@
 {
-  "hash": "7c3de0ee1f960f5083e68757ab247520",
+  "hash": "ed176394596942badad0cee909db0b09",
   "result": {
-    "markdown": "---\ntitle: Post With Code\nauthor: Harlow Malloc\ndate: '2023-01-16'\ncategories:\n  - news\n  - code\n  - analysis\nimage: image.jpg\n---\n\nThis is a post with executable code.\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n2\n```\n:::\n:::\n\n\n",
-    "supporting": [
-      "index_files"
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2023-01-16\"\ndate-format: iso\ndate-modified: last-modified\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n# jupyter: python3\nreference-location: margin\ncitation-location: margin\n---\n\n\n\nThis document was published at {{< meta image >}}.\n\n\n{{< video https://youtu.be/cb5rDaMAP3U >}}\n\n\n\nEtiam eu suspendisse aliquam, suscipit augue, nulla auctor. Quis est litora ut aenean vulputate in aliquam nec massa lorem mus rhoncus. Bibendum hendrerit, a varius sed cubilia facilisis pellentesque. Nec commodo semper, malesuada malesuada in id sed. A pellentesque sed ac metus pellentesque. Sit sed eros vitae praesent duis facilisis. Non leo maecenas amet posuere semper sed semper elementum.\n\nPharetra eu est potenti eu. Semper tellus taciti sociosqu, sem est dui bibendum. Convallis vestibulum magnis velit, consequat sapien dis fusce, taciti luctus. Nec nec dapibus vel vulputate. Sed diam nulla, aptent posuere. At porttitor adipiscing sociis magna mus neque. Ullamcorper ac, et tempus, vel. Libero morbi ac amet rhoncus pellentesque lacus. Proin habitant venenatis netus luctus nunc sed dapibus. Fusce, posuere sapien et fusce fermentum nec sit sapien, imperdiet. In nullam curabitur at aliquet tristique pellentesque. Quis parturient lacinia duis eros sagittis maecenas imperdiet. Purus vivamus maecenas ut a. Ligula eros sapien ex ex nec sed eu sociosqu nascetur.\n\n::: {.column-margin}\nWe know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:\n\n$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\n$$\n\n:::\n\nThis is a post with executable code.[^1]\n\n[^1]: ajdpiajdipa js\n\nSee @bookdown2016.\n\n\n::: {.cell .column-margin}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\nLorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.\n\n\n::: {.cell output-location='column'}\n\n```{.r .cell-code}\n1+1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
     ],
-    "filters": [],
-    "includes": {}
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
   }
 }

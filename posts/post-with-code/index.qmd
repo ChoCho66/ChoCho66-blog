@@ -2,13 +2,45 @@
 title: "Post With Code"
 author: "Harlow Malloc"
 date: "2023-01-16"
+date-format: iso
+date-modified: last-modified
 categories: [news, code, analysis]
 image: "image.jpg"
-jupyter: python3
+# jupyter: python3
+reference-location: margin
+citation-location: margin
 ---
 
-This is a post with executable code.
 
-```{python}
+This document was published at {{< meta image >}}.
+
+{{< video https://youtu.be/cb5rDaMAP3U >}}
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = '\n\n')`
+
+::: {.column-margin}
+We know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:
+
+$$
+\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).
+$$
+
+:::
+
+This is a post with executable code.[^1]
+
+[^1]: ajdpiajdipa js
+
+See @bookdown2016.
+
+```{r}
+#| column: margin
 1 + 1
+```
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+
+```{r}
+#| output-location: column
+1+1
 ```

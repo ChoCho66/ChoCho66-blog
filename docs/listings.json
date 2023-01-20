@@ -2,13 +2,14 @@
   {
     "listing": "/slides.html",
     "items": [
-      "/slides/slide-test2.html",
-      "/slides/slide-test1.html"
+      "/slides/slide-test1.html",
+      "/slides/slide-test2.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/observable-JS/ojs.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]

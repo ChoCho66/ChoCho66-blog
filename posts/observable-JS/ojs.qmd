@@ -1,0 +1,97 @@
+---
+title: "Function Plot"
+author: "ChoCho"
+date: "2023-01-20"
+date-format: iso
+date-modified: last-modified
+categories: [Observable JS]
+# image: "https://avatars.observableusercontent.com/avatar/5a51c3b908225a581d20577e488e2aba8cbc9541c52982c638638c370c3e5e8e?s=120&format=avif"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+See [https://quarto.org/docs/interactive/ojs/](https://quarto.org/docs/interactive/ojs/).
+
+See [https://observablehq.com/\@mauriciopoppe/function-plot](https://observablehq.com/@mauriciopoppe/function-plot).
+
+```{ojs}
+//| echo: false
+functionPlot = require("function-plot@1.22.2/dist/function-plot")
+```
+
+```{ojs}
+{
+  let target = DOM.element('div')
+  functionPlot({
+    title: 'y = x²',
+    data: [{
+      fn: 'x^2'
+    }],
+    target
+  });
+  return target
+}
+```
+
+```{ojs}
+targetA = {
+  let target = DOM.element('div')
+  return target
+}
+targetB = {
+  let target = DOM.element('div')
+  return target
+}
+joinTargets = {
+  let a = functionPlot({
+    target: targetA,
+    xAxis: { domain: [-4, 8] },
+    yAxis: { domain: [-4, 8] },
+    annotations: [
+      {
+        y: 3.333333333,
+        text: 'max'
+      },
+      {
+        y: 2,
+        text: 'min'
+      }
+    ],
+    data: [
+      {
+        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',
+        graphType: 'polyline',
+        derivative: {
+          fn: 'x * x - 4 * x + 3',
+          updateOnMouseMove: true
+        }
+      }
+    ]
+  })
+  let b = functionPlot({
+    target: targetB,
+    xAxis: { domain: [-4, 8] },
+    yAxis: { domain: [-4, 8] },
+    annotations: [
+      {
+        x: 1,
+        text: 'intercept'
+      },
+      {
+        x: 3,
+        text: 'intercept'
+      }
+    ],
+    data: [
+      {
+        fn: 'x * x - 4 * x + 3',
+        graphType: 'polyline'
+      }
+    ]
+  })
+  a.addLink(b)
+  b.addLink(a)
+  return "targets joined!"
+}
+```

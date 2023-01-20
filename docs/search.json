@@ -4,7 +4,7 @@
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n2"
+    "text": "This document was published at image.jpg.\n\nEtiam eu suspendisse aliquam, suscipit augue, nulla auctor. Quis est litora ut aenean vulputate in aliquam nec massa lorem mus rhoncus. Bibendum hendrerit, a varius sed cubilia facilisis pellentesque. Nec commodo semper, malesuada malesuada in id sed. A pellentesque sed ac metus pellentesque. Sit sed eros vitae praesent duis facilisis. Non leo maecenas amet posuere semper sed semper elementum.\nPharetra eu est potenti eu. Semper tellus taciti sociosqu, sem est dui bibendum. Convallis vestibulum magnis velit, consequat sapien dis fusce, taciti luctus. Nec nec dapibus vel vulputate. Sed diam nulla, aptent posuere. At porttitor adipiscing sociis magna mus neque. Ullamcorper ac, et tempus, vel. Libero morbi ac amet rhoncus pellentesque lacus. Proin habitant venenatis netus luctus nunc sed dapibus. Fusce, posuere sapien et fusce fermentum nec sit sapien, imperdiet. In nullam curabitur at aliquet tristique pellentesque. Quis parturient lacinia duis eros sagittis maecenas imperdiet. Purus vivamus maecenas ut a. Ligula eros sapien ex ex nec sed eu sociosqu nascetur.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\n\\]\nThis is a post with executable code.11 ajdpiajdipa js\nSee Xie (2016).\n\nXie, Yihui. 2016. Bookdown: Authoring Books and Technical Documents with R Markdown. Boca Raton, Florida: Chapman; Hall/CRC. https://bookdown.org/yihui/bookdown.\n\n1 + 1\n\n[1] 2\n\n\nLorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.\n\n1+1\n\n[1] 2"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -18,14 +18,14 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "title\n\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n2022-01-11\n\n\n\n\n\n\n\n\n\n\n\n\nJan 11, 2022\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "title\n\n\n\n\n\n\n\n\n\n\n\n\nJan 18, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Archives",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Function Plot\n\n\n\n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n\nJan 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/slide-test2.html#modified",
@@ -44,7 +44,7 @@
   {
     "objectID": "slides/slide-test1.html#section",
     "href": "slides/slide-test1.html#section",
-    "title": "2022-01-11",
+    "title": "title",
     "section": "222",
     "text": "222\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
   },
@@ -54,5 +54,26 @@
     "title": "About",
     "section": "",
     "text": "About this blog."
+  },
+  {
+    "objectID": "slides/slide-test1.html#title",
+    "href": "slides/slide-test1.html#title",
+    "title": "title",
+    "section": "title",
+    "text": "title"
+  },
+  {
+    "objectID": "slides/slide-test1.html#modified",
+    "href": "slides/slide-test1.html#modified",
+    "title": "title",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "posts/observable-JS/ojs.html",
+    "href": "posts/observable-JS/ojs.html",
+    "title": "Function Plot",
+    "section": "",
+    "text": "See https://quarto.org/docs/interactive/ojs/.\nSee https://observablehq.com/@mauriciopoppe/function-plot.\n\nfunctionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\ntargetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        y: 3.333333333,\n        text: 'max'\n      },\n      {\n        y: 2,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        graphType: 'polyline',\n        derivative: {\n          fn: 'x * x - 4 * x + 3',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}"
   }
 ]
