@@ -46,24 +46,26 @@ targetB = {
 joinTargets = {
   let a = functionPlot({
     target: targetA,
-    xAxis: { domain: [-4, 8] },
-    yAxis: { domain: [-4, 8] },
+    xAxis: { domain: [-6, 6] },
+    yAxis: { domain: [-6, 6] },
     annotations: [
       {
-        y: 3.333333333,
+        y: 1,
         text: 'max'
       },
       {
-        y: 2,
+        y: -1,
         text: 'min'
       }
     ],
     data: [
       {
-        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',
+        // fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',
+        fn: 'sin(x)',
         graphType: 'polyline',
         derivative: {
-          fn: 'x * x - 4 * x + 3',
+          // fn: '2 * x * x - 4 * x + 3',
+          fn: 'cos(x)',
           updateOnMouseMove: true
         }
       }
