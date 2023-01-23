@@ -1,0 +1,127 @@
+---
+title: "Add to class 函數裝飾"
+author: "ChoCho"
+date: "2023-01-23"
+date-format: iso
+date-modified: last-modified
+categories: [decorator, Python]
+# image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+- 取自 [https://d2l.ai/chapter_linear-regression/oo-design.html#utilities](https://d2l.ai/chapter_linear-regression/oo-design.html#utilities).
+
+- See [https://www.runoob.com/w3cnote/python-func-decorators.html](https://www.runoob.com/w3cnote/python-func-decorators.html).
+
+- 重要準則:
+  
+  ```python
+  @f
+  def g():
+    ...
+  ```
+  
+  等價於
+
+  ```python
+  g = f(g)
+  ```
+
+## 使用方式
+
+定義如下的 `add_to_class`.
+
+```{python}
+def add_to_class(Class):
+  def wrapper(obj):
+    setattr(Class, obj.__name__, obj)
+  return wrapper
+```
+
+假如我們有一個 class `A`, 且有個 method `double`.
+
+```{python}
+class A:
+  def double(self,t):
+    return 2*t
+```
+
+令 `a` 為 `A` 的 instance.
+
+```{python}
+a = A()
+```
+
+則我們可以呼叫 `a.double(3)`.
+
+```{python}
+a.double(3)
+```
+
+現在假如我們想修改 A 的 method `double`,
+可用如下.
+
+```{python}
+@add_to_class(A)
+def double(self,t):
+  return 7*t
+```
+
+則可以發現: 不需重新令 `a` 是 `A` 的 instance, `a` 的 `double` 都已經變更.
+
+```{python}
+a.double(3)
+```
+
+```{python}
+# 另一個 A 的 instance
+aa = A()
+aa.double(3)
+```
+
+## 解析 code
+
+回顧 `add_to_class` 為
+
+```python
+def add_to_class(Class):
+  def wrapper(obj):
+    setattr(Class, obj.__name__, obj)
+  return wrapper
+```
+
+且
+
+```python
+@add_to_class(A)
+def double(self,t):
+  return 7*t
+```
+
+等價於 `double = add_to_class(A)(double)`.
+
+::: {.callout-important}
+這裡會令 `double` 為 `add_to_class(A)(double)`.
+所以要注意不會覆蓋到舊有的變數.
+可以單獨執行 `double` 會發現不報錯 (不會 return 任何東西).
+
+```{python}
+double, type(double)
+```
+
+:::
+
+所以有執行了 `add_to_class(A)(double)`[^1] 這指令.
+
+[^1]: 這裡 `add_to_class(A)` 不 是 class, 而是 `wrapper`.
+
+所以有執行 `setattr(Class, obj.__name__, obj)`,
+其中 `Class = A`, `obj = double`.
+
+所以相當於執行了 `setattr(A, double, 7*t)`[^2][^3].
+
+[^2]: 這裡的 `obj.__name__` 相當於 obj 的名字. 在這就是 double.
+
+[^3]: 這裡 `setattr(Class, obj.__name__, obj)` 的第三分量 `obj` 相當於 `double` return 的東西, 所以就是 `7*t`.

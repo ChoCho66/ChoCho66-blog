@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/decorator.html",
       "/posts/observable-JS/ojs.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"

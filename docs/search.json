@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Archives",
     "section": "",
-    "text": "Function Plot\n\n\n\n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n\nJan 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Add to class 函數裝飾\n\n\n\n\n\n\n\ndecorator\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunction Plot\n\n\n\n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n\nJan 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/slide-test2.html#modified",
@@ -75,5 +75,33 @@
     "title": "Function Plot",
     "section": "",
     "text": "See https://quarto.org/docs/interactive/ojs/.\nSee https://observablehq.com/@mauriciopoppe/function-plot.\n\nfunctionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\ntargetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        // fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          // fn: '2 * x * x - 4 * x + 3',\n          fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}"
+  },
+  {
+    "objectID": "posts/decorator.html",
+    "href": "posts/decorator.html",
+    "title": "Add to class 函數裝飾",
+    "section": "",
+    "text": "取自 https://d2l.ai/chapter_linear-regression/oo-design.html#utilities.\nSee https://www.runoob.com/w3cnote/python-func-decorators.html.\n重要準則:\n@f\ndef g():\n  ...\n等價於\ng = f(g)"
+  },
+  {
+    "objectID": "posts/decorator.html#add-to-class-函數裝飾",
+    "href": "posts/decorator.html#add-to-class-函數裝飾",
+    "title": "Python 函數裝飾器",
+    "section": "Add to class 函數裝飾",
+    "text": "Add to class 函數裝飾\n\n使用方式\n定義如下的 add_to_class.\n\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n\n假如我們有一個 class A, 且有個 method double.\n\nclass A:\n  def double(self,t):\n    return 2*t\n\n令 a 為 A 的 instance.\n\na = A()\n\n則我們可以呼叫 a.double(3).\n\na.double(3)\n\n6\n\n\n現在假如我們想修改 A 的 method double, 可用如下.\n\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n\n則可以發現: 不需重新令 a 是 A 的 instance, a 的 double 都已經變更.\n\na.double(3)\n\n21\n\n\n\n# 另一個 A 的 instance\naa = A()\naa.double(3)\n\n21\n\n\n\n\n解析 code\n再回顧 add_to_class 為\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n且\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n等價於 double = add_to_class(A)(double).\n所以有執行了 add_to_class(A)(double)1 這指令.1 注意這裡 add_to_class(A) 不 是 class, 而是 wrapper.\n所以有執行 setattr(Class, obj.__name__, obj), 其中 Class = A, obj = double.\n所以相當於執行了 setattr(A, double, 7*t)23.2 這裡的 obj.__name__ 相當於 obj 的名字. 在這就是 double.3 這裡 setattr(Class, obj.__name__, obj) 的第三分量 obj 相當於 double return 的東西, 所以就是 7*t."
+  },
+  {
+    "objectID": "posts/decorator.html#使用方式",
+    "href": "posts/decorator.html#使用方式",
+    "title": "Add to class 函數裝飾",
+    "section": "使用方式",
+    "text": "使用方式\n定義如下的 add_to_class.\n\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n\n假如我們有一個 class A, 且有個 method double.\n\nclass A:\n  def double(self,t):\n    return 2*t\n\n令 a 為 A 的 instance.\n\na = A()\n\n則我們可以呼叫 a.double(3).\n\na.double(3)\n\n6\n\n\n現在假如我們想修改 A 的 method double, 可用如下.\n\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n\n則可以發現: 不需重新令 a 是 A 的 instance, a 的 double 都已經變更.\n\na.double(3)\n\n21\n\n\n\n# 另一個 A 的 instance\naa = A()\naa.double(3)\n\n21"
+  },
+  {
+    "objectID": "posts/decorator.html#解析-code",
+    "href": "posts/decorator.html#解析-code",
+    "title": "Add to class 函數裝飾",
+    "section": "解析 code",
+    "text": "解析 code\n回顧 add_to_class 為\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n且\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n等價於 double = add_to_class(A)(double).\n\n\n\n\n\n\nImportant\n\n\n\n這裡會令 double 為 add_to_class(A)(double). 所以要注意不會覆蓋到舊有的變數. 可以單獨執行 double 會發現不報錯 (不會 return 任何東西).\n\ndouble, type(double)\n\n(None, NoneType)\n\n\n\n\n所以有執行了 add_to_class(A)(double)1 這指令.1 這裡 add_to_class(A) 不 是 class, 而是 wrapper.\n所以有執行 setattr(Class, obj.__name__, obj), 其中 Class = A, obj = double.\n所以相當於執行了 setattr(A, double, 7*t)23.2 這裡的 obj.__name__ 相當於 obj 的名字. 在這就是 double.3 這裡 setattr(Class, obj.__name__, obj) 的第三分量 obj 相當於 double return 的東西, 所以就是 7*t."
   }
 ]
