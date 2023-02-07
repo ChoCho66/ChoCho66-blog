@@ -1,0 +1,15 @@
+---
+title: "Downloadthis Example"
+author: Shafayet Khan Shafee
+date: last-modified
+format: html
+filter: 
+  - downloadthis
+---
+
+{{< downloadthis ../cover.jpg  label="Download" >}}
+
+{{< downloadthis ../cover.jpg dname=Mtcars label="Download the mtcars data" icon=database-fill-down type=info class=data-button id=mtcars >}}
+
+{{< downloadthis ../cover.jpg dname="File" label="Download the pdf" icon="file-earmark-pdf" type="success" >}}
+

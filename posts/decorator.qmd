@@ -125,3 +125,11 @@ double, type(double)
 [^2]: 這裡的 `obj.__name__` 相當於 obj 的名字. 在這就是 double.
 
 [^3]: 這裡 `setattr(Class, obj.__name__, obj)` 的第三分量 `obj` 相當於 `double` return 的東西, 所以就是 `7*t`.
+
+
+
+###
+
+TODO: 
+
+- https://www.runoob.com/w3cnote/python-func-decorators.html

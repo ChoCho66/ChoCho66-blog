@@ -1,0 +1,11 @@
+---
+title: "Social-embeds"
+format: html
+---
+
+- [https://quarto-social-embeds.sellorm.com/examples/gists.html](https://quarto-social-embeds.sellorm.com/examples/gists.html)
+
+
+{{< youtube Shvy8ce49KQ >}}
+
+

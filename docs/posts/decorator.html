@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -176,7 +176,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#使用方式" id="toc-使用方式" class="nav-link active" data-scroll-target="#使用方式">使用方式</a></li>
-  <li><a href="#解析-code" id="toc-解析-code" class="nav-link" data-scroll-target="#解析-code">解析 code</a></li>
+  <li><a href="#解析-code" id="toc-解析-code" class="nav-link" data-scroll-target="#解析-code">解析 code</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -216,7 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2023-01-23</p>
+      <p class="date-modified">2023-02-07</p>
     </div>
   </div>
     
@@ -257,7 +260,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>則我們可以呼叫 <code>a.double(3)</code>.</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a.double(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="52">
 <pre><code>6</code></pre>
 </div>
 </div>
@@ -270,7 +273,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>則可以發現: 不需重新令 <code>a</code> 是 <code>A</code> 的 instance, <code>a</code> 的 <code>double</code> 都已經變更.</p>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a.double(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="54">
 <pre><code>21</code></pre>
 </div>
 </div>
@@ -278,7 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 另一個 A 的 instance</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>aa <span class="op">=</span> A()</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>aa.double(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="55">
 <pre><code>21</code></pre>
 </div>
 </div>
@@ -308,7 +311,7 @@ Important
 <p>這裡會令 <code>double</code> 為 <code>add_to_class(A)(double)</code>. 所以要注意不會覆蓋到舊有的變數. 可以單獨執行 <code>double</code> 會發現不報錯 (不會 return 任何東西).</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>double, <span class="bu">type</span>(double)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="56">
 <pre><code>(None, NoneType)</code></pre>
 </div>
 </div>
@@ -317,8 +320,15 @@ Important
 <div class="page-columns page-full"><p>所以有執行了 <code>add_to_class(A)(double)</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 這指令.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;這裡 <code>add_to_class(A)</code> 不 是 class, 而是 <code>wrapper</code>.</p></li></div></div>
 <p>所以有執行 <code>setattr(Class, obj.__name__, obj)</code>, 其中 <code>Class = A</code>, <code>obj = double</code>.</p>
 <div class="page-columns page-full"><p>所以相當於執行了 <code>setattr(A, double, 7*t)</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;這裡的 <code>obj.__name__</code> 相當於 obj 的名字. 在這就是 double.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;這裡 <code>setattr(Class, obj.__name__, obj)</code> 的第三分量 <code>obj</code> 相當於 <code>double</code> return 的東西, 所以就是 <code>7*t</code>.</p></li></div></div>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>TODO:</p>
+<ul>
+<li>https://www.runoob.com/w3cnote/python-func-decorators.html</li>
+</ul>
 
 
+</section>
 </section>
 
 
