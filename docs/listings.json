@@ -14,5 +14,12 @@
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
+  },
+  {
+    "listing": "/daily.html",
+    "items": [
+      "/daily/2023-02-14-sakana.html",
+      "/daily/2023-02-08.html"
+    ]
   }
 ]

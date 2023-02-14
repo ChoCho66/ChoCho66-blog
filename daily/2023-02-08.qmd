@@ -1,0 +1,12 @@
+---
+title: "Title"
+author: "ChoCho"
+date: "2023-02-08"
+date-format: iso
+date-modified: last-modified
+categories: [math]
+# image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---

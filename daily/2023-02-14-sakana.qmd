@@ -1,0 +1,16 @@
+---
+title: "Sakana"
+author: "ChoCho"
+date: "2023-02-14"
+date-format: iso
+date-modified: last-modified
+# categories: [math]
+image: "sakana.png"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+AAA
+
+https://github.com/itorr/sakana
