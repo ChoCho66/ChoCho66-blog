@@ -151,10 +151,50 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>AAA</p>
-<p>https://github.com/itorr/sakana</p>
+<section id="httpsgithub.comitorrsakana" class="level1">
+<h1><a href="https://github.com/itorr/sakana">https://github.com/itorr/sakana</a></h1>
+<style>
+html{
+  background: #CCC;
+}
+html .sakana-box{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  
+  transform-origin: 20% 100%; /* 从右下开始变换 */
+}
+</style>
+<div class="sakana-box">
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sakana@1.0.8"></script>
+<script>
+// 取消静音
+Sakana.setMute(false);
+const { isMute } = Sakana.Voices;
+
+// 启动
+Sakana.init({
+  el:         '.sakana-box',     // 启动元素 node 或 选择器
+  character:  'takina',          // 启动角色 'chisato','takina' 
+  inertia:    0.001,              // 惯性
+  decay:      0.999,              // 衰减
+  r:          60,                // 启动角度
+  y:          10,                // 启动高度
+  scale:      0.5,                 // 缩放倍数
+  translateY: 0,                 // 位移高度
+  canSwitchCharacter: true,     // 允许换角色
+});
+</script>
+<p>Vitae est luctus morbi purus gravida. Euismod quis a. Phasellus dui non sed quam vestibulum ligula amet libero magna. Mi vestibulum felis tristique congue hendrerit fames ante rhoncus litora. Quam volutpat amet quis non felis nisl, ipsum ultrices lacus. Hac erat pellentesque malesuada nascetur, efficitur a tortor dui. Fusce eget, sollicitudin sapien maecenas nascetur neque in vehicula congue, semper. Penatibus sed lorem, ut. Lacinia quam ridiculus litora quisque odio vel nunc, aliquet. Eget habitant amet parturient a finibus rutrum dapibus accumsan accumsan. Fermentum consequat vestibulum vitae porttitor, erat cras, sed consequat consectetur. Orci dolor leo phasellus etiam eu fringilla orci faucibus suspendisse semper. Sit aliquet ac ac in ante non eros massa montes. Neque egestas at quis lacinia nibh ac malesuada accumsan, dictum arcu nulla. Tempor ut adipiscing senectus auctor risus montes eget donec est. Lacinia scelerisque maximus commodo magna dui porta arcu consequat sed, lacus. Varius sit egestas feugiat potenti pulvinar tincidunt nunc.</p>
+<p>Et eros massa posuere placerat nisl ac, ligula et diam ut. Nunc non elit faucibus rhoncus conubia. Quam dui suspendisse dolor. Velit, eleifend eu nullam sodales eu. Mus mi purus. Ante at ante quis libero tortor at. Proin orci vitae ac. Ac eu, tempor euismod faucibus, scelerisque velit tortor. Sed sagittis sociis at amet gravida quisque.</p>
+<p>Consequat porttitor consequat at nulla magna malesuada nullam ante. Turpis sapien mi maecenas pellentesque pretium egestas et sagittis nec eleifend. Et, sed elementum molestie turpis ut ac urna. Nunc aenean id ut aenean, parturient pellentesque justo aliquam in. Sem sagittis fames non vel vestibulum suspendisse sodales vel. Massa fringilla. Sem eleifend donec dapibus pharetra pharetra.</p>
+<p>Leo eget sed sed ex suspendisse elit mauris tortor id habitasse. Nunc molestie, aliquam erat in mi sed. Et, vel egestas auctor iaculis vel et phasellus. Cras magnis mi platea. Facilisi iaculis tincidunt eu finibus felis tincidunt? Et augue aliquam, taciti neque dictum molestie aliquam tincidunt eu sodales. Vitae aliquet suscipit a nullam amet, sit massa diam sed, non nec. Class quisque congue tincidunt aliquam blandit sed tempus quis habitasse fusce in. Sit malesuada ac etiam aenean, at sed blandit.</p>
+<p>Nec metus a purus suscipit diam, non dis maecenas nibh. Nulla leo nec, ad taciti faucibus integer ligula ornare dignissim. Amet fermentum in sociosqu lobortis sed sapien aliquet. Taciti vel sed ligula et lacinia eget eros duis non. Sed lorem quis interdum senectus dolor cras. Arcu facilisis massa ac quisque platea in ultrices, eu quis duis. Dapibus inceptos tortor orci felis volutpat, venenatis. Aliquet vel sit ultricies suspendisse amet maecenas dis. Hac vivamus lectus lacinia porttitor proin ut ornare risus primis. Dis, tempus ut nunc pellentesque mattis. Ridiculus diam nulla natoque consectetur vestibulum nulla faucibus? Ligula turpis eget pulvinar nulla nunc tincidunt mauris nec sit vel nullam. Platea nec habitant in semper laoreet ultricies lacinia leo fames.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

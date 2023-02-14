@@ -11,6 +11,43 @@ reference-location: margin
 citation-location: margin
 ---
 
-AAA
+# [https://github.com/itorr/sakana](https://github.com/itorr/sakana)
 
-https://github.com/itorr/sakana
+<style>
+html{
+  background: #CCC;
+}
+html .sakana-box{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  
+  transform-origin: 20% 100%; /* 从右下开始变换 */
+}
+</style>
+
+<div class="sakana-box"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/sakana@1.0.8"></script>
+
+<script>
+// 取消静音
+Sakana.setMute(false);
+const { isMute } = Sakana.Voices;
+
+// 启动
+Sakana.init({
+  el:         '.sakana-box',     // 启动元素 node 或 选择器
+  character:  'takina',          // 启动角色 'chisato','takina' 
+  inertia:    0.001,              // 惯性
+  decay:      0.999,              // 衰减
+  r:          60,                // 启动角度
+  y:          10,                // 启动高度
+  scale:      0.5,                 // 缩放倍数
+  translateY: 0,                 // 位移高度
+  canSwitchCharacter: true,     // 允许换角色
+});
+</script>
+
+
+`r paste(stringi::stri_rand_lipsum(5, start_lipsum = FALSE), collapse = '\n\n')`
