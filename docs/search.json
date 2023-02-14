@@ -1,108 +1,10 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "daily.html",
+    "href": "daily.html",
+    "title": "Daily",
     "section": "",
-    "text": "This document was published at image.jpg.\n\nEtiam eu suspendisse aliquam, suscipit augue, nulla auctor. Quis est litora ut aenean vulputate in aliquam nec massa lorem mus rhoncus. Bibendum hendrerit, a varius sed cubilia facilisis pellentesque. Nec commodo semper, malesuada malesuada in id sed. A pellentesque sed ac metus pellentesque. Sit sed eros vitae praesent duis facilisis. Non leo maecenas amet posuere semper sed semper elementum.\nPharetra eu est potenti eu. Semper tellus taciti sociosqu, sem est dui bibendum. Convallis vestibulum magnis velit, consequat sapien dis fusce, taciti luctus. Nec nec dapibus vel vulputate. Sed diam nulla, aptent posuere. At porttitor adipiscing sociis magna mus neque. Ullamcorper ac, et tempus, vel. Libero morbi ac amet rhoncus pellentesque lacus. Proin habitant venenatis netus luctus nunc sed dapibus. Fusce, posuere sapien et fusce fermentum nec sit sapien, imperdiet. In nullam curabitur at aliquet tristique pellentesque. Quis parturient lacinia duis eros sagittis maecenas imperdiet. Purus vivamus maecenas ut a. Ligula eros sapien ex ex nec sed eu sociosqu nascetur.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\n\\]\nThis is a post with executable code.11 ajdpiajdipa js\nSee Xie (2016).\n\nXie, Yihui. 2016. Bookdown: Authoring Books and Technical Documents with R Markdown. Boca Raton, Florida: Chapman; Hall/CRC. https://bookdown.org/yihui/bookdown.\n\n1 + 1\n\n[1] 2\n\n\nLorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.\n\n1+1\n\n[1] 2"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "title\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Archives",
-    "section": "",
-    "text": "Add to class 函數裝飾\n\n\n\n\n\n\n\ndecorator\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunction Plot\n\n\n\n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n\nJan 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "slides/slide-test2.html#modified",
-    "href": "slides/slide-test2.html#modified",
-    "title": "title",
-    "section": "MODIFIED",
-    "text": "MODIFIED"
-  },
-  {
-    "objectID": "slides/slide-test2.html#yrsdf",
-    "href": "slides/slide-test2.html#yrsdf",
-    "title": "title",
-    "section": "YRSdf",
-    "text": "YRSdf\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
-  },
-  {
-    "objectID": "slides/slide-test1.html#section",
-    "href": "slides/slide-test1.html#section",
-    "title": "title",
-    "section": "222",
-    "text": "222\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog."
-  },
-  {
-    "objectID": "slides/slide-test1.html#title",
-    "href": "slides/slide-test1.html#title",
-    "title": "title",
-    "section": "title",
-    "text": "title"
-  },
-  {
-    "objectID": "slides/slide-test1.html#modified",
-    "href": "slides/slide-test1.html#modified",
-    "title": "title",
-    "section": "MODIFIED",
-    "text": "MODIFIED"
-  },
-  {
-    "objectID": "posts/observable-JS/ojs.html",
-    "href": "posts/observable-JS/ojs.html",
-    "title": "Function Plot",
-    "section": "",
-    "text": "See https://quarto.org/docs/interactive/ojs/.\nSee https://observablehq.com/@mauriciopoppe/function-plot.\n\nfunctionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\ntargetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        // fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          // fn: '2 * x * x - 4 * x + 3',\n          fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}"
-  },
-  {
-    "objectID": "posts/decorator.html",
-    "href": "posts/decorator.html",
-    "title": "Add to class 函數裝飾",
-    "section": "",
-    "text": "取自 https://d2l.ai/chapter_linear-regression/oo-design.html#utilities.\nSee https://www.runoob.com/w3cnote/python-func-decorators.html.\n重要準則:\n@f\ndef g():\n  ...\n等價於\ng = f(g)"
-  },
-  {
-    "objectID": "posts/decorator.html#add-to-class-函數裝飾",
-    "href": "posts/decorator.html#add-to-class-函數裝飾",
-    "title": "Python 函數裝飾器",
-    "section": "Add to class 函數裝飾",
-    "text": "Add to class 函數裝飾\n\n使用方式\n定義如下的 add_to_class.\n\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n\n假如我們有一個 class A, 且有個 method double.\n\nclass A:\n  def double(self,t):\n    return 2*t\n\n令 a 為 A 的 instance.\n\na = A()\n\n則我們可以呼叫 a.double(3).\n\na.double(3)\n\n6\n\n\n現在假如我們想修改 A 的 method double, 可用如下.\n\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n\n則可以發現: 不需重新令 a 是 A 的 instance, a 的 double 都已經變更.\n\na.double(3)\n\n21\n\n\n\n# 另一個 A 的 instance\naa = A()\naa.double(3)\n\n21\n\n\n\n\n解析 code\n再回顧 add_to_class 為\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n且\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n等價於 double = add_to_class(A)(double).\n所以有執行了 add_to_class(A)(double)1 這指令.1 注意這裡 add_to_class(A) 不 是 class, 而是 wrapper.\n所以有執行 setattr(Class, obj.__name__, obj), 其中 Class = A, obj = double.\n所以相當於執行了 setattr(A, double, 7*t)23.2 這裡的 obj.__name__ 相當於 obj 的名字. 在這就是 double.3 這裡 setattr(Class, obj.__name__, obj) 的第三分量 obj 相當於 double return 的東西, 所以就是 7*t."
-  },
-  {
-    "objectID": "posts/decorator.html#使用方式",
-    "href": "posts/decorator.html#使用方式",
-    "title": "Add to class 函數裝飾",
-    "section": "使用方式",
-    "text": "使用方式\n定義如下的 add_to_class.\n\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n\n假如我們有一個 class A, 且有個 method double.\n\nclass A:\n  def double(self,t):\n    return 2*t\n\n令 a 為 A 的 instance.\n\na = A()\n\n則我們可以呼叫 a.double(3).\n\na.double(3)\n\n6\n\n\n現在假如我們想修改 A 的 method double, 可用如下.\n\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n\n則可以發現: 不需重新令 a 是 A 的 instance, a 的 double 都已經變更.\n\na.double(3)\n\n21\n\n\n\n# 另一個 A 的 instance\naa = A()\naa.double(3)\n\n21"
-  },
-  {
-    "objectID": "posts/decorator.html#解析-code",
-    "href": "posts/decorator.html#解析-code",
-    "title": "Add to class 函數裝飾",
-    "section": "解析 code",
-    "text": "解析 code\n回顧 add_to_class 為\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n且\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n等價於 double = add_to_class(A)(double).\n\n\n\n\n\n\nImportant\n\n\n\n這裡會令 double 為 add_to_class(A)(double). 所以要注意不會覆蓋到舊有的變數. 可以單獨執行 double 會發現不報錯 (不會 return 任何東西).\n\ndouble, type(double)\n\n(None, NoneType)\n\n\n\n\n所以有執行了 add_to_class(A)(double)1 這指令.1 這裡 add_to_class(A) 不 是 class, 而是 wrapper.\n所以有執行 setattr(Class, obj.__name__, obj), 其中 Class = A, obj = double.\n所以相當於執行了 setattr(A, double, 7*t)23.2 這裡的 obj.__name__ 相當於 obj 的名字. 在這就是 double.3 這裡 setattr(Class, obj.__name__, obj) 的第三分量 obj 相當於 double return 的東西, 所以就是 7*t.\n\n\nTODO:\n\nhttps://www.runoob.com/w3cnote/python-func-decorators.html"
+    "text": "Sakana\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "temp/downloadthis.html",
@@ -110,27 +12,6 @@
     "title": "Downloadthis Example",
     "section": "",
     "text": "Download \n Download the mtcars data \n Download the pdf"
-  },
-  {
-    "objectID": "downloadthis.html",
-    "href": "downloadthis.html",
-    "title": "Downloadthis Example",
-    "section": "",
-    "text": "Download"
-  },
-  {
-    "objectID": "posts/downloadthis.html",
-    "href": "posts/downloadthis.html",
-    "title": "Downloadthis Example",
-    "section": "",
-    "text": "Download"
-  },
-  {
-    "objectID": "slides/slide-test1.html#downloadthis",
-    "href": "slides/slide-test1.html#downloadthis",
-    "title": "title",
-    "section": "downloadthis",
-    "text": "downloadthis"
   },
   {
     "objectID": "temp/lordicon.html",
@@ -147,24 +28,108 @@
     "text": "https://quarto-social-embeds.sellorm.com/examples/gists.html"
   },
   {
-    "objectID": "daily.html",
-    "href": "daily.html",
-    "title": "Daily",
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "Sakana\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "This document was published at image.jpg.\n\nEtiam eu suspendisse aliquam, suscipit augue, nulla auctor. Quis est litora ut aenean vulputate in aliquam nec massa lorem mus rhoncus. Bibendum hendrerit, a varius sed cubilia facilisis pellentesque. Nec commodo semper, malesuada malesuada in id sed. A pellentesque sed ac metus pellentesque. Sit sed eros vitae praesent duis facilisis. Non leo maecenas amet posuere semper sed semper elementum.\nPharetra eu est potenti eu. Semper tellus taciti sociosqu, sem est dui bibendum. Convallis vestibulum magnis velit, consequat sapien dis fusce, taciti luctus. Nec nec dapibus vel vulputate. Sed diam nulla, aptent posuere. At porttitor adipiscing sociis magna mus neque. Ullamcorper ac, et tempus, vel. Libero morbi ac amet rhoncus pellentesque lacus. Proin habitant venenatis netus luctus nunc sed dapibus. Fusce, posuere sapien et fusce fermentum nec sit sapien, imperdiet. In nullam curabitur at aliquet tristique pellentesque. Quis parturient lacinia duis eros sagittis maecenas imperdiet. Purus vivamus maecenas ut a. Ligula eros sapien ex ex nec sed eu sociosqu nascetur.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\n\\]\nThis is a post with executable code.11 ajdpiajdipa js\nSee Xie (2016).\n\nXie, Yihui. 2016. Bookdown: Authoring Books and Technical Documents with R Markdown. Boca Raton, Florida: Chapman; Hall/CRC. https://bookdown.org/yihui/bookdown.\n\n1 + 1\n\n[1] 2\n\n\nLorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.\n\n1+1\n\n[1] 2"
   },
   {
-    "objectID": "daily/2023-02-08.html",
-    "href": "daily/2023-02-08.html",
-    "title": "Untitled",
+    "objectID": "posts/observable-JS/ojs.html",
+    "href": "posts/observable-JS/ojs.html",
+    "title": "Function Plot",
     "section": "",
-    "text": "asdads"
+    "text": "See https://quarto.org/docs/interactive/ojs/.\nSee https://observablehq.com/@mauriciopoppe/function-plot.\n\nfunctionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\ntargetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        // fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          // fn: '2 * x * x - 4 * x + 3',\n          fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/decorator.html",
+    "href": "posts/decorator.html",
+    "title": "Add to class 函數裝飾",
+    "section": "",
+    "text": "取自 https://d2l.ai/chapter_linear-regression/oo-design.html#utilities.\nSee https://www.runoob.com/w3cnote/python-func-decorators.html.\n重要準則:\n@f\ndef g():\n  ...\n等價於\ng = f(g)"
+  },
+  {
+    "objectID": "posts/decorator.html#使用方式",
+    "href": "posts/decorator.html#使用方式",
+    "title": "Add to class 函數裝飾",
+    "section": "使用方式",
+    "text": "使用方式\n定義如下的 add_to_class.\n\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n\n假如我們有一個 class A, 且有個 method double.\n\nclass A:\n  def double(self,t):\n    return 2*t\n\n令 a 為 A 的 instance.\n\na = A()\n\n則我們可以呼叫 a.double(3).\n\na.double(3)\n\n6\n\n\n現在假如我們想修改 A 的 method double, 可用如下.\n\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n\n則可以發現: 不需重新令 a 是 A 的 instance, a 的 double 都已經變更.\n\na.double(3)\n\n21\n\n\n\n# 另一個 A 的 instance\naa = A()\naa.double(3)\n\n21"
+  },
+  {
+    "objectID": "posts/decorator.html#解析-code",
+    "href": "posts/decorator.html#解析-code",
+    "title": "Add to class 函數裝飾",
+    "section": "解析 code",
+    "text": "解析 code\n回顧 add_to_class 為\ndef add_to_class(Class):\n  def wrapper(obj):\n    setattr(Class, obj.__name__, obj)\n  return wrapper\n且\n@add_to_class(A)\ndef double(self,t):\n  return 7*t\n等價於 double = add_to_class(A)(double).\n\n\n\n\n\n\nImportant\n\n\n\n這裡會令 double 為 add_to_class(A)(double). 所以要注意不會覆蓋到舊有的變數. 可以單獨執行 double 會發現不報錯 (不會 return 任何東西).\n\ndouble, type(double)\n\n(None, NoneType)\n\n\n\n\n所以有執行了 add_to_class(A)(double)1 這指令.1 這裡 add_to_class(A) 不 是 class, 而是 wrapper.\n所以有執行 setattr(Class, obj.__name__, obj), 其中 Class = A, obj = double.\n所以相當於執行了 setattr(A, double, 7*t)23.2 這裡的 obj.__name__ 相當於 obj 的名字. 在這就是 double.3 這裡 setattr(Class, obj.__name__, obj) 的第三分量 obj 相當於 double return 的東西, 所以就是 7*t.\n\n\nTODO:\n\nhttps://www.runoob.com/w3cnote/python-func-decorators.html"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "title\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Archives",
+    "section": "",
+    "text": "Add to class 函數裝飾\n\n\n\n\n\n\n\ndecorator\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunction Plot\n\n\n\n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n\nJan 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "daily/2023-02-14-sakana.html",
     "href": "daily/2023-02-14-sakana.html",
     "title": "Sakana",
     "section": "",
-    "text": "https://github.com/itorr/sakana\n\n\n\n\n\n\nVitae est luctus morbi purus gravida. Euismod quis a. Phasellus dui non sed quam vestibulum ligula amet libero magna. Mi vestibulum felis tristique congue hendrerit fames ante rhoncus litora. Quam volutpat amet quis non felis nisl, ipsum ultrices lacus. Hac erat pellentesque malesuada nascetur, efficitur a tortor dui. Fusce eget, sollicitudin sapien maecenas nascetur neque in vehicula congue, semper. Penatibus sed lorem, ut. Lacinia quam ridiculus litora quisque odio vel nunc, aliquet. Eget habitant amet parturient a finibus rutrum dapibus accumsan accumsan. Fermentum consequat vestibulum vitae porttitor, erat cras, sed consequat consectetur. Orci dolor leo phasellus etiam eu fringilla orci faucibus suspendisse semper. Sit aliquet ac ac in ante non eros massa montes. Neque egestas at quis lacinia nibh ac malesuada accumsan, dictum arcu nulla. Tempor ut adipiscing senectus auctor risus montes eget donec est. Lacinia scelerisque maximus commodo magna dui porta arcu consequat sed, lacus. Varius sit egestas feugiat potenti pulvinar tincidunt nunc.\nEt eros massa posuere placerat nisl ac, ligula et diam ut. Nunc non elit faucibus rhoncus conubia. Quam dui suspendisse dolor. Velit, eleifend eu nullam sodales eu. Mus mi purus. Ante at ante quis libero tortor at. Proin orci vitae ac. Ac eu, tempor euismod faucibus, scelerisque velit tortor. Sed sagittis sociis at amet gravida quisque.\nConsequat porttitor consequat at nulla magna malesuada nullam ante. Turpis sapien mi maecenas pellentesque pretium egestas et sagittis nec eleifend. Et, sed elementum molestie turpis ut ac urna. Nunc aenean id ut aenean, parturient pellentesque justo aliquam in. Sem sagittis fames non vel vestibulum suspendisse sodales vel. Massa fringilla. Sem eleifend donec dapibus pharetra pharetra.\nLeo eget sed sed ex suspendisse elit mauris tortor id habitasse. Nunc molestie, aliquam erat in mi sed. Et, vel egestas auctor iaculis vel et phasellus. Cras magnis mi platea. Facilisi iaculis tincidunt eu finibus felis tincidunt? Et augue aliquam, taciti neque dictum molestie aliquam tincidunt eu sodales. Vitae aliquet suscipit a nullam amet, sit massa diam sed, non nec. Class quisque congue tincidunt aliquam blandit sed tempus quis habitasse fusce in. Sit malesuada ac etiam aenean, at sed blandit.\nNec metus a purus suscipit diam, non dis maecenas nibh. Nulla leo nec, ad taciti faucibus integer ligula ornare dignissim. Amet fermentum in sociosqu lobortis sed sapien aliquet. Taciti vel sed ligula et lacinia eget eros duis non. Sed lorem quis interdum senectus dolor cras. Arcu facilisis massa ac quisque platea in ultrices, eu quis duis. Dapibus inceptos tortor orci felis volutpat, venenatis. Aliquet vel sit ultricies suspendisse amet maecenas dis. Hac vivamus lectus lacinia porttitor proin ut ornare risus primis. Dis, tempus ut nunc pellentesque mattis. Ridiculus diam nulla natoque consectetur vestibulum nulla faucibus? Ligula turpis eget pulvinar nulla nunc tincidunt mauris nec sit vel nullam. Platea nec habitant in semper laoreet ultricies lacinia leo fames."
+    "text": "https://github.com/itorr/sakana\n\n\n\n\n\n\nNibh nulla dictum sed ipsum, turpis. Mauris, dictum, etiam vestibulum id in felis aliquam. Suspendisse fermentum sodales, sit vehicula vulputate sed ligula integer et consectetur proin odio fusce praesent in. Nunc cum sed ridiculus habitasse, ad auctor convallis tincidunt nunc feugiat, platea. At, eget malesuada himenaeos nec, donec. A laoreet, erat lacus amet quisque pretium tincidunt. Non vel cum, tincidunt pharetra vitae et phasellus. Ante lectus donec eleifend, sed felis. Risus malesuada tellus aptent in turpis eu non erat ut molestie ut, curabitur euismod in felis. Luctus, sit mus a facilisi magna posuere.\nCurae maecenas ut id et nibh sed, nunc aliquam. In rhoncus vehicula, tempus habitasse vehicula ac sit quis efficitur orci ex. Tempor condimentum dictumst facilisi condimentum nascetur nibh fringilla mollis potenti in vitae. Id ac in, ante, blandit mauris. Et mauris aenean vel sodales. Commodo in sem in penatibus et mauris sem nulla. Facilisis hendrerit mi adipiscing maecenas facilisi a ac habitasse! Posuere aenean, mus et nam congue, suspendisse. Velit lacus, ullamcorper erat dictumst congue eget. Ridiculus a ac natoque lacinia turpis ipsum, nisi pulvinar etiam himenaeos potenti. Sit ultrices eget nostra diam at. Amet nunc iaculis ad ac sed elit lobortis.\nMorbi hendrerit velit nunc elementum ultricies. Sociis luctus nunc cum vivamus sed, ac ipsum mattis porttitor nec blandit scelerisque! Tempor sem lacinia sit aliquam fermentum in eu, taciti. Quis praesent, ante nostra orci ante senectus phasellus vitae turpis. Ligula, risus iaculis ut congue metus. Imperdiet vitae quisque donec posuere est vivamus neque ornare ac. Sed, donec aliquam ut, dictum accumsan! Ornare sed hendrerit taciti sit.\nDonec phasellus nulla nam, amet viverra. Inceptos nec fames ultricies a risus quam ridiculus lacinia lacus quisque. Nullam a posuere pharetra etiam risus tristique sit ac. Ac odio imperdiet pretium velit ac. At augue, egestas. Nunc sociis accumsan erat tristique proin senectus vestibulum quis faucibus lorem libero. Arcu interdum senectus nunc eget amet nec nulla vel. Tincidunt ipsum, ex nulla vestibulum torquent ac aenean arcu. Non justo, nisi elit eu vitae accumsan, parturient cubilia litora. Aliquet, egestas nibh id mauris, erat penatibus class aliquam. Pulvinar in. Aptent eu ad euismod aenean.\nNulla eu elit, sodales odio, ac nascetur. Blandit mus pulvinar dui nisi fusce. Neque cubilia aliquam cum in fermentum phasellus sed torquent. Metus iaculis mollis amet sed consequat himenaeos laoreet mauris ante. Ultricies vestibulum aliquam mattis pharetra et eu viverra mauris arcu. Euismod mattis venenatis. Nulla pellentesque. Et a nunc duis tincidunt adipiscing, sed."
+  },
+  {
+    "objectID": "slides/slide-test2.html#modified",
+    "href": "slides/slide-test2.html#modified",
+    "title": "title",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/slide-test2.html#yrsdf",
+    "href": "slides/slide-test2.html#yrsdf",
+    "title": "title",
+    "section": "YRSdf",
+    "text": "YRSdf\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
+  },
+  {
+    "objectID": "slides/slide-test1.html#modified",
+    "href": "slides/slide-test1.html#modified",
+    "title": "title",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/slide-test1.html#section",
+    "href": "slides/slide-test1.html#section",
+    "title": "title",
+    "section": "222",
+    "text": "222\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
+  },
+  {
+    "objectID": "slides/slide-test1.html#title",
+    "href": "slides/slide-test1.html#title",
+    "title": "title",
+    "section": "title",
+    "text": "title"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog."
   }
 ]
