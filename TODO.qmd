@@ -1,0 +1,25 @@
+---
+title: "TODO"
+author: "ChoCho"
+date: "2023-01-01"
+date-format: iso
+date-modified: last-modified
+# categories: [news, code, analysis]
+# image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+## TODO
+
+1. https://cpok.tw/36122 租屋申請
+
+
+
+## RNN
+
+1. 菜EE機器人
+
+1. 
+

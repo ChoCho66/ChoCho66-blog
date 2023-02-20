@@ -74,7 +74,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "title\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Stochastic Gradient Descent\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -131,5 +131,397 @@
     "title": "About",
     "section": "",
     "text": "About this blog."
+  },
+  {
+    "objectID": "slides/slide.html#modified",
+    "href": "slides/slide.html#modified",
+    "title": "title",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/slide.html",
+    "href": "slides/slide.html",
+    "title": "title",
+    "section": "",
+    "text": "proof.\n\n\n\n\n\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
+  },
+  {
+    "objectID": "TODO.html",
+    "href": "TODO.html",
+    "title": "TODO",
+    "section": "",
+    "text": "菜EE機器人"
+  },
+  {
+    "objectID": "slides/slide.html#proof.",
+    "href": "slides/slide.html#proof.",
+    "title": "title",
+    "section": "proof.",
+    "text": "proof.\nLorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
+  },
+  {
+    "objectID": "slides/slide.html#ref",
+    "href": "slides/slide.html#ref",
+    "title": "title",
+    "section": "REF",
+    "text": "REF"
+  },
+  {
+    "objectID": "slides/slide.html#sec-REF",
+    "href": "slides/slide.html#sec-REF",
+    "title": "title",
+    "section": "REF",
+    "text": "REF"
+  },
+  {
+    "objectID": "slides/slide.html#resources",
+    "href": "slides/slide.html#resources",
+    "title": "title",
+    "section": "Resources",
+    "text": "Resources"
+  },
+  {
+    "objectID": "slides/slide.html#more-resources",
+    "href": "slides/slide.html#more-resources",
+    "title": "title",
+    "section": "More Resources",
+    "text": "More Resources"
+  },
+  {
+    "objectID": "slides/SGD.html#modified",
+    "href": "slides/SGD.html#modified",
+    "title": "Stochastic Gradient Descent",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/SGD.html#lieanr-regression",
+    "href": "slides/SGD.html#lieanr-regression",
+    "title": "SGD",
+    "section": "Lieanr Regression",
+    "text": "Lieanr Regression\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} \\bigl( f(x^{(i)}) - y^{(i)} \\bigr)^2\n\\end{aligned},\n\\qquad(1)\\] where \\(w,b\\) are variables."
+  },
+  {
+    "objectID": "slides/SGD.html#section",
+    "href": "slides/SGD.html#section",
+    "title": "SGD and MLP",
+    "section": "",
+    "text": "?@thm-a"
+  },
+  {
+    "objectID": "slides/SGD.html#sgd",
+    "href": "slides/SGD.html#sgd",
+    "title": "Stochastic Gradient Descent",
+    "section": "4.1 SGD",
+    "text": "4.1 SGD\n\nRewrite ?@eq-sumf0218-1 to \\[\n\\begin{aligned}\n\\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2\n\\end{aligned}\n\\qquad(2)\\]\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want \\[\n\\begin{aligned}\nTODO\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/SGD.html#mlp",
+    "href": "slides/SGD.html#mlp",
+    "title": "SGD and MLP",
+    "section": "MLP",
+    "text": "MLP"
+  },
+  {
+    "objectID": "slides/SGD.html#lieanr-regression-in-mathbb-r1",
+    "href": "slides/SGD.html#lieanr-regression-in-mathbb-r1",
+    "title": "SGD",
+    "section": "Lieanr Regression (in \\(\\mathbb R^1\\))",
+    "text": "Lieanr Regression (in \\(\\mathbb R^1\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} \\bigl( f(x^{(i)}) - y^{(i)} \\bigr)^2\n\\end{aligned},\n\\qquad(1)\\] where \\(w,b\\) are variables."
+  },
+  {
+    "objectID": "slides/SGD.html#lieanr-regression-in-mathbb-r",
+    "href": "slides/SGD.html#lieanr-regression-in-mathbb-r",
+    "title": "SGD",
+    "section": "Lieanr Regression (in \\(\\mathbb R\\))",
+    "text": "Lieanr Regression (in \\(\\mathbb R\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\qquad(1)\\] where\n\n\\(w,b\\) are variables in \\(\\mathbb R\\) and\n\\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\n\n\\(d?\\)\n\nBy Likelihood function."
+  },
+  {
+    "objectID": "slides/SGD.html#section-1",
+    "href": "slides/SGD.html#section-1",
+    "title": "SGD and MLP",
+    "section": "",
+    "text": "We have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want $$ \\begin{aligned}\n\n\\end{aligned} $$"
+  },
+  {
+    "objectID": "slides/SGD.html#likelihood",
+    "href": "slides/SGD.html#likelihood",
+    "title": "SGD",
+    "section": "Likelihood",
+    "text": "Likelihood"
+  },
+  {
+    "objectID": "slides/SGD.html#section-2",
+    "href": "slides/SGD.html#section-2",
+    "title": "SGD",
+    "section": "",
+    "text": "We have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want $$ \\begin{aligned}\n\n\\end{aligned} $$"
+  },
+  {
+    "objectID": "slides/SGD.html#section-3",
+    "href": "slides/SGD.html#section-3",
+    "title": "SGD",
+    "section": "",
+    "text": "We have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want $$ \\begin{aligned}\n\n\\end{aligned} $$"
+  },
+  {
+    "objectID": "slides/SGD.html#likelihood-function",
+    "href": "slides/SGD.html#likelihood-function",
+    "title": "Stochastic Gradient Descent",
+    "section": "Likelihood function",
+    "text": "Likelihood function\n\nblabla\nFor the linear regression, the best choice of \\(d\\) (in the sense of stastics) is \\(d(x,y)=(x-y)^2.\\)\nHow to find a local min?"
+  },
+  {
+    "objectID": "slides/SGD.html#how-to-find-local-min",
+    "href": "slides/SGD.html#how-to-find-local-min",
+    "title": "Stochastic Gradient Descent",
+    "section": "How to find local min?",
+    "text": "How to find local min?\n\nFor the linear regression, the best choice of \\(d\\) (in the sense of stastics) is"
+  },
+  {
+    "objectID": "slides/SGD.html#gd",
+    "href": "slides/SGD.html#gd",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.4 GD",
+    "text": "3.4 GD\n\nhttps://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained\nhttps://kevinbinz.com/2019/05/26/intro-gradient-descent/"
+  },
+  {
+    "objectID": "slides/SGD.html#linear-regression-in-mathbb-r",
+    "href": "slides/SGD.html#linear-regression-in-mathbb-r",
+    "title": "SGD and MLP",
+    "section": "Linear Regression (in \\(\\mathbb R\\))",
+    "text": "Linear Regression (in \\(\\mathbb R\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\qquad(1)\\] where\n\n\\(w,b\\) are variables in \\(\\mathbb R\\) and\n\\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\n\n\\(d?\\)\n\nBy Likelihood function."
+  },
+  {
+    "objectID": "slides/SGD.html#linear-regression",
+    "href": "slides/SGD.html#linear-regression",
+    "title": "SGD",
+    "section": "Linear Regression",
+    "text": "Linear Regression"
+  },
+  {
+    "objectID": "slides/SGD.html#sgd-1",
+    "href": "slides/SGD.html#sgd-1",
+    "title": "SGD",
+    "section": "SGD",
+    "text": "SGD"
+  },
+  {
+    "objectID": "slides/SGD.html#content",
+    "href": "slides/SGD.html#content",
+    "title": "SGD",
+    "section": "Content",
+    "text": "Content\nLinear Regression"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#modified",
+    "href": "slides/SGD_MLP.html#modified",
+    "title": "SGD and MLP",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#linear-regression-in-mathbb-r",
+    "href": "slides/SGD_MLP.html#linear-regression-in-mathbb-r",
+    "title": "SGD and MLP",
+    "section": "Linear Regression (in \\(\\mathbb R\\))",
+    "text": "Linear Regression (in \\(\\mathbb R\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\qquad(1)\\] where\n\n\\(w,b\\) are variables in \\(\\mathbb R\\) and\n\\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\n\n\\(d?\\)\n\nBy Likelihood function."
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#likelihood-function",
+    "href": "slides/SGD_MLP.html#likelihood-function",
+    "title": "SGD and MLP",
+    "section": "Likelihood function",
+    "text": "Likelihood function"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#how-to-find-local-min",
+    "href": "slides/SGD_MLP.html#how-to-find-local-min",
+    "title": "SGD and MLP",
+    "section": "How to find local min?",
+    "text": "How to find local min?"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#gd",
+    "href": "slides/SGD_MLP.html#gd",
+    "title": "SGD and MLP",
+    "section": "GD",
+    "text": "GD\n\nRewrite Equation 1 to \\[\n\\begin{aligned}\n\\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2\n\\end{aligned}\n\\qquad(2)\\]\nhttps://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#section",
+    "href": "slides/SGD_MLP.html#section",
+    "title": "SGD and MLP",
+    "section": "",
+    "text": "?@thm-a"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#section-1",
+    "href": "slides/SGD_MLP.html#section-1",
+    "title": "SGD and MLP",
+    "section": "",
+    "text": "We have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want $$ \\begin{aligned}\n\n\\end{aligned} $$"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#sgd",
+    "href": "slides/SGD_MLP.html#sgd",
+    "title": "SGD and MLP",
+    "section": "SGD",
+    "text": "SGD"
+  },
+  {
+    "objectID": "slides/SGD_MLP.html#mlp",
+    "href": "slides/SGD_MLP.html#mlp",
+    "title": "SGD and MLP",
+    "section": "MLP",
+    "text": "MLP"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#modified",
+    "href": "slides/SGD-MLP.html#modified",
+    "title": "SGD and MLP",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#linear-regression-in-mathbb-r",
+    "href": "slides/SGD-MLP.html#linear-regression-in-mathbb-r",
+    "title": "SGD and MLP",
+    "section": "Linear Regression (in \\(\\mathbb R\\))",
+    "text": "Linear Regression (in \\(\\mathbb R\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\qquad(1)\\] where\n\n\\(w,b\\) are variables in \\(\\mathbb R\\) and\n\\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\n\n\\(d?\\)\n\nBy Likelihood function."
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#likelihood-function",
+    "href": "slides/SGD-MLP.html#likelihood-function",
+    "title": "SGD and MLP",
+    "section": "Likelihood function",
+    "text": "Likelihood function"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#how-to-find-local-min",
+    "href": "slides/SGD-MLP.html#how-to-find-local-min",
+    "title": "SGD and MLP",
+    "section": "How to find local min?",
+    "text": "How to find local min?"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#gd",
+    "href": "slides/SGD-MLP.html#gd",
+    "title": "SGD and MLP",
+    "section": "GD",
+    "text": "GD\n\nhttps://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#section",
+    "href": "slides/SGD-MLP.html#section",
+    "title": "SGD and MLP",
+    "section": "",
+    "text": "We have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want \\[\n\\begin{aligned}\nTODO\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#section-1",
+    "href": "slides/SGD-MLP.html#section-1",
+    "title": "SGD and MLP",
+    "section": "",
+    "text": "We have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want $$ \\begin{aligned}\n\n\\end{aligned} $$"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#sgd",
+    "href": "slides/SGD-MLP.html#sgd",
+    "title": "SGD and MLP",
+    "section": "SGD",
+    "text": "SGD"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#mlp",
+    "href": "slides/SGD-MLP.html#mlp",
+    "title": "SGD and MLP",
+    "section": "MLP",
+    "text": "MLP"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#sec-LR",
+    "href": "slides/SGD-MLP.html#sec-LR",
+    "title": "SGD and MLP",
+    "section": "Linear Regression (in \\(\\mathbb R\\))",
+    "text": "Linear Regression (in \\(\\mathbb R\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\qquad(1)\\] where\n\n\\(w,b\\) are variables in \\(\\mathbb R\\) and\n\\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\n\n\\(d?\\)\n\nBy Likelihood function."
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#sec-LRinR",
+    "href": "slides/SGD-MLP.html#sec-LRinR",
+    "title": "SGD and MLP",
+    "section": "Linear Regression (in \\(\\mathbb R\\))",
+    "text": "Linear Regression (in \\(\\mathbb R\\))\n\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be to minimize \\[\n\\begin{aligned}\n\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\qquad(1)\\] where\n\n\\(w,b\\) are variables in \\(\\mathbb R\\) and\n\\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\n\nWhat is the best choice for \\(d\\) (in some sense)?\n\nWe may use the Likelihood function."
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#sgd-1",
+    "href": "slides/SGD-MLP.html#sgd-1",
+    "title": "SGD and MLP",
+    "section": "SGD",
+    "text": "SGD\n\nRewrite Equation 1 to \\[\n\\begin{aligned}\n\\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2\n\\end{aligned}\n\\qquad(2)\\]\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want \\[\n\\begin{aligned}\nTODO\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#sgd-2",
+    "href": "slides/SGD-MLP.html#sgd-2",
+    "title": "SGD and MLP",
+    "section": "SGD",
+    "text": "SGD"
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#other-model",
+    "href": "slides/SGD-MLP.html#other-model",
+    "title": "SGD and MLP",
+    "section": "Other Model",
+    "text": "Other Model\n\nStone–Weierstrass Theorem."
+  },
+  {
+    "objectID": "slides/SGD-MLP.html#idea",
+    "href": "slides/SGD-MLP.html#idea",
+    "title": "SGD and MLP",
+    "section": "Idea",
+    "text": "Idea\n\nPick some r.v. \\(X\\) s.t. \\(\\mathbb EX=\\nabla L(\\theta).\\)"
+  },
+  {
+    "objectID": "slides/SGD.html#sec-LRegression-in-R",
+    "href": "slides/SGD.html#sec-LRegression-in-R",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.1 Linear Regression (in \\(\\mathbb R\\))",
+    "text": "3.1 Linear Regression (in \\(\\mathbb R\\))\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be \\[\n\\begin{aligned}\n\\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\] where \\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(d\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
+  },
+  {
+    "objectID": "slides/SGD.html#idea",
+    "href": "slides/SGD.html#idea",
+    "title": "Stochastic Gradient Descent",
+    "section": "4.2 Idea",
+    "text": "4.2 Idea\n\nPick some r.v. \\(X\\) s.t. \\(\\mathbb EX=\\nabla L(\\theta).\\)"
+  },
+  {
+    "objectID": "slides/SGD.html#other-model",
+    "href": "slides/SGD.html#other-model",
+    "title": "Stochastic Gradient Descent",
+    "section": "5.1 Other Model",
+    "text": "5.1 Other Model\n\nStone–Weierstrass Theorem."
+  },
+  {
+    "objectID": "slides/SGD.html#how-to-find-a-local-min",
+    "href": "slides/SGD.html#how-to-find-a-local-min",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.3 How to find a local min?",
+    "text": "3.3 How to find a local min?\n\nWe choose \\(d(x,y)=(x-y)^2.\\)"
+  },
+  {
+    "objectID": "slides/SGD.html#mle-maximum-likelihood-function",
+    "href": "slides/SGD.html#mle-maximum-likelihood-function",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.2 MLE (maximum likelihood function)",
+    "text": "3.2 MLE (maximum likelihood function)\n\nWe regard \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) as realizations of random variables \\(X,Y,\\) and we assume that \\(Y=wX+b+\\mathtt{noise},\\) where\n\n\\(w,b\\) are two parameters in \\(\\mathbb R,\\)\n\\(\\mathtt{noise}\\sim N(0,\\sigma^2)\\) for some fixed \\(\\sigma>0.\\)\n\nIn math:\n\nAssume that \\(X\\sim \\operatorname{unif}([\\min_i x^{(i)}, \\max_i x^{(i)}]).\\)\nGiven the distribution of \\(Y\\) by given \\(\\mathbb E[Y\\vert X].\\)\nConditioning on \\(X=x,\\) we give the density of \\(\\mathbb E[Y\\vert X]\\) by \\[\n\\begin{aligned}\n  Y-(wx+b) \\sim N(0,\\sigma^2).\n\\end{aligned}\n\\] That is, the density of \\(Y,\\) conditioning on \\(X=x,\\) is \\[\n\\begin{aligned}\n  \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y-(wx+b) \\bigr)^2 \\Bigr\\rbrace.\n\\end{aligned}\n\\]\n\nLet \\(Z_i\\) be iid and \\(Z_i \\stackrel{d}{=} \\mathbb E[Y\\vert X].\\)\nThe likelihood function of \\(Z_i,\\) \\(i=1\\sim n,\\) for the realizations \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) is that \\[\n\\begin{aligned}\n\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\n= \\prod_{i=1}^n \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2 \\Bigr\\rbrace\n\\end{aligned}\n\\qquad(1)\\]\nTo maximize \\(\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\\) \\(\\iff\\) To minimize \\(\\sum_{i=1}^n \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2.\\)\nFor the linear regression, the best choice of \\(d\\) (in the sense of stastics) is \\(d(x,y)=(x-y)^2.\\)\nHow to find a local min?"
+  },
+  {
+    "objectID": "slides/SGD.html#asdasd",
+    "href": "slides/SGD.html#asdasd",
+    "title": "Stochastic Gradient Descent",
+    "section": "1.1 asdasd",
+    "text": "1.1 asdasd\n1.1.1 ASDASDAsimply connected domain\n1.1.2 asdajs pidj"
   }
 ]

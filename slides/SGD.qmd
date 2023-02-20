@@ -1,0 +1,196 @@
+---
+title: "Stochastic Gradient Descent"
+# subtitle: Last
+author: ChoCho<br><br>
+date-format: iso
+date: last-modified
+institute: MODIFIED
+bibliography: ../references.bib
+slide-number: c/t
+categories: [slide]
+# knitr: true
+# jupyter: python3
+format:
+  revealjs:
+    theme: [serif,custom.scss]    # 像 LaTeX
+    width: 1800
+    height: 1200
+    # preview-links: auto
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 2
+      # src: "Chalkboard-2022-12-27.json"
+    scrollable: true
+    echo: true
+    # footer: "foot"
+    # logo: cover.jpg
+    slide-number: true
+    sc-sb-title: true
+filters:
+  - reveal-header
+# slide-level: 3
+number-sections: true
+# filters: [revealjs_filter.lua]
+# filters:   
+#   - custom-callout.lua
+# callout-appearance: minimal
+# callout-icon: false
+# crossref:
+  # eq-prefix: - (1)    # (default is "Figure")
+---
+
+## MODIFIED {-}
+
+# Test
+
+## asdasd 
+
+### ASDASDAsimply connected domain 
+
+### asdajs pidj
+
+# Content
+
+- [Regression](#sec-Regression)
+
+  - [Linear Regression](#sec-LRegression-in-R)
+
+- [Stochastic Gradient Descent (SGD)](#sec-SGD)
+
+# Regression {#sec-Regression}
+
+- [Linear Regression (in $\mathbb R$)](#sec-LRinR)
+
+## Linear Regression (in $\mathbb R$) {#sec-LRegression-in-R}
+
+- Suppose that we have the data $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ in $\mathbb R\times \mathbb R.$
+
+- ![](images/SGD/2023-02-19-22-17-59.png)
+
+- We want to find some linear function $f:\mathbb R\longrightarrow \mathbb R,$ 
+say $f(x) = w x+b,$ s.t.
+$$
+\begin{aligned}
+  f(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
+\end{aligned}
+$$
+
+- In math, our goal can be
+$$
+\begin{aligned}
+  \operatorname{argmin}_{w,b\in \mathbb R}\sum_{i=1}^{n} d\bigl( f(x^{(i)}) , y^{(i)} \bigr)
+\end{aligned},
+$$
+where $d:\mathbb R^2 \longrightarrow [0,\infty)$ is what we need to determine.
+
+- What is the best choice for $d$ (in some sense)?
+
+  - We may use the MLE (maximum likelihood function).
+
+## MLE (maximum likelihood function)
+
+- We regard $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ as realizations of random variables $X,Y,$ 
+and we assume that $Y=wX+b+\mathtt{noise},$
+where 
+    
+  - $w,b$ are two parameters in $\mathbb R,$
+
+  - $\mathtt{noise}\sim N(0,\sigma^2)$ for some fixed $\sigma>0.$
+
+- In math:
+
+  - Assume that $X\sim \operatorname{unif}([\min_i x^{(i)}, \max_i x^{(i)}]).$
+
+  - Given the distribution of $Y$ by given $\mathbb E[Y\vert X].$
+
+  - Conditioning on $X=x,$
+    we give the density of $\mathbb E[Y\vert X]$ by
+    $$
+    \begin{aligned}
+      Y-(wx+b) \sim N(0,\sigma^2).
+    \end{aligned}
+    $$
+    That is, the density of $Y,$ conditioning on $X=x,$ is
+    $$
+    \begin{aligned}
+      \frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1}{2\sigma^2} \bigl( y-(wx+b) \bigr)^2 \Bigr\rbrace.
+    \end{aligned}
+    $$
+
+- Let $Z_i$ be iid and $Z_i \stackrel{d}{=} \mathbb E[Y\vert X].$
+
+- The likelihood function of $Z_i,$ $i=1\sim n,$ for the realizations $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$
+is that
+$$
+\begin{aligned}
+  \mathtt{lik}(w,b)\Big\vert_{(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})}
+  = \prod_{i=1}^n \frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1}{2\sigma^2} \bigl( y^{(i)}-(wx^{(i)}+b) \bigr)^2 \Bigr\rbrace
+\end{aligned}
+$$ {#eq-MLELR}
+
+- To maximize $\mathtt{lik}(w,b)\Big\vert_{(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})}$ $\iff$ To minimize $\sum_{i=1}^n \bigl( y^{(i)}-(wx^{(i)}+b) \bigr)^2.$
+
+- For the linear regression, the best choice of $d$ (in the sense of stastics) is $d(x,y)=(x-y)^2.$
+
+- How to find a local min?
+
+## How to find a local min?
+
+- We choose $d(x,y)=(x-y)^2.$
+
+- ![](images/SGD/gradient_descent_parameter_a.gif)
+
+- ![](images/SGD/dualspace_explore.gif)
+
+## GD
+
+- https://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained
+
+- https://kevinbinz.com/2019/05/26/intro-gradient-descent/
+
+
+
+
+# Stochastic Gradient Descent (SGD) {#sec-SGD}
+
+- Why it works
+
+- https://www.kaggle.com/code/ryanholbrook/stochastic-gradient-descent
+
+## SGD
+
+- Rewrite @eq-sumf0218-1 to
+$$
+\begin{aligned}
+  \sum_{i=1}^n \bigl( a^{(i)}\theta - b^{(i)}  \bigr)^2
+\end{aligned}
+$$ {#eq-sumf0218-2}
+
+- We have data $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ in $\mathbb R^{n_{\text{in}}}\times \mathbb R^{n_{\text{out}}}.$
+
+- We want to find some linear function $f:\mathbb R^{n_{\text{in}}} \longrightarrow \mathbb R^{n_{\text{out}}}$ s.t.
+$$
+\begin{aligned}
+  f(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
+\end{aligned}
+$$
+
+- In mathematicas, we want
+$$
+\begin{aligned}
+  TODO
+\end{aligned}
+$$
+
+
+## Idea
+
+- Pick some r.v. $X$ s.t.
+$\mathbb EX=\nabla L(\theta).$
+
+
+# MLP
+
+## Other Model
+
+- [Stone–Weierstrass Theorem](https://en.wikipedia.org/wiki/Stone–Weierstrass_theorem).
