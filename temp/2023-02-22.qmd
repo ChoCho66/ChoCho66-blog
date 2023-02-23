@@ -1,0 +1,20 @@
+---
+title: "Reading"
+author: "ChoCho"
+date: "2023-02-22"
+date-format: iso
+date-modified: last-modified
+# categories: [news, code, analysis]
+image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+- 7.5 Batch normalize 可加深網路收斂速度
+
+
+
+transform
+
+transoorm

@@ -1,0 +1,21 @@
+---
+title: "RNN"
+author: "ChoCho"
+date: "2023-01-16"
+date-format: iso
+date-modified: last-modified
+categories: [RNN]
+image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+- https://www.joet.org/m/journal/view.php?number=3090
+
+  - ![](https://www.joet.org/upload//thumbnails/ksoe-2022-026f2.gif)
+
+
+- https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45
+
+  - ![](https://miro.medium.com/v2/resize:fit:4800/1*goJVQs-p9kgLODFNyhl9zA.gif)
