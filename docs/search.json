@@ -39,7 +39,7 @@
     "href": "posts/observable-JS/ojs.html",
     "title": "Function Plot",
     "section": "",
-    "text": "See https://quarto.org/docs/interactive/ojs/.\nSee https://observablehq.com/@mauriciopoppe/function-plot.\n\nfunctionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\ntargetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        // fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          // fn: '2 * x * x - 4 * x + 3',\n          fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}"
+    "text": "See https://quarto.org/docs/interactive/ojs/.\nSee https://observablehq.com/@mauriciopoppe/function-plot.\nSee https://mauriciopoppe.github.io/function-plot/.\n\nfunctionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    target: '#butterfly-curve',\n    yAxis: {domain: [-4.428571429, 4.428571429]},\n    xAxis: {domain: [-7, 7]},\n    data: [{\n      x: 'sin(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',\n      y: 'cos(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',\n      range: [-10 * Math.PI, 10 * Math.PI],\n      fnType: 'parametric',\n      graphType: 'polyline'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\n{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n\n\n\n\n\n\n\ntargetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        // fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          fn: 'x * x - 4 * x + 3',\n          // fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -74,7 +74,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Stochastic Gradient Descent\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -151,7 +151,7 @@
     "href": "TODO.html",
     "title": "TODO",
     "section": "",
-    "text": "菜EE機器人"
+    "text": "https://cpok.tw/36122 租屋申請"
   },
   {
     "objectID": "slides/slide.html#proof.",
@@ -213,8 +213,8 @@
     "objectID": "slides/SGD.html#sgd",
     "href": "slides/SGD.html#sgd",
     "title": "Stochastic Gradient Descent",
-    "section": "4.1 SGD",
-    "text": "4.1 SGD\n\nRewrite ?@eq-sumf0218-1 to \\[\n\\begin{aligned}\n\\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2\n\\end{aligned}\n\\qquad(2)\\]\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want \\[\n\\begin{aligned}\nTODO\n\\end{aligned}\n\\]"
+    "section": "4.2 SGD",
+    "text": "4.2 SGD\n\nRewrite ?@eq-sumf0218-1 to \\[\n\\begin{aligned}\n\\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2\n\\end{aligned}\n\\qquad(1)\\]\nWe have data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{n_{\\text{in}}}\\times \\mathbb R^{n_{\\text{out}}}.\\)\nWe want to find some linear function \\(f:\\mathbb R^{n_{\\text{in}}} \\longrightarrow \\mathbb R^{n_{\\text{out}}}\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn mathematicas, we want \\[\n\\begin{aligned}\nTODO\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "slides/SGD.html#mlp",
@@ -283,8 +283,8 @@
     "objectID": "slides/SGD.html#gd",
     "href": "slides/SGD.html#gd",
     "title": "Stochastic Gradient Descent",
-    "section": "3.4 GD",
-    "text": "3.4 GD\n\nhttps://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained\nhttps://kevinbinz.com/2019/05/26/intro-gradient-descent/"
+    "section": "4.2 GD",
+    "text": "4.2 GD"
   },
   {
     "objectID": "slides/SGD.html#linear-regression-in-mathbb-r",
@@ -487,35 +487,35 @@
     "href": "slides/SGD.html#sec-LRegression-in-R",
     "title": "Stochastic Gradient Descent",
     "section": "3.1 Linear Regression (in \\(\\mathbb R\\))",
-    "text": "3.1 Linear Regression (in \\(\\mathbb R\\))\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be \\[\n\\begin{aligned}\n\\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} d\\bigl( f(x^{(i)}) , y^{(i)} \\bigr)\n\\end{aligned},\n\\] where \\(d:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(d\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
+    "text": "3.1 Linear Regression (in \\(\\mathbb R\\))\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = w x+b,\\) s.t. \\[\n\\begin{aligned}\nf(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal can be \\[\n\\begin{aligned}\n\\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(d\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
   },
   {
     "objectID": "slides/SGD.html#idea",
     "href": "slides/SGD.html#idea",
     "title": "Stochastic Gradient Descent",
-    "section": "4.2 Idea",
-    "text": "4.2 Idea\n\nPick some r.v. \\(X\\) s.t. \\(\\mathbb EX=\\nabla L(\\theta).\\)"
+    "section": "4.4 Idea",
+    "text": "4.4 Idea\n\nPick some r.v. \\(X\\) s.t. \\(\\mathbf E[X]=\\nabla L(\\theta).\\)"
   },
   {
     "objectID": "slides/SGD.html#other-model",
     "href": "slides/SGD.html#other-model",
     "title": "Stochastic Gradient Descent",
     "section": "5.1 Other Model",
-    "text": "5.1 Other Model\n\nStone–Weierstrass Theorem."
+    "text": "5.1 Other Model\n\nStone–Weierstrass Theorem.\n\n\n\n\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\nBottou, Léon. 2010. “Large-Scale Machine Learning with Stochastic Gradient Descent.” In Proceedings of COMPSTAT’2010, 177–86. Springer.\n\n\nLiu, Dong C, and Jorge Nocedal. 1989. “On the Limited Memory BFGS Method for Large Scale Optimization.” Mathematical Programming 45 (1): 503–28."
   },
   {
     "objectID": "slides/SGD.html#how-to-find-a-local-min",
     "href": "slides/SGD.html#how-to-find-a-local-min",
     "title": "Stochastic Gradient Descent",
-    "section": "3.3 How to find a local min?",
-    "text": "3.3 How to find a local min?\n\nWe choose \\(d(x,y)=(x-y)^2.\\)"
+    "section": "3.7 How to find a local min?",
+    "text": "3.7 How to find a local min?\n\nWe want \\[\n\\begin{aligned}\n\\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} \\bigl( f(x^{(i)}) - y^{(i)} \\bigr)^2.\n\\end{aligned}\n\\]\n\n\nObserving from the above graph, 從斜率的負方向走. This is GD."
   },
   {
     "objectID": "slides/SGD.html#mle-maximum-likelihood-function",
     "href": "slides/SGD.html#mle-maximum-likelihood-function",
     "title": "Stochastic Gradient Descent",
-    "section": "3.2 MLE (maximum likelihood function)",
-    "text": "3.2 MLE (maximum likelihood function)\n\nWe regard \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) as realizations of random variables \\(X,Y,\\) and we assume that \\(Y=wX+b+\\mathtt{noise},\\) where\n\n\\(w,b\\) are two parameters in \\(\\mathbb R,\\)\n\\(\\mathtt{noise}\\sim N(0,\\sigma^2)\\) for some fixed \\(\\sigma>0.\\)\n\nIn math:\n\nAssume that \\(X\\sim \\operatorname{unif}([\\min_i x^{(i)}, \\max_i x^{(i)}]).\\)\nGiven the distribution of \\(Y\\) by given \\(\\mathbb E[Y\\vert X].\\)\nConditioning on \\(X=x,\\) we give the density of \\(\\mathbb E[Y\\vert X]\\) by \\[\n\\begin{aligned}\n  Y-(wx+b) \\sim N(0,\\sigma^2).\n\\end{aligned}\n\\] That is, the density of \\(Y,\\) conditioning on \\(X=x,\\) is \\[\n\\begin{aligned}\n  \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y-(wx+b) \\bigr)^2 \\Bigr\\rbrace.\n\\end{aligned}\n\\]\n\nLet \\(Z_i\\) be iid and \\(Z_i \\stackrel{d}{=} \\mathbb E[Y\\vert X].\\)\nThe likelihood function of \\(Z_i,\\) \\(i=1\\sim n,\\) for the realizations \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) is that \\[\n\\begin{aligned}\n\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\n= \\prod_{i=1}^n \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2 \\Bigr\\rbrace\n\\end{aligned}\n\\qquad(1)\\]\nTo maximize \\(\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\\) \\(\\iff\\) To minimize \\(\\sum_{i=1}^n \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2.\\)\nFor the linear regression, the best choice of \\(d\\) (in the sense of stastics) is \\(d(x,y)=(x-y)^2.\\)\nHow to find a local min?"
+    "section": "MLE (maximum likelihood function)",
+    "text": "MLE (maximum likelihood function)\nEX 2. 正常骰子 跟 12 面骰\nTODO"
   },
   {
     "objectID": "slides/SGD.html#asdasd",
@@ -530,5 +530,173 @@
     "title": "Test css",
     "section": "MODIFIED",
     "text": "MODIFIED\n\n\nHoc vero non videre, maximoargumento esse voluptatem illam, qua sublata neget se intellegereomnino quid sit bonum - eam autem ita persequitur: quae palatopercipiatur, quae auribus; cetera addit, quae si appelles, honospraefandus sit - hoc igitur, quod solum bonum severus et gravisphilosophus novit, idem non videt ne expetendum quidem esse, quodeam voluptatem hoc eodem auctore non desideremus, cum dolorecareamus. quam haec sunt contraria! hic sidefinire, si dividere didicisset, si loquendi vim, si deniqueconsuetudinem verborum teneret, numquam in tantas salebrasincidisset. nunc vides, quid faciat. quam nemo umquam voluptatemappellavit, appellat; quae duo sunt, unum facit. hanc in motuvoluptatem - sic enim has suaves et quasi dulces voluptatesappellat - interdum ita extenuat, ut M’. Curium putes loqui, interdum ita laudat, ut quid praeterea sit bonum neget se posse nesuspicari quidem. quae iam oratio non a philosopho aliquo, sed acensore opprimenda est. non est enim vitium in oratione solum, sedetiam in moribus. luxuriam non reprehendit, modo sit vacua infinitacupiditate et timore. hoc loco discipulos quaerer!"
+  },
+  {
+    "objectID": "temp/RNN.html",
+    "href": "temp/RNN.html",
+    "title": "RNN",
+    "section": "",
+    "text": "https://www.joet.org/m/journal/view.php?number=3090\n\n\n\nhttps://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45"
+  },
+  {
+    "objectID": "temp/2023-02-22.html",
+    "href": "temp/2023-02-22.html",
+    "title": "Reading",
+    "section": "",
+    "text": "7.5 Batch normalize 可加深網路收斂速度\n\ntransform\ntransoorm"
+  },
+  {
+    "objectID": "TODO.html#rnn",
+    "href": "TODO.html#rnn",
+    "title": "TODO",
+    "section": "RNN",
+    "text": "RNN\n\n菜EE機器人"
+  },
+  {
+    "objectID": "slides/SGD.html#mle-maximum-likelihood-function-1",
+    "href": "slides/SGD.html#mle-maximum-likelihood-function-1",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.3 MLE (maximum likelihood function)",
+    "text": "3.3 MLE (maximum likelihood function)\n\nWe regard \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) as realizations of random variables \\(X,Y,\\) and we assume that \\[\n\\begin{aligned}\nY=wX+b+\\mathtt{noise},\n\\end{aligned}\n\\] where\n\n\\(w,b\\) are two parameters in \\(\\mathbb R,\\) and\n\\(\\mathtt{noise}\\sim N(0,\\sigma^2)\\) for some fixed \\(\\sigma>0.\\)\n\nIn math, we give the joint density of \\((X,Y)\\) by the following:\n\nAssume that \\(X\\sim \\operatorname{unif}\\bigl(\\bigl[\\min_i x^{(i)}, \\max_i x^{(i)}\\bigr]\\bigr).\\) That is, the density of \\(X\\) is \\[\n\\begin{aligned}\n  f_X(x) = \\frac{1}{\\max_i x^{(i)}- \\min_i x^{(i)}} x.\n\\end{aligned}\n\\]\nConditioning on \\(X=x,\\) we give the density of \\(\\mathbb E[Y\\vert X]\\) by \\[\n\\begin{aligned}\n  Y-(wx+b) \\sim N(0,\\sigma^2).\n\\end{aligned}\n\\] That is, the density of \\(Y,\\) conditioning on \\(X=x,\\) is \\[\n\\begin{aligned}\n  f_{Y\\vert X} (y\\vert x)=\\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y-(wx+b) \\bigr)^2 \\Bigr\\rbrace.\n\\end{aligned}\n\\]\nThe joint density of \\((X,Y)\\) is \\[\n\\begin{aligned}\n  f_{X,Y}(x,y) = f_{Y\\vert X}(y\\vert x) \\cdot f_X(x).\n\\end{aligned}\n\\]\n\nLet \\((X_i,Y_i)\\) be i.i.d. with \\((X_i,Y_i)\\stackrel{d}{=} (X,Y)\\) and \\(Z_i = \\mathbb E[Y_i\\vert X_i].\\)\nThe likelihood function of \\(\\bigl\\lbrace Z_i:i=1\\sim n \\bigr\\rbrace,\\) for the realizations \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) is \\[\n\\begin{aligned}\n  \\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\n  = \\prod_{i=1}^n \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2 \\Bigr\\rbrace.\n\\end{aligned}\n\\]\nTo maximize \\(\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\\) \\(\\iff\\) To minimize \\(\\sum_{i=1}^n \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2.\\)\nFor the linear regression, the best choice of \\(d\\) (in the sense of stastics) is \\(d(x,y)=(x-y)^2.\\)\nHow to find a local min?"
+  },
+  {
+    "objectID": "slides/SGD.html#dl-and-statistic",
+    "href": "slides/SGD.html#dl-and-statistic",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.4 DL and statistic",
+    "text": "3.4 DL and statistic"
+  },
+  {
+    "objectID": "slides/SGD.html#sec-SGD",
+    "href": "slides/SGD.html#sec-SGD",
+    "title": "Stochastic Gradient Descent",
+    "section": "4.3 SGD",
+    "text": "4.3 SGD\n\nFor simplicity, we assume that \\(b\\) is a constant, not a parameter.\nRewriting \\[\n\\begin{aligned}\n  \\sum_{i=1}^n \\bigl( y^{(i)} - (w x^{(i)} + b) \\bigr)^2\n\\end{aligned}\n\\] to \\[\n\\begin{aligned}\n  \\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2.\n\\end{aligned}\n\\qquad(1)\\]\n\n4.3.1 Idea\n\nPick some r.v. \\(X\\) s.t. \\(\\mathbf E[X]=\\nabla L(\\theta).\\)"
+  },
+  {
+    "objectID": "slides/SGD.html#sec-SGD2",
+    "href": "slides/SGD.html#sec-SGD2",
+    "title": "Stochastic Gradient Descent",
+    "section": "4.2 SGD",
+    "text": "4.2 SGD\n\nRewrite \\[\n\\begin{aligned}\n\\sum_{i=1}^n \\bigl( a^{(i)}\\theta - b^{(i)}  \\bigr)^2\n\\end{aligned}\n\\qquad(1)\\]"
+  },
+  {
+    "objectID": "slides/SGD.html#sec-MLE",
+    "href": "slides/SGD.html#sec-MLE",
+    "title": "Stochastic Gradient Descent",
+    "section": "MLE (maximum likelihood function)",
+    "text": "MLE (maximum likelihood function)\n\nWe regard \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) as realizations of random variables \\(X,Y,\\) and we assume that \\[\n\\begin{aligned}\nY=wX+b+\\mathtt{noise},\n\\end{aligned}\n\\] where\n\n\\(w,b\\) are two parameters in \\(\\mathbb R,\\) and\n\\(\\mathtt{noise}\\sim N(0,\\sigma^2)\\) for some fixed \\(\\sigma>0.\\)\n\nIn math, we give the joint density of \\((X,Y)\\) by the following:\n\nAssume that \\(X\\sim \\operatorname{unif}\\bigl(\\bigl[\\min_i x^{(i)}, \\max_i x^{(i)}\\bigr]\\bigr).\\)\n\nThat is, the density of \\(X\\) is \\[\n\\begin{aligned}\n  f_X(x) = \\frac{1}{\\max_i x^{(i)}- \\min_i x^{(i)}} x \\cdot 1_{[\\min_i x^{(i)}, \\max_i x^{(i)}]}(x).\n\\end{aligned}\n\\]\n\nConditioning on \\(X=x,\\) we give the density of \\(\\mathbf E[Y\\vert X]\\) by \\[\n\\begin{aligned}\n  Y-(wx+b) \\sim N(0,\\sigma^2).\n\\end{aligned}\n\\]\n\nThat is, the density of \\(Y,\\) conditioning on \\(X=x,\\) is \\[\n  \\begin{aligned}\nf_{Y\\vert X} (y\\vert x)=\\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y-(wx+b) \\bigr)^2 \\Bigr\\rbrace.\n  \\end{aligned}\n  \\]\n\nThe joint density of \\((X,Y)\\) is \\[\n\\begin{aligned}\n  f_{X,Y}(x,y) = f_{Y\\vert X}(y\\vert x) \\cdot f_X(x).\n\\end{aligned}\n\\]\n\nLet \\((X_i,Y_i)\\) be i.i.d. with \\((X_i,Y_i)\\stackrel{d}{=} (X,Y)\\) and \\(Z_i = \\mathbf E[Y_i\\vert X_i].\\)\nThe likelihood function of \\(\\bigl\\lbrace Z_i:i=1\\sim n \\bigr\\rbrace\\) for the realizations \\((X_i,Y_i)=(x^{(i)},y^{(i)})\\) is \\[\n\\begin{aligned}\n  \\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\n  = \\prod_{i=1}^n \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2 \\Bigr\\rbrace.\n\\end{aligned}\n\\]\nTo maximize \\(\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\\) \\(\\iff\\) To minimize \\(\\sum_{i=1}^n \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2.\\)\n\nHow to minimize it?\n\nFor the regression, the best choice of \\(\\ell\\) (in the sense of stastics) is \\(\\ell(y,\\widehat{y})=(y-\\widehat{y})^2.\\)\n\n\n\n此頁的結論與 \\(X\\) 的分布沒關係."
+  },
+  {
+    "objectID": "slides/SGD.html#temp",
+    "href": "slides/SGD.html#temp",
+    "title": "Stochastic Gradient Descent",
+    "section": "4.1 TEMP",
+    "text": "4.1 TEMP\n\nhttps://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained\nhttps://kevinbinz.com/2019/05/26/intro-gradient-descent/\nWhy it works\nhttps://www.kaggle.com/code/ryanholbrook/stochastic-gradient-descent"
+  },
+  {
+    "objectID": "slides/SGD.html#sec-minibatchSGD",
+    "href": "slides/SGD.html#sec-minibatchSGD",
+    "title": "Stochastic Gradient Descent",
+    "section": "Minibatch Stochastic Gradient Descent",
+    "text": "Minibatch Stochastic Gradient Descent\n\nGiven any initial value \\(\\theta\\in \\mathbb \\Theta\\) and any \\(\\eta\\in (0,\\infty)\\) small enough.\nGiven a number \\(n_B,\\) called the batch size.\nSplit \\(\\lbrace 1,2,\\cdots,n \\rbrace\\) into \\[\n\\begin{aligned}\n  \\mathcal{B}_1 = &\\lbrace 1,2,\\cdots, n_B \\rbrace,  \\cr\n  \\mathcal{B}_2 = &\\lbrace n_B+ 1, n_B+ 2,\\cdots, 2 n_B \\rbrace,  \\cr\n  &\\vdots \\cr\n  &  \\lbrace \\cdots, n \\rbrace.\n\\end{aligned}\n\\]\nLet \\(P\\) be a permutation of \\(\\lbrace 1,2,\\cdots,n \\rbrace.\\)\n\nFor \\(k=1,2,\\cdots,\\) we update \\(\\theta\\) by \\[\n\\begin{aligned}\n  \\theta \\leftarrow \\theta -  \\eta \\cdot \\frac{1}{n_B} \\sum_{j\\in \\mathcal{B}_k} \\nabla\\ell_{P(j)}(\\theta) .\n\\end{aligned}\n\\] Running all \\(t\\) at once is called an epoch."
+  },
+  {
+    "objectID": "slides/SGD.html#deep-learning-dl-and-statistic",
+    "href": "slides/SGD.html#deep-learning-dl-and-statistic",
+    "title": "Stochastic Gradient Descent",
+    "section": "Deep learning (DL) and statistic",
+    "text": "Deep learning (DL) and statistic\n\n\n\n\n\n\n\n\n\nDeep learning\nStatistic\n\n\n\n\n\\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\)\nData\nSample\n\n\n\nBuild a model \\(\\texttt{Net}_{\\theta}\\) (denote the estimators \\(\\mathtt{Net}_{\\theta}(x)\\) by \\(\\widehat{y}\\))\nRegard \\(x^{(i)},y^{(i)}\\) as the realizations of random elements \\(X,Y\\)\n\n\n\\(\\theta\\)\nparameters of model\nparameters of density or mass\n\n\noptimize parameters\nMin. \\(\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}),\\) where \\(\\widehat{y}^{(i)}=\\mathtt{Net}_{\\theta}(x^{(i)})\\)\nMax. the likelihood\n\n\n\n\n\n\\(\\ell\\) is called the loss function.\nHow to minimize \\(\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)})?\\)\n\n \nObserving from the above graph, 從斜率的負方向走. This is Gradient Descent.\n\n\n\n\n後面會解釋為什麼叫 \\(\\mathtt{Net}.\\)\n這裡的變數是 \\(\\theta.\\) 注意有 data space and parameter space."
+  },
+  {
+    "objectID": "slides/SGD.html#gd-gradient-descent",
+    "href": "slides/SGD.html#gd-gradient-descent",
+    "title": "Stochastic Gradient Descent",
+    "section": "GD (Gradient Descent)",
+    "text": "GD (Gradient Descent)\n\n\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nGiven any initial value \\(\\theta_0\\in \\mathbb \\Theta.\\)\nGiven any \\(\\eta\\in (0,\\infty)\\) small enough.\n\n\\(\\eta\\): learning rate.\n\nMomentum, Adam, \\(\\cdots.\\)\n\n\nWe set \\(\\lbrace \\theta_i \\rbrace_{i\\in \\mathbb N}\\) by \\[\n\\begin{aligned}\n\\theta_{i} \\leftarrow \\theta_{i-1} - \\eta \\cdot \\nabla L(\\theta_{i-1}),\\quad i\\in \\mathbb N.\n\\end{aligned}\n\\]\nThen \\(\\theta_i,i\\in \\mathbb N\\) may converges to a local min. of \\(L.\\)\n\n\n\n\n\n\n\n\n\nIn practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful (Liu and Nocedal 1989).\n\nSolution: Stochastic Gradient Descent (SGD)."
+  },
+  {
+    "objectID": "slides/SGD.html#why",
+    "href": "slides/SGD.html#why",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.6 Why?",
+    "text": "3.6 Why?\n\nFix \\(\\theta\\in \\mathbb R^n.\\)\nWe want find some \\(h\\) s.t. \\(f(\\theta+h) < f(\\theta).\\)\n\\(f(\\theta+h) \\approx f(\\theta) + \\begin{bmatrix} & \\nabla f(\\theta) & \\\\\\end{bmatrix} \\cdot \\begin{bmatrix} \\\\ h \\\\ \\\\\\end{bmatrix}\\) for \\(h\\in \\mathbb R^n\\) with \\(\\left\\lVert h \\right\\rVert\\) small enough. So \\(f(\\theta+h)<f(\\theta) \\iff \\nabla f(\\theta) \\cdot h < 0.\\)"
+  },
+  {
+    "objectID": "slides/SGD.html#why-gd-works",
+    "href": "slides/SGD.html#why-gd-works",
+    "title": "Stochastic Gradient Descent",
+    "section": "Why GD works?",
+    "text": "Why GD works?\n\nLet \\(f:\\mathbb R^n\\longrightarrow \\mathbb R\\) be any differentiable function.\nFix \\(\\theta\\in \\mathbb \\Theta.\\)\nWe assume that \\(\\nabla f(\\theta) \\neq \\mathbf{0}.\\)\nOur goal is to find some \\(h\\in \\mathbb R^n\\) such that \\(f(\\theta+h) < f(\\theta).\\)\nBy Taylor’s theorem, \\[\n\\begin{aligned}\n  f(\\theta+h) \\approx f(\\theta) +  \\begin{bmatrix}  & \\nabla f(\\theta) &  \\\\\\end{bmatrix} \\cdot \\begin{bmatrix}  \\\\ h \\\\  \\\\\\end{bmatrix}\n\\end{aligned}\n\\] for \\(h\\in \\mathbb R^n\\) with \\(\\left\\lVert h \\right\\rVert\\) small enough.\nSo for \\(\\left\\lVert h \\right\\rVert\\) small enough, \\(f(\\theta+h)<f(\\theta) \\iff \\nabla f(\\theta) \\cdot h < 0.\\)\nGiven \\(\\eta_0\\in (0,\\infty)\\) small. By Cauchy’s inequality, \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{h\\in \\mathbb R^n,\\left\\lVert h \\right\\rVert = \\eta_0}   \n  \\nabla f(\\theta) \\cdot h\n  = -\\eta_0 \\cdot \\frac{\\nabla f(\\theta)}{\\left\\lVert \\nabla f(\\theta) \\right\\rVert}.\n\\end{aligned}\n\\]\nHence, we choose \\[\n\\begin{aligned}\n  h = -\\eta \\cdot \\nabla f(\\theta)\n\\end{aligned}\n\\] for some \\(\\eta\\in (0,\\infty)\\) small."
+  },
+  {
+    "objectID": "slides/SGD.html#sec-Regression1",
+    "href": "slides/SGD.html#sec-Regression1",
+    "title": "Stochastic Gradient Descent",
+    "section": "3.1 Regression",
+    "text": "3.1 Regression\n\nWe see the case of \\(\\mathbb R.\\)\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some continuous function \\(\\color{red}{f}:\\mathbb R\\longrightarrow \\mathbb R\\) such that \\[\n\\begin{aligned}\n  f(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\color{red}{\\ell}:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(d\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
+  },
+  {
+    "objectID": "slides/SGD.html#sec-SGDsingle",
+    "href": "slides/SGD.html#sec-SGDsingle",
+    "title": "Stochastic Gradient Descent",
+    "section": "SGD(single)",
+    "text": "SGD(single)\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nLet \\(\\ell_i(\\theta) = \\ell(y^{(i)},\\widehat{y}^{(i)}).\\)\nGiven any initial value \\(\\theta\\in \\mathbb \\Theta\\) and any \\(\\eta\\in (0,\\infty)\\) small enough.\nLet \\(P\\) be a permutation of \\(\\lbrace 1,2,\\cdots, n \\rbrace.\\)\nThen for each \\(j=1,\\cdots, n,\\) we update \\(\\theta\\) by \\[\n\\begin{aligned}\n\\theta \\leftarrow \\theta - \\eta \\cdot \\nabla \\ell_{P(j)}(\\theta).\n\\end{aligned}\n\\]\nAfter repeating the above step several times, the final \\(\\theta\\) may be close to a local min. of \\(L.\\)\n\n\n\nThe SGD(single) can be an effective strategy, even for large datasets (Bottou 2010).\n\n\n\n可想像圖會在那裡抖"
+  },
+  {
+    "objectID": "slides/SGD.html#why-sgdsingle-works",
+    "href": "slides/SGD.html#why-sgdsingle-works",
+    "title": "Stochastic Gradient Descent",
+    "section": "Why SGD(single) works",
+    "text": "Why SGD(single) works\n\nWe see the case of linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nFor simplicity, we assume that \\(b\\) is a fixed constant, not a parameter.\nNow our parameters are only \\(w.\\)\nWe rewrite \\[\n\\begin{aligned}\n  L(w)=\\sum_{i=1}^n \\bigl( y^{(i)} - (w x^{(i)} + b) \\bigr)^2\n\\end{aligned}\n\\] to \\[\n\\begin{aligned}\n  L(w) = \\sum_{i=1}^n \\bigl( a_i w - b_i  \\bigr)^2\n  \\stackrel{\\text{denote}}{=}\n  \\sum_{i=1}^n \\ell_i(w).\n\\end{aligned}\n\\]\nLet \\(w_i = b_i/a_i\\) and \\[\n\\begin{aligned}\n  w_* = \\min_i w_i , \\quad w^* = \\max_i w_i.\n\\end{aligned}\n\\]\nNote that \\[\n\\begin{aligned}\n  w_*  \n  \\leq \\operatorname{argmin}_{w\\in \\mathbb R} L(w)\n  = \\frac{\\sum_{i}a_i b_i}{\\sum_i a_i^2}\n  \\leq w^*.\n\\end{aligned}\n\\]\n\n\n\nFor each \\(i,\\) if we update \\(w\\) by \\[\n\\begin{aligned}\n  w' = w - \\eta \\cdot \\nabla_w  \\ell_i (w),\n\\end{aligned}\n\\] \\(w'\\) will try to enter \\([w_*,w^*]\\) (if not in this interval).\n\n\n\n補圖\n補救方式就是打包成 minibatch"
+  },
+  {
+    "objectID": "slides/SGD.html#why-sgdminibatch-works",
+    "href": "slides/SGD.html#why-sgdminibatch-works",
+    "title": "Stochastic Gradient Descent",
+    "section": "Why SGD(minibatch) works",
+    "text": "Why SGD(minibatch) works\n\nFix \\(\\theta\\in \\Theta.\\)\nThe main idea here is to pick some random vector \\(X\\) such that \\(\\mathbf E[X]=\\nabla_{\\theta} L(\\theta).\\)\nRecall that our goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nIf \\((X,Y)\\) is a random sample from \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\), then \\[\n\\begin{aligned}\n  \\mathbf{E} \\bigl[ \\nabla_\\theta \\ell\\bigl(Y,\\mathtt{Net}_\\theta(X)\\bigr)  \\bigr]\n  = \\frac{1}{n}  \\sum_{i=1}^n \\nabla_{\\theta} \\ell\\bigl( y^{(i)} , \\mathtt{Net}_{\\theta} (x^{(i)}) \\bigr)\n  = \\nabla_{\\theta} L(\\theta).\n\\end{aligned}\n\\]\nLet \\(\\bigl\\lbrace (X_k,Y_k) \\bigr\\rbrace_{k=1}^m\\) be a simple random sampling with replacement from \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)}).\\) Then \\[\n\\begin{aligned}\n  \\dfrac{1}{m}\\sum_{k=1}^m \\nabla_\\theta \\ell\\bigl(Y_k,\\mathtt{Net}_\\theta(X_k)\\bigr)\n\\end{aligned}\n\\] is an unbiased estimation of \\(\\nabla_{\\theta} L(\\theta).\\)\nMoreover, by SLLN, as \\(m\\rightarrow\\infty,\\) \\[\n\\begin{aligned}\n  \\dfrac{1}{m}\\sum_{k=1}^m \\nabla_\\theta \\ell\\bigl(Y_k,\\mathtt{Net}_\\theta(X_k)\\bigr) \\stackrel{\\text{a.s.}}{\\longrightarrow} \\nabla_{\\theta}L(\\theta).\n\\end{aligned}\n\\]\nIn practive, we use the simple random sampling without replacement for efficiency."
+  },
+  {
+    "objectID": "slides/SGD.html#sec-Regression-Linear",
+    "href": "slides/SGD.html#sec-Regression-Linear",
+    "title": "Stochastic Gradient Descent",
+    "section": "Linear Regression",
+    "text": "Linear Regression\n\nFor simplicity, we see linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = wx+b,\\) such that \\[\n\\begin{aligned}\n  f(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(\\ell\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
+  },
+  {
+    "objectID": "slides/SGD.html#sec-Regression2",
+    "href": "slides/SGD.html#sec-Regression2",
+    "title": "Stochastic Gradient Descent",
+    "section": "Regression",
+    "text": "Regression\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{\\text{in}}\\times \\mathbb R^{\\text{out}}.\\)\n\nWe first need to give a function set \\(\\lbrace f_\\theta: \\theta \\in \\Theta \\rbrace,\\) where each \\(f_\\theta\\) is a function from \\(\\mathbb R^{\\text{in}}\\) to \\(\\mathbb R^{\\text{out}}.\\)\nWe want to some \\(f_\\theta\\) such that \\[\n\\begin{aligned}\n  f_\\theta(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{\\theta\\in \\Theta} \\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f_\\theta(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell(y,\\widehat{y}) = (y-\\widehat{y})^2.\\)"
+  },
+  {
+    "objectID": "slides/SGD.html#comparison-of-gd-and-sgd",
+    "href": "slides/SGD.html#comparison-of-gd-and-sgd",
+    "title": "Stochastic Gradient Descent",
+    "section": "Comparison of GD and SGD",
+    "text": "Comparison of GD and SGD"
+  },
+  {
+    "objectID": "slides/SGD.html#what-next",
+    "href": "slides/SGD.html#what-next",
+    "title": "Stochastic Gradient Descent",
+    "section": "What next?",
+    "text": "What next?\n\nHow to calculate \\(\\nabla_{\\theta} L(\\theta)\\)?\nThe above is dependent on \\(\\mathtt{Net}_{\\theta},\\) so what kind of \\(\\mathtt{Net}_{\\theta}\\) will we use?"
+  },
+  {
+    "objectID": "slides/SGD.html#reference",
+    "href": "slides/SGD.html#reference",
+    "title": "Stochastic Gradient Descent",
+    "section": "Reference",
+    "text": "Reference\n\n\n\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\nBottou, Léon. 2010. “Large-Scale Machine Learning with Stochastic Gradient Descent.” In Proceedings of COMPSTAT’2010, 177–86. Springer.\n\n\nLiu, Dong C, and Jorge Nocedal. 1989. “On the Limited Memory BFGS Method for Large Scale Optimization.” Mathematical Programming 45 (1): 503–28."
+  },
+  {
+    "objectID": "slides/SGD.html#whats-next",
+    "href": "slides/SGD.html#whats-next",
+    "title": "Stochastic Gradient Descent",
+    "section": "What’s next?",
+    "text": "What’s next?\n\nHow to calculate \\(\\nabla_{\\theta} L(\\theta)\\)?\nThe above is dependent on \\(\\mathtt{Net}_{\\theta},\\) so what kind of \\(\\mathtt{Net}_{\\theta}\\) will we use?\nWhat is the best choice for \\(\\ell\\) for the classification?"
   }
 ]

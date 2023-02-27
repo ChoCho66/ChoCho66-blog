@@ -1,0 +1,47 @@
+
+
+## TEMP
+
+- https://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained
+
+- https://kevinbinz.com/2019/05/26/intro-gradient-descent/
+
+- Why it works
+
+- https://www.kaggle.com/code/ryanholbrook/stochastic-gradient-descent
+
+
+
+- <small>https://ithelp.ithome.com.tw/m/articles/10202720</small>
+![](https://cdn-images-1.medium.com/max/1000/1*PV-fcUsNlD9EgTIc61h-Ig.png)
+
+
+
+
+# MLP
+
+## Other Model
+
+- [Stone–Weierstrass Theorem](https://en.wikipedia.org/wiki/Stone–Weierstrass_theorem).
+
+
+
+```{mermaid}
+graph BT
+  A[Hard] -->|Text| B(Round)
+  B --> C{Decision}
+  C -->|FC+sigmoid| D[Result 1]
+  C -->|Two| E[Result 2]
+  D --> F
+  D --> G
+  E --> F
+  E --> G
+```
+
+# Test
+
+## asdasd 
+
+### ASDASDAsimply connected domain 
+
+### asdajs pidj

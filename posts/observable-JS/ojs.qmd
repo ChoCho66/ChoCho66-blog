@@ -15,10 +15,33 @@ See [https://quarto.org/docs/interactive/ojs/](https://quarto.org/docs/interacti
 
 See [https://observablehq.com/\@mauriciopoppe/function-plot](https://observablehq.com/@mauriciopoppe/function-plot).
 
+See [https://mauriciopoppe.github.io/function-plot/](https://mauriciopoppe.github.io/function-plot/).
+
 ```{ojs}
 //| echo: false
 functionPlot = require("function-plot@1.22.2/dist/function-plot")
 ```
+
+```{ojs}
+{
+  let target = DOM.element('div')
+  functionPlot({
+    target: '#butterfly-curve',
+    yAxis: {domain: [-4.428571429, 4.428571429]},
+    xAxis: {domain: [-7, 7]},
+    data: [{
+      x: 'sin(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',
+      y: 'cos(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',
+      range: [-10 * Math.PI, 10 * Math.PI],
+      fnType: 'parametric',
+      graphType: 'polyline'
+    }],
+    target
+  });
+  return target
+}
+```
+
 
 ```{ojs}
 {
@@ -60,12 +83,12 @@ joinTargets = {
     ],
     data: [
       {
-        // fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',
-        fn: 'sin(x)',
+        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',
+        // fn: 'sin(x)',
         graphType: 'polyline',
         derivative: {
-          // fn: '2 * x * x - 4 * x + 3',
-          fn: 'cos(x)',
+          fn: 'x * x - 4 * x + 3',
+          // fn: 'cos(x)',
           updateOnMouseMove: true
         }
       }

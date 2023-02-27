@@ -1,7 +1,7 @@
 ---
 title: "Stochastic Gradient Descent"
-# subtitle: Last
-author: ChoCho<br><br>
+subtitle: <br>2023-03-01
+author: ChoCho<br><br><br>
 date-format: iso
 date: last-modified
 institute: MODIFIED
@@ -26,10 +26,13 @@ format:
     # logo: cover.jpg
     slide-number: true
     sc-sb-title: true
+    # mermaid:
+      # theme: forest
+
 filters:
   - reveal-header
 # slide-level: 3
-number-sections: true
+# number-sections: true
 # filters: [revealjs_filter.lua]
 # filters:   
 #   - custom-callout.lua
@@ -41,156 +44,448 @@ number-sections: true
 
 ## MODIFIED {-}
 
-# Test
-
-## asdasd 
-
-### ASDASDAsimply connected domain 
-
-### asdajs pidj
-
 # Content
 
 - [Regression](#sec-Regression)
-
-  - [Linear Regression](#sec-LRegression-in-R)
 
 - [Stochastic Gradient Descent (SGD)](#sec-SGD)
 
 # Regression {#sec-Regression}
 
-- [Linear Regression (in $\mathbb R$)](#sec-LRinR)
+- [Linear Regression](#sec-Regression-Linear)
 
-## Linear Regression (in $\mathbb R$) {#sec-LRegression-in-R}
+- [MLE (maximum likelihood function)](#sec-MLE)
+
+## Linear Regression {#sec-Regression-Linear}
+
+- For simplicity, we see linear regression from $\mathbb R$ to $\mathbb R.$
 
 - Suppose that we have the data $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ in $\mathbb R\times \mathbb R.$
 
 - ![](images/SGD/2023-02-19-22-17-59.png)
 
-- We want to find some linear function $f:\mathbb R\longrightarrow \mathbb R,$ 
-say $f(x) = w x+b,$ s.t.
-$$
-\begin{aligned}
-  f(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
-\end{aligned}
-$$
+- We want to find some linear function $f:\mathbb R\longrightarrow \mathbb R,$
+  say $f(x) = wx+b,$ such that
+  $$
+  \begin{aligned}
+    f(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
+  \end{aligned}
+  $$
 
-- In math, our goal can be
-$$
-\begin{aligned}
-  \operatorname{argmin}_{w,b\in \mathbb R}\sum_{i=1}^{n} d\bigl( f(x^{(i)}) , y^{(i)} \bigr)
-\end{aligned},
-$$
-where $d:\mathbb R^2 \longrightarrow [0,\infty)$ is what we need to determine.
+- In math, our goal is to find
+  $$
+  \begin{aligned}
+    \operatorname{argmin}_{w,b\in \mathbb R}\sum_{i=1}^{n} \ell \bigl( y^{(i)} , f(x^{(i)}) \bigr),
+  \end{aligned}
+  $$
+  where $\ell:\mathbb R^2 \longrightarrow [0,\infty)$ is what we need to determine.
 
-- What is the best choice for $d$ (in some sense)?
+- What is the best choice for $\ell$ (in some sense)?
 
   - We may use the MLE (maximum likelihood function).
 
 ## MLE (maximum likelihood function)
 
+EX 2. 正常骰子 跟 12 面骰
+
+TODO
+
+## MLE (maximum likelihood function) {#sec-MLE}
+
 - We regard $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ as realizations of random variables $X,Y,$ 
-and we assume that $Y=wX+b+\mathtt{noise},$
+and we assume that
+$$
+\begin{aligned}
+  Y=wX+b+\mathtt{noise},
+\end{aligned}
+$$
 where 
     
-  - $w,b$ are two parameters in $\mathbb R,$
+  - $w,b$ are two parameters in $\mathbb R,$ and
 
   - $\mathtt{noise}\sim N(0,\sigma^2)$ for some fixed $\sigma>0.$
 
-- In math:
+- In math, we give the joint density of $(X,Y)$ by the following:
 
-  - Assume that $X\sim \operatorname{unif}([\min_i x^{(i)}, \max_i x^{(i)}]).$
-
-  - Given the distribution of $Y$ by given $\mathbb E[Y\vert X].$
+  - Assume that $X\sim \operatorname{unif}\bigl(\bigl[\min_i x^{(i)}, \max_i x^{(i)}\bigr]\bigr).$
+    - That is, the density of $X$ is
+      $$
+      \begin{aligned}
+        f_X(x) = \frac{1}{\max_i x^{(i)}- \min_i x^{(i)}} x \cdot 1_{[\min_i x^{(i)}, \max_i x^{(i)}]}(x).
+      \end{aligned}
+      $$
+    
 
   - Conditioning on $X=x,$
-    we give the density of $\mathbb E[Y\vert X]$ by
+    we give the density of $\mathbf E[Y\vert X]$ by
     $$
     \begin{aligned}
       Y-(wx+b) \sim N(0,\sigma^2).
     \end{aligned}
     $$
-    That is, the density of $Y,$ conditioning on $X=x,$ is
+    
+      - That is, the density of $Y,$ conditioning on $X=x,$ is
+      $$
+      \begin{aligned}
+        f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1}{2\sigma^2} \bigl( y-(wx+b) \bigr)^2 \Bigr\rbrace.
+      \end{aligned}
+      $$
+
+  - The joint density of $(X,Y)$ is
     $$
     \begin{aligned}
-      \frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1}{2\sigma^2} \bigl( y-(wx+b) \bigr)^2 \Bigr\rbrace.
+      f_{X,Y}(x,y) = f_{Y\vert X}(y\vert x) \cdot f_X(x).
     \end{aligned}
     $$
 
-- Let $Z_i$ be iid and $Z_i \stackrel{d}{=} \mathbb E[Y\vert X].$
+- Let $(X_i,Y_i)$ be i.i.d. with $(X_i,Y_i)\stackrel{d}{=} (X,Y)$ and $Z_i = \mathbf E[Y_i\vert X_i].$
 
-- The likelihood function of $Z_i,$ $i=1\sim n,$ for the realizations $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$
-is that
-$$
-\begin{aligned}
-  \mathtt{lik}(w,b)\Big\vert_{(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})}
-  = \prod_{i=1}^n \frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1}{2\sigma^2} \bigl( y^{(i)}-(wx^{(i)}+b) \bigr)^2 \Bigr\rbrace
-\end{aligned}
-$$ {#eq-MLELR}
+- The likelihood function of $\bigl\lbrace Z_i:i=1\sim n \bigr\rbrace$
+  for the realizations $(X_i,Y_i)=(x^{(i)},y^{(i)})$ is
+  $$
+  \begin{aligned}
+    \mathtt{lik}(w,b)\Big\vert_{(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})}
+    = \prod_{i=1}^n \frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1}{2\sigma^2} \bigl( y^{(i)}-(wx^{(i)}+b) \bigr)^2 \Bigr\rbrace.
+  \end{aligned}
+  $$
 
 - To maximize $\mathtt{lik}(w,b)\Big\vert_{(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})}$ $\iff$ To minimize $\sum_{i=1}^n \bigl( y^{(i)}-(wx^{(i)}+b) \bigr)^2.$
 
-- For the linear regression, the best choice of $d$ (in the sense of stastics) is $d(x,y)=(x-y)^2.$
+  - How to minimize it?
 
-- How to find a local min?
+- For the regression, the best choice of $\ell$ (in the sense of stastics) is $\ell(y,\widehat{y})=(y-\widehat{y})^2.$
 
-## How to find a local min?
+::: {.notes}
+- 此頁的結論與 $X$ 的分布沒關係.
+:::
 
-- We choose $d(x,y)=(x-y)^2.$
+## Regression {#sec-Regression2}
 
-- ![](images/SGD/gradient_descent_parameter_a.gif)
+- Suppose that we have the data $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ in $\mathbb R^{\text{in}}\times \mathbb R^{\text{out}}.$
 
-- ![](images/SGD/dualspace_explore.gif)
+- ![](images/SGD/2023-02-19-22-17-59.png)
 
-## GD
+- We first need to give a function set $\lbrace f_\theta: \theta \in \Theta \rbrace,$
+  where each $f_\theta$ is a function from $\mathbb R^{\text{in}}$ to $\mathbb R^{\text{out}}.$
 
-- https://baptiste-monpezat.github.io/blog/stochastic-gradient-descent-for-machine-learning-clearly-explained
+- We want to some $f_\theta$ such that
+  $$
+  \begin{aligned}
+    f_\theta(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
+  \end{aligned}
+  $$
 
-- https://kevinbinz.com/2019/05/26/intro-gradient-descent/
+- In math, our goal is to find
+  $$
+  \begin{aligned}
+    \operatorname{argmin}_{\theta\in \Theta} \sum_{i=1}^{n} \ell \bigl( y^{(i)} , f_\theta(x^{(i)}) \bigr),
+  \end{aligned}
+  $$
+  where $\ell(y,\widehat{y}) = (y-\widehat{y})^2.$
 
+## Deep learning (DL) and statistic
 
+| | Deep learning | Statistic
+------- | ------- | -------
+$(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ | Data | Sample
+| | Build a model $\texttt{Net}_{\theta}$ (denote the estimators $\mathtt{Net}_{\theta}(x)$ by $\widehat{y}$) | Regard $x^{(i)},y^{(i)}$ as the realizations of random elements $X,Y$
+$\theta$ | parameters of model | parameters of density or mass
+optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where $\widehat{y}^{(i)}=\mathtt{Net}_{\theta}(x^{(i)})$ | Max. the likelihood
 
+<hr style='height:2px;border-width:0;color:gray;background-color:gray'>
 
-# Stochastic Gradient Descent (SGD) {#sec-SGD}
+- $\ell$ is called the **loss function**.
 
-- Why it works
+- How to minimize $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)})?$
 
-- https://www.kaggle.com/code/ryanholbrook/stochastic-gradient-descent
+  - ![](images/SGD/dualspace_explore.gif){width=40%}
+    ![](images/SGD/gradient_descent_parameter_a.gif){width=40%}
 
-## SGD
+  - Observing from the above graph, 從斜率的負方向走. This is **Gradient Descent**.
 
-- Rewrite @eq-sumf0218-1 to
-$$
-\begin{aligned}
-  \sum_{i=1}^n \bigl( a^{(i)}\theta - b^{(i)}  \bigr)^2
-\end{aligned}
-$$ {#eq-sumf0218-2}
-
-- We have data $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ in $\mathbb R^{n_{\text{in}}}\times \mathbb R^{n_{\text{out}}}.$
-
-- We want to find some linear function $f:\mathbb R^{n_{\text{in}}} \longrightarrow \mathbb R^{n_{\text{out}}}$ s.t.
-$$
-\begin{aligned}
-  f(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
-\end{aligned}
-$$
-
-- In mathematicas, we want
-$$
-\begin{aligned}
-  TODO
-\end{aligned}
-$$
-
-
-## Idea
-
-- Pick some r.v. $X$ s.t.
-$\mathbb EX=\nabla L(\theta).$
+::: {.notes}
+- 後面會解釋為什麼叫 $\mathtt{Net}.$
+- 這裡的變數是 $\theta.$ 注意有 data space and parameter space.
+:::
 
 
-# MLP
+## GD (Gradient Descent)
 
-## Other Model
+:::: {.columns}
+::: {.column width=60%}
 
-- [Stone–Weierstrass Theorem](https://en.wikipedia.org/wiki/Stone–Weierstrass_theorem).
+- Our goal is to find a local min. of
+  $$
+  \begin{aligned}
+    L(\theta) = \frac{1}{n}\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}).
+  \end{aligned}
+  $$
+  
+- Given any initial value $\theta_0\in \mathbb \Theta.$
+
+- Given any $\eta\in (0,\infty)$ small enough. 
+  
+  - $\eta$: learning rate.
+  
+    - Momentum, Adam, $\cdots.$
+
+- We set $\lbrace \theta_i \rbrace_{i\in \mathbb N}$ by
+  $$
+  \begin{aligned}
+  \theta_{i} \leftarrow \theta_{i-1} - \eta \cdot \nabla L(\theta_{i-1}),\quad i\in \mathbb N. 
+  \end{aligned}
+  $$
+
+- Then $\theta_i,i\in \mathbb N$ may converges to a local min. of $L.$
+
+:::
+
+::: {.column width=40%}
+
+- ![](https://thumbs.gfycat.com/AngryInconsequentialDiplodocus-size_restricted.gif)
+
+:::
+::::
+
+<hr style='height:2px;border-width:0;color:gray;background-color:gray'>
+
+
+- In practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful [@liu1989limited].
+
+  - Solution: Stochastic Gradient Descent (SGD).
+
+<!-- SGD (single) and Minibatch SGD. -->
+
+## Why GD works?
+
+- Let $f:\mathbb R^n\longrightarrow \mathbb R$ be any differentiable function.
+
+- Fix $\theta\in \mathbb \Theta.$
+
+- We assume that $\nabla f(\theta) \neq \mathbf{0}.$
+
+- Our goal is to find some $h\in \mathbb R^n$ such that $f(\theta+h) < f(\theta).$
+
+- By Taylor's theorem,
+  $$
+  \begin{aligned}
+    f(\theta+h) \approx f(\theta) +  \begin{bmatrix}  & \nabla f(\theta) &  \\\end{bmatrix} \cdot \begin{bmatrix}  \\ h \\  \\\end{bmatrix}
+  \end{aligned}
+  $$
+  for $h\in \mathbb R^n$ with $\left\lVert h \right\rVert$ small enough.
+
+- So for $\left\lVert h \right\rVert$ small enough, $f(\theta+h)<f(\theta) \iff \nabla f(\theta) \cdot h < 0.$
+
+- Given $\eta_0\in (0,\infty)$ small. 
+  By Cauchy's inequality,
+  $$
+  \begin{aligned}
+    \operatorname{argmin}_{h\in \mathbb R^n,\left\lVert h \right\rVert = \eta_0}   
+    \nabla f(\theta) \cdot h 
+    = -\eta_0 \cdot \frac{\nabla f(\theta)}{\left\lVert \nabla f(\theta) \right\rVert}.
+  \end{aligned}
+  $$
+  
+- Hence, we choose 
+  $$
+  \begin{aligned}
+    h = -\eta \cdot \nabla f(\theta)
+  \end{aligned}
+  $$
+  for some $\eta\in (0,\infty)$ small.
+
+
+# Stochastic Gradient Descent (SGD)
+
+
+
+- [SGD](#sec-SGD2)
+
+  - [Stochastic Gradient Descent](#sec-SGD)
+
+  - [Minibatch Stochastic Gradient Descent](#sec-minibatchSGD)
+
+
+## SGD(single) {#sec-SGDsingle}
+
+- Our goal is to find a local min. of
+  $$
+  \begin{aligned}
+    L(\theta) = \frac{1}{n}\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}).
+  \end{aligned}
+  $$
+
+- Let $\ell_i(\theta) = \ell(y^{(i)},\widehat{y}^{(i)}).$
+
+- Given any initial value $\theta\in \mathbb \Theta$ and any $\eta\in (0,\infty)$ small enough.
+
+- Let $P$ be a permutation of $\lbrace 1,2,\cdots, n \rbrace.$
+  
+  Then for each $j=1,\cdots, n,$
+  we update $\theta$ by
+  $$
+  \begin{aligned}
+  \theta \leftarrow \theta - \eta \cdot \nabla \ell_{P(j)}(\theta).
+  \end{aligned}
+  $$
+
+- After repeating the above step several times,
+  the final $\theta$ may be close to a local min. of $L.$
+
+<hr style='height:2px;border-width:0;color:gray;background-color:gray'>
+  
+- The SGD(single) can be an effective strategy, 
+  even for large datasets [@bottou2010large].
+
+::: {.notes}
+- 可想像圖會在那裡抖
+:::
+
+## Why SGD(single) works 
+
+- We see the case of linear regression from $\mathbb R$ to $\mathbb R.$
+
+- For simplicity, 
+  we assume that $b$ is a fixed constant, not a parameter.
+
+- Now our parameters are only $w.$
+
+- We rewrite
+  $$
+  \begin{aligned}
+    L(w)=\sum_{i=1}^n \bigl( y^{(i)} - (w x^{(i)} + b) \bigr)^2
+  \end{aligned}
+  $$
+  to
+  $$
+  \begin{aligned}
+    L(w) = \sum_{i=1}^n \bigl( a_i w - b_i  \bigr)^2 
+    \stackrel{\text{denote}}{=}
+    \sum_{i=1}^n \ell_i(w).
+  \end{aligned}
+  $$
+
+- Let $w_i = b_i/a_i$ and
+  $$
+  \begin{aligned}
+    w_* = \min_i w_i , \quad w^* = \max_i w_i.
+  \end{aligned}
+  $$
+
+- Note that
+  $$
+  \begin{aligned}
+    w_*  
+    \leq \operatorname{argmin}_{w\in \mathbb R} L(w) 
+    = \frac{\sum_{i}a_i b_i}{\sum_i a_i^2} 
+    \leq w^*.
+  \end{aligned}
+  $$
+
+<!-- 
+- Our goal is to update $w$ such that it is in $[w_*,w^*].$ 
+-->
+
+- For each $i,$ if we update $w$ by
+  $$
+  \begin{aligned}
+    w' = w - \eta \cdot \nabla_w  \ell_i (w),
+  \end{aligned}
+  $$
+  $w'$ will try to enter $[w_*,w^*]$ (if not in this interval).
+
+::: {.notes}
+- 補圖
+- 補救方式就是打包成 minibatch
+:::
+
+## Minibatch Stochastic Gradient Descent {#sec-minibatchSGD}
+
+- Given any initial value $\theta\in \mathbb \Theta$ and any $\eta\in (0,\infty)$ small enough.
+
+- Given a number $n_B,$ called the batch size.
+
+- Split $\lbrace 1,2,\cdots,n \rbrace$ into
+  $$
+  \begin{aligned}
+    \mathcal{B}_1 = &\lbrace 1,2,\cdots, n_B \rbrace,  \cr 
+    \mathcal{B}_2 = &\lbrace n_B+ 1, n_B+ 2,\cdots, 2 n_B \rbrace,  \cr 
+    &\vdots \cr 
+    &  \lbrace \cdots, n \rbrace.
+  \end{aligned}
+  $$
+
+- Let $P$ be a permutation of $\lbrace 1,2,\cdots,n \rbrace.$
+
+  - For $k=1,2,\cdots,$ 
+    we update $\theta$ by
+    $$
+    \begin{aligned}
+      \theta \leftarrow \theta -  \eta \cdot \frac{1}{n_B} \sum_{j\in \mathcal{B}_k} \nabla\ell_{P(j)}(\theta) .
+    \end{aligned}
+    $$
+    Running all $t$ at once is called an epoch.
+
+- ![](images/SGD/rFI1tIk.gif)
+
+
+## Why SGD(minibatch) works
+
+- Fix $\theta\in \Theta.$
+
+- The main idea here is to pick some random vector $X$ such that $\mathbf E[X]=\nabla_{\theta} L(\theta).$
+
+- Recall that our goal is to find a local min. of
+  $$
+  \begin{aligned}
+    L(\theta) = \frac{1}{n}\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}).
+  \end{aligned}
+  $$
+
+- If $(X,Y)$ is a random sample from $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$, 
+  then
+  $$
+  \begin{aligned}
+    \mathbf{E} \bigl[ \nabla_\theta \ell\bigl(Y,\mathtt{Net}_\theta(X)\bigr)  \bigr]
+    = \frac{1}{n}  \sum_{i=1}^n \nabla_{\theta} \ell\bigl( y^{(i)} , \mathtt{Net}_{\theta} (x^{(i)}) \bigr) 
+    = \nabla_{\theta} L(\theta).
+  \end{aligned}
+  $$
+  
+- Let $\bigl\lbrace (X_k,Y_k) \bigr\rbrace_{k=1}^m$ be a simple random sampling with replacement from $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)}).$
+  Then 
+  $$
+  \begin{aligned}
+    \dfrac{1}{m}\sum_{k=1}^m \nabla_\theta \ell\bigl(Y_k,\mathtt{Net}_\theta(X_k)\bigr)
+  \end{aligned}
+  $$
+  is an unbiased estimation of $\nabla_{\theta} L(\theta).$
+
+  Moreover, by SLLN, as $m\rightarrow\infty,$
+  $$
+  \begin{aligned}
+    \dfrac{1}{m}\sum_{k=1}^m \nabla_\theta \ell\bigl(Y_k,\mathtt{Net}_\theta(X_k)\bigr) \stackrel{\text{a.s.}}{\longrightarrow} \nabla_{\theta}L(\theta).
+  \end{aligned}
+  $$
+  
+- In practive, we use the simple random sampling without replacement for efficiency.
+
+## Comparison of GD and SGD
+
+<!-- - <small>https://ithelp.ithome.com.tw/m/articles/10202720</small> -->
+![](images/SGD/GDSGD.png){width=500}
+
+<!-- 
+- We consider $(\Omega,\mathbf{P})=\Bigl( \bigl\lbrace (x^{(i)},y^{(i)}) \bigr\rbrace_{i=1\sim n} , \mathtt{unif} \Bigr).$
+-->
+
+## What's next?
+
+- How to calculate $\nabla_{\theta} L(\theta)$?
+
+- The above is dependent on $\mathtt{Net}_{\theta},$
+  so what kind of $\mathtt{Net}_{\theta}$ will we use?
+  
+- What is the best choice for $\ell$ for the classification?
+
+# Reference
