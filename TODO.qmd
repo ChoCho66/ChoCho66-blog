@@ -13,13 +13,15 @@ citation-location: margin
 
 ## TODO
 
-1. https://cpok.tw/36122 租屋申請
+- https://cpok.tw/36122 租屋申請
 
 
 
 ## RNN
 
-1. 菜EE機器人
+- 菜EE機器人
+ 
 
-1. 
+## markdown
 
+- [https://support.typora.io/Draw-Diagrams-With-Markdown/](https://support.typora.io/Draw-Diagrams-With-Markdown/)

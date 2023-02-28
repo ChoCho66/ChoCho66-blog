@@ -74,7 +74,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nFeb 27, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nFeb 28, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -599,21 +599,21 @@
     "href": "slides/SGD.html#sec-minibatchSGD",
     "title": "Stochastic Gradient Descent",
     "section": "Minibatch Stochastic Gradient Descent",
-    "text": "Minibatch Stochastic Gradient Descent\n\nGiven any initial value \\(\\theta\\in \\mathbb \\Theta\\) and any \\(\\eta\\in (0,\\infty)\\) small enough.\nGiven a number \\(n_B,\\) called the batch size.\nSplit \\(\\lbrace 1,2,\\cdots,n \\rbrace\\) into \\[\n\\begin{aligned}\n  \\mathcal{B}_1 = &\\lbrace 1,2,\\cdots, n_B \\rbrace,  \\cr\n  \\mathcal{B}_2 = &\\lbrace n_B+ 1, n_B+ 2,\\cdots, 2 n_B \\rbrace,  \\cr\n  &\\vdots \\cr\n  &  \\lbrace \\cdots, n \\rbrace.\n\\end{aligned}\n\\]\nLet \\(P\\) be a permutation of \\(\\lbrace 1,2,\\cdots,n \\rbrace.\\)\n\nFor \\(k=1,2,\\cdots,\\) we update \\(\\theta\\) by \\[\n\\begin{aligned}\n  \\theta \\leftarrow \\theta -  \\eta \\cdot \\frac{1}{n_B} \\sum_{j\\in \\mathcal{B}_k} \\nabla\\ell_{P(j)}(\\theta) .\n\\end{aligned}\n\\] Running all \\(t\\) at once is called an epoch."
+    "text": "Minibatch Stochastic Gradient Descent\n\nGiven any initial value \\(\\theta\\in \\mathbb \\Theta\\) and any \\(\\eta\\in (0,\\infty)\\) small enough.\nGiven a number \\(n_B,\\) called the batch size.\nSplit \\(\\lbrace 1,2,\\cdots,n \\rbrace\\) into \\[\n\\begin{aligned}\n  \\mathcal{B}_1 = &\\lbrace 1,2,\\cdots, n_B \\rbrace,  \\cr\n  \\mathcal{B}_2 = &\\lbrace n_B+ 1, n_B+ 2,\\cdots, 2 n_B \\rbrace,  \\cr\n  &\\vdots \\cr\n  &  \\lbrace \\cdots, n \\rbrace.\n\\end{aligned}\n\\]\nLet \\(P\\) be a permutation of \\(\\lbrace 1,2,\\cdots,n \\rbrace.\\)\n\nFor \\(k=1,2,\\cdots,\\) we update \\(\\theta\\) by \\[\n\\begin{aligned}\n  \\theta \\leftarrow \\theta -  \\eta \\cdot \\frac{1}{n_B} \\sum_{j\\in \\mathcal{B}_k} \\nabla\\ell_{P(j)}(\\theta) .\n\\end{aligned}\n\\] We call an epoch if we run over all \\(k.\\)"
   },
   {
     "objectID": "slides/SGD.html#deep-learning-dl-and-statistic",
     "href": "slides/SGD.html#deep-learning-dl-and-statistic",
     "title": "Stochastic Gradient Descent",
     "section": "Deep learning (DL) and statistic",
-    "text": "Deep learning (DL) and statistic\n\n\n\n\n\n\n\n\n\nDeep learning\nStatistic\n\n\n\n\n\\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\)\nData\nSample\n\n\n\nBuild a model \\(\\texttt{Net}_{\\theta}\\) (denote the estimators \\(\\mathtt{Net}_{\\theta}(x)\\) by \\(\\widehat{y}\\))\nRegard \\(x^{(i)},y^{(i)}\\) as the realizations of random elements \\(X,Y\\)\n\n\n\\(\\theta\\)\nparameters of model\nparameters of density or mass\n\n\noptimize parameters\nMin. \\(\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}),\\) where \\(\\widehat{y}^{(i)}=\\mathtt{Net}_{\\theta}(x^{(i)})\\)\nMax. the likelihood\n\n\n\n\n\n\\(\\ell\\) is called the loss function.\nHow to minimize \\(\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)})?\\)\n\n \nObserving from the above graph, 從斜率的負方向走. This is Gradient Descent.\n\n\n\n\n後面會解釋為什麼叫 \\(\\mathtt{Net}.\\)\n這裡的變數是 \\(\\theta.\\) 注意有 data space and parameter space."
+    "text": "Deep learning (DL) and statistic\n\n\n\n\n\n\n\n\n\nDeep learning\nStatistic\n\n\n\n\n\\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\)\nData\nSample\n\n\n\nBuild a model \\(\\texttt{Net}_{\\theta}\\) (denote the estimators \\(\\mathtt{Net}_{\\theta}(x)\\) by \\(\\widehat{y}\\))\nRegard \\(x^{(i)},y^{(i)}\\) as the realizations of random elements \\(X,Y\\)\n\n\n\\(\\theta\\)\nparameters of model\nparameters of density or mass\n\n\noptimize parameters\nMin. \\(\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}),\\) where \\(\\widehat{y}^{(i)}=\\mathtt{Net}_{\\theta}(x^{(i)})\\)\nMax. the likelihood\n\n\n\n\n\n\\(\\ell\\) is called the loss function.\nHow to minimize \\(\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)})?\\)\n\n \n\n\n\n\n這裡的變數是 \\(\\theta.\\) 注意有 data space and parameter space.\nObserving from the above graph, 從斜率的負方向走. This is Gradient Descent.\n之後會解釋為什麼叫 \\(\\mathtt{Net}.\\)"
   },
   {
     "objectID": "slides/SGD.html#gd-gradient-descent",
     "href": "slides/SGD.html#gd-gradient-descent",
     "title": "Stochastic Gradient Descent",
     "section": "GD (Gradient Descent)",
-    "text": "GD (Gradient Descent)\n\n\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nGiven any initial value \\(\\theta_0\\in \\mathbb \\Theta.\\)\nGiven any \\(\\eta\\in (0,\\infty)\\) small enough.\n\n\\(\\eta\\): learning rate.\n\nMomentum, Adam, \\(\\cdots.\\)\n\n\nWe set \\(\\lbrace \\theta_i \\rbrace_{i\\in \\mathbb N}\\) by \\[\n\\begin{aligned}\n\\theta_{i} \\leftarrow \\theta_{i-1} - \\eta \\cdot \\nabla L(\\theta_{i-1}),\\quad i\\in \\mathbb N.\n\\end{aligned}\n\\]\nThen \\(\\theta_i,i\\in \\mathbb N\\) may converges to a local min. of \\(L.\\)\n\n\n\n\n\n\n\n\n\nIn practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful (Liu and Nocedal 1989).\n\nSolution: Stochastic Gradient Descent (SGD)."
+    "text": "GD (Gradient Descent)\n\n\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nGiven any initial value \\(\\theta_0\\in \\mathbb \\Theta.\\)\nGiven any \\(\\eta\\in (0,\\infty)\\) small enough.\n\n\\(\\eta\\): learning rate.\n\nMomentum, Adam, \\(\\cdots.\\)\n\n\nWe set \\(\\lbrace \\theta_i \\rbrace_{i\\in \\mathbb N}\\) by \\[\n\\begin{aligned}\n\\theta_{i} \\leftarrow \\theta_{i-1} - \\eta \\cdot \\nabla L(\\theta_{i-1}),\\quad i\\in \\mathbb N.\n\\end{aligned}\n\\]\nThen \\(\\theta_i,i\\in \\mathbb N\\) may converges to a local min. of \\(L.\\)\n\n\n\n\n\n\n\n\n\nIn practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful (Liu and Nocedal 1989).\n\nSolution: Stochastic Gradient Descent (SGD).\n\n\n\n\n取 \\(1/n\\) 是之後有個方便地方."
   },
   {
     "objectID": "slides/SGD.html#why",
@@ -648,7 +648,7 @@
     "href": "slides/SGD.html#why-sgdsingle-works",
     "title": "Stochastic Gradient Descent",
     "section": "Why SGD(single) works",
-    "text": "Why SGD(single) works\n\nWe see the case of linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nFor simplicity, we assume that \\(b\\) is a fixed constant, not a parameter.\nNow our parameters are only \\(w.\\)\nWe rewrite \\[\n\\begin{aligned}\n  L(w)=\\sum_{i=1}^n \\bigl( y^{(i)} - (w x^{(i)} + b) \\bigr)^2\n\\end{aligned}\n\\] to \\[\n\\begin{aligned}\n  L(w) = \\sum_{i=1}^n \\bigl( a_i w - b_i  \\bigr)^2\n  \\stackrel{\\text{denote}}{=}\n  \\sum_{i=1}^n \\ell_i(w).\n\\end{aligned}\n\\]\nLet \\(w_i = b_i/a_i\\) and \\[\n\\begin{aligned}\n  w_* = \\min_i w_i , \\quad w^* = \\max_i w_i.\n\\end{aligned}\n\\]\nNote that \\[\n\\begin{aligned}\n  w_*  \n  \\leq \\operatorname{argmin}_{w\\in \\mathbb R} L(w)\n  = \\frac{\\sum_{i}a_i b_i}{\\sum_i a_i^2}\n  \\leq w^*.\n\\end{aligned}\n\\]\n\n\n\nFor each \\(i,\\) if we update \\(w\\) by \\[\n\\begin{aligned}\n  w' = w - \\eta \\cdot \\nabla_w  \\ell_i (w),\n\\end{aligned}\n\\] \\(w'\\) will try to enter \\([w_*,w^*]\\) (if not in this interval).\n\n\n\n補圖\n補救方式就是打包成 minibatch"
+    "text": "Why SGD(single) works\n\nWe see the case of linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nFor simplicity, we assume that \\(b\\) is a fixed constant, not a parameter.\nNow our parameters are only \\(w.\\)\nWe rewrite \\[\n\\begin{aligned}\n  L(w)=\\sum_{i=1}^n \\bigl( y^{(i)} - (w x^{(i)} + b) \\bigr)^2\n\\end{aligned}\n\\] to \\[\n\\begin{aligned}\n  L(w) = \\sum_{i=1}^n \\bigl( a_i w - b_i  \\bigr)^2\n  \\stackrel{\\text{denote}}{=}\n  \\sum_{i=1}^n \\ell_i(w).\n\\end{aligned}\n\\]\nLet \\(w_i = b_i/a_i\\) and \\[\n\\begin{aligned}\n  w_* = \\min_i w_i , \\quad w^* = \\max_i w_i.\n\\end{aligned}\n\\]\nNote that \\[\n\\begin{aligned}\n  w_*  \n  \\leq \\operatorname{argmin}_{w\\in \\mathbb R} L(w)\n  = \\frac{\\sum_{i}a_i b_i}{\\sum_i a_i^2}\n  \\leq w^*.\n\\end{aligned}\n\\]\n\n\n\nFor each \\(i,\\) if we update \\(w\\) by \\[\n\\begin{aligned}\n  w' = w - \\eta \\cdot \\nabla_w  \\ell_i (w),\n\\end{aligned}\n\\] then \\(w'\\) will try to enter \\([w_*,w^*]\\) if \\(w'\\) not in this interval.\n\n\n\n補圖\n補救方式就是打包成 minibatch"
   },
   {
     "objectID": "slides/SGD.html#why-sgdminibatch-works",
@@ -669,7 +669,7 @@
     "href": "slides/SGD.html#sec-Regression2",
     "title": "Stochastic Gradient Descent",
     "section": "Regression",
-    "text": "Regression\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{\\text{in}}\\times \\mathbb R^{\\text{out}}.\\)\n\nWe first need to give a function set \\(\\lbrace f_\\theta: \\theta \\in \\Theta \\rbrace,\\) where each \\(f_\\theta\\) is a function from \\(\\mathbb R^{\\text{in}}\\) to \\(\\mathbb R^{\\text{out}}.\\)\nWe want to some \\(f_\\theta\\) such that \\[\n\\begin{aligned}\n  f_\\theta(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{\\theta\\in \\Theta} \\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f_\\theta(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell(y,\\widehat{y}) = (y-\\widehat{y})^2.\\)"
+    "text": "Regression\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{\\text{in}}\\times \\mathbb R^{\\text{out}}.\\)\n\nWe first need to give a function set \\(\\lbrace f_\\theta: \\theta \\in \\Theta \\rbrace,\\) where each \\(f_\\theta\\) is a function from \\(\\mathbb R^{\\text{in}}\\) to \\(\\mathbb R^{\\text{out}}.\\)\nWe want to find some \\(\\theta\\in \\Theta\\) such that \\[\n\\begin{aligned}\n  f_\\theta(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{\\theta\\in \\Theta} \\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f_\\theta(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell(y,\\widehat{y}) = (y-\\widehat{y})^2.\\)"
   },
   {
     "objectID": "slides/SGD.html#comparison-of-gd-and-sgd",
@@ -697,6 +697,20 @@
     "href": "slides/SGD.html#whats-next",
     "title": "Stochastic Gradient Descent",
     "section": "What’s next?",
-    "text": "What’s next?\n\nHow to calculate \\(\\nabla_{\\theta} L(\\theta)\\)?\nThe above is dependent on \\(\\mathtt{Net}_{\\theta},\\) so what kind of \\(\\mathtt{Net}_{\\theta}\\) will we use?\nWhat is the best choice for \\(\\ell\\) for the classification?"
+    "text": "What’s next?\n\nWhat kind of \\(\\mathtt{Net}_{\\theta}\\) can we choose?\nHow to calculate \\(\\nabla_{\\theta} L(\\theta)\\)?\nThe above is dependent on \\(\\mathtt{Net}_{\\theta},\\) so what kind of \\(\\mathtt{Net}_{\\theta}\\) will we use?\nWhat is the best choice for \\(\\ell\\) for the classification?"
+  },
+  {
+    "objectID": "temp/test.html",
+    "href": "temp/test.html",
+    "title": "Test",
+    "section": "",
+    "text": "Alog\n\n\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n\n\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
+  },
+  {
+    "objectID": "temp/test.html#alog",
+    "href": "temp/test.html#alog",
+    "title": "Test",
+    "section": "Alog",
+    "text": "Alog\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n:::\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
   }
 ]

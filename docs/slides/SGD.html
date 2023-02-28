@@ -15,7 +15,7 @@
   <meta name="generator" content="quarto-1.3.159">
 
   <meta name="author" content="ChoCho   ">
-  <meta name="dcterms.date" content="2023-02-27">
+  <meta name="dcterms.date" content="2023-02-28">
   <title>ChoCho66 - Stochastic Gradient Descent</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -366,7 +366,7 @@ ChoCho<br><br><br>
     </div>
 </div>
 
-  <p class="date">2023-02-27</p>
+  <p class="date">2023-02-28</p>
 </section>
 <section id="modified" class="slide level2 unnumbered">
 <h2>MODIFIED</h2>
@@ -489,7 +489,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <li><p>Suppose that we have the data <span class="math inline">\((x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})\)</span> in <span class="math inline">\(\mathbb R^{\text{in}}\times \mathbb R^{\text{out}}.\)</span></p></li>
 <li><p><img data-src="images/SGD/2023-02-19-22-17-59.png"></p></li>
 <li><p>We first need to give a function set <span class="math inline">\(\lbrace f_\theta: \theta \in \Theta \rbrace,\)</span> where each <span class="math inline">\(f_\theta\)</span> is a function from <span class="math inline">\(\mathbb R^{\text{in}}\)</span> to <span class="math inline">\(\mathbb R^{\text{out}}.\)</span></p></li>
-<li><p>We want to some <span class="math inline">\(f_\theta\)</span> such that <span class="math display">\[
+<li><p>We want to find some <span class="math inline">\(\theta\in \Theta\)</span> such that <span class="math display">\[
 \begin{aligned}
   f_\theta(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
 \end{aligned}
@@ -544,14 +544,14 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <li><p><span class="math inline">\(\ell\)</span> is called the <strong>loss function</strong>.</p></li>
 <li><p>How to minimize <span class="math inline">\(\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)})?\)</span></p>
 <ul>
-<li><p><img data-src="images/SGD/dualspace_explore.gif" style="width:40.0%"> <img data-src="images/SGD/gradient_descent_parameter_a.gif" style="width:40.0%"></p></li>
-<li><p>Observing from the above graph, 從斜率的負方向走. This is <strong>Gradient Descent</strong>.</p></li>
+<li><img data-src="images/SGD/dualspace_explore.gif" style="width:40.0%"> <img data-src="images/SGD/gradient_descent_parameter_a.gif" style="width:40.0%"></li>
 </ul></li>
 </ul>
 <aside class="notes">
 <ul>
-<li>後面會解釋為什麼叫 <span class="math inline">\(\mathtt{Net}.\)</span></li>
 <li>這裡的變數是 <span class="math inline">\(\theta.\)</span> 注意有 data space and parameter space.</li>
+<li>Observing from the above graph, 從斜率的負方向走. This is <strong>Gradient Descent</strong>.</li>
+<li>之後會解釋為什麼叫 <span class="math inline">\(\mathtt{Net}.\)</span></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -603,6 +603,21 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <li>Solution: Stochastic Gradient Descent (SGD).</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<ul>
+<li>取 <span class="math inline">\(1/n\)</span> 是之後有個方便地方.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- SGD (single) and Minibatch SGD. -->
 </section>
 <section id="why-gd-works" class="slide level2">
@@ -720,7 +735,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 \begin{aligned}
   w' = w - \eta \cdot \nabla_w  \ell_i (w),
 \end{aligned}
-\]</span> <span class="math inline">\(w'\)</span> will try to enter <span class="math inline">\([w_*,w^*]\)</span> (if not in this interval).</li>
+\]</span> then <span class="math inline">\(w'\)</span> will try to enter <span class="math inline">\([w_*,w^*]\)</span> if <span class="math inline">\(w'\)</span> not in this interval.</li>
 </ul>
 <aside class="notes">
 <ul>
@@ -758,7 +773,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 \begin{aligned}
   \theta \leftarrow \theta -  \eta \cdot \frac{1}{n_B} \sum_{j\in \mathcal{B}_k} \nabla\ell_{P(j)}(\theta) .
 \end{aligned}
-\]</span> Running all <span class="math inline">\(t\)</span> at once is called an epoch.</li>
+\]</span> We call an epoch if we run over all <span class="math inline">\(k.\)</span></li>
 </ul></li>
 <li><p><img data-src="images/SGD/rFI1tIk.gif"></p></li>
 </ul>
@@ -800,15 +815,17 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <!-- 
 - We consider $(\Omega,\mathbf{P})=\Bigl( \bigl\lbrace (x^{(i)},y^{(i)}) \bigr\rbrace_{i=1\sim n} , \mathtt{unif} \Bigr).$
 -->
-<img data-src="images/SGD/GDSGD.png" width="500" class="r-stretch"></section>
-<section id="whats-next" class="slide level2">
-<h2>What’s next?</h2>
+<img data-src="images/SGD/GDSGD.png" width="500" class="r-stretch"></section></section>
+<section id="question" class="title-slide slide level1 center">
+<h1>Question?</h1>
 <ul>
+<li><p>What kind of <span class="math inline">\(\mathtt{Net}_{\theta}\)</span> can we choose?</p></li>
 <li><p>How to calculate <span class="math inline">\(\nabla_{\theta} L(\theta)\)</span>?</p></li>
 <li><p>The above is dependent on <span class="math inline">\(\mathtt{Net}_{\theta},\)</span> so what kind of <span class="math inline">\(\mathtt{Net}_{\theta}\)</span> will we use?</p></li>
 <li><p>What is the best choice for <span class="math inline">\(\ell\)</span> for the classification?</p></li>
 </ul>
-</section></section>
+</section>
+
 <section id="reference" class="title-slide slide level1 smaller scrollable">
 <h1>Reference</h1>
 

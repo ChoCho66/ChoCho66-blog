@@ -168,7 +168,7 @@ where
 - We first need to give a function set $\lbrace f_\theta: \theta \in \Theta \rbrace,$
   where each $f_\theta$ is a function from $\mathbb R^{\text{in}}$ to $\mathbb R^{\text{out}}.$
 
-- We want to some $f_\theta$ such that
+- We want to find some $\theta\in \Theta$ such that
   $$
   \begin{aligned}
     f_\theta(x^{(i)}) \approx y^{(i)} , \qquad \forall  i = 1\sim n.
@@ -201,11 +201,10 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   - ![](images/SGD/dualspace_explore.gif){width=40%}
     ![](images/SGD/gradient_descent_parameter_a.gif){width=40%}
 
-  - Observing from the above graph, 從斜率的負方向走. This is **Gradient Descent**.
-
 ::: {.notes}
-- 後面會解釋為什麼叫 $\mathtt{Net}.$
 - 這裡的變數是 $\theta.$ 注意有 data space and parameter space.
+- Observing from the above graph, 從斜率的負方向走. This is **Gradient Descent**.
+- 之後會解釋為什麼叫 $\mathtt{Net}.$
 :::
 
 
@@ -253,6 +252,10 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 - In practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful [@liu1989limited].
 
   - Solution: Stochastic Gradient Descent (SGD).
+
+::: {.notes}
+- 取 $1/n$ 是之後有個方便地方.
+:::
 
 <!-- SGD (single) and Minibatch SGD. -->
 
@@ -392,7 +395,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
     w' = w - \eta \cdot \nabla_w  \ell_i (w),
   \end{aligned}
   $$
-  $w'$ will try to enter $[w_*,w^*]$ (if not in this interval).
+  then $w'$ will try to enter $[w_*,w^*]$ if $w'$ not in this interval.
 
 ::: {.notes}
 - 補圖
@@ -424,7 +427,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
       \theta \leftarrow \theta -  \eta \cdot \frac{1}{n_B} \sum_{j\in \mathcal{B}_k} \nabla\ell_{P(j)}(\theta) .
     \end{aligned}
     $$
-    Running all $t$ at once is called an epoch.
+    We call an epoch if we run over all $k.$
 
 - ![](images/SGD/rFI1tIk.gif)
 
@@ -479,7 +482,9 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 - We consider $(\Omega,\mathbf{P})=\Bigl( \bigl\lbrace (x^{(i)},y^{(i)}) \bigr\rbrace_{i=1\sim n} , \mathtt{unif} \Bigr).$
 -->
 
-## What's next?
+# Question?
+
+- What kind of $\mathtt{Net}_{\theta}$ can we choose?
 
 - How to calculate $\nabla_{\theta} L(\theta)$?
 
