@@ -25,3 +25,5 @@ citation-location: margin
 ## markdown
 
 - [https://support.typora.io/Draw-Diagrams-With-Markdown/](https://support.typora.io/Draw-Diagrams-With-Markdown/)
+
+- [https://saswat.padhi.me/pseudocode.js/](https://saswat.padhi.me/pseudocode.js/)

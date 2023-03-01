@@ -11,6 +11,40 @@ reference-location: margin
 citation-location: margin
 ---
 
+>
+
+::: {.callout}
+| **INPUT:** input;  
+| **OUTPUT:** result;  
+| 
+| **IF** this_is_True:  
+|   do_this;  
+| **ELSE**
+|   select B from input;  
+|   do something whith input;  
+|   **FOR EACH** $a_i$ **in** B   
+|     do something with $a_i$;
+:::
+
+
+
+> **if** A
+>
+>> **then** B
+>> 
+>> C
+>
+> **end if**
+
+
+> **if** A
+> 
+>> **then** B
+|
+| C
+
+
+
 ::: {.callout-note icon=false}
 
 ## **Alog**

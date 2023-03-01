@@ -15,7 +15,7 @@
   <meta name="generator" content="quarto-1.3.159">
 
   <meta name="author" content="ChoCho   ">
-  <meta name="dcterms.date" content="2023-02-28">
+  <meta name="dcterms.date" content="2023-03-01">
   <title>ChoCho66 - Stochastic Gradient Descent</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -366,7 +366,7 @@ ChoCho<br><br><br>
     </div>
 </div>
 
-  <p class="date">2023-02-28</p>
+  <p class="date">2023-03-01</p>
 </section>
 <section id="modified" class="slide level2 unnumbered">
 <h2>MODIFIED</h2>
@@ -374,8 +374,9 @@ ChoCho<br><br><br>
 <section id="content" class="title-slide slide level1 center">
 <h1>Content</h1>
 <ul>
-<li><p><a href="#/sec-Regression">Regression</a></p></li>
+<li><p><a href="#/sec-Regression2">Regression</a></p></li>
 <li><p><a href="#/sec-SGD">Stochastic Gradient Descent (SGD)</a></p></li>
+<li><p><a href="#/sec-ques">Questions</a></p></li>
 </ul>
 </section>
 
@@ -409,13 +410,29 @@ ChoCho<br><br><br>
 </ul></li>
 </ul>
 </section>
-<section id="mle-maximum-likelihood-function" class="slide level2">
-<h2>MLE (maximum likelihood function)</h2>
-<p>EX 2. 正常骰子 跟 12 面骰</p>
-<p>TODO</p>
-</section>
 <section id="sec-MLE" class="slide level2">
 <h2>MLE (maximum likelihood function)</h2>
+<ul>
+<li><p><img data-src="images/SGD/2023-03-01-10-53-13.png"></p></li>
+<li><p>If <span class="math inline">\(X_1,\cdots,X_n\)</span> are i.i.d. from <span class="math inline">\(f(\cdot \vert \theta_{\text{real}}),\)</span> and let <span class="math display">\[
+\begin{aligned}
+  \text{lik}(\theta) = \prod_{i=1}^n f(X_i\vert \theta).
+\end{aligned}
+\]</span></p></li>
+<li><p>MLE of <span class="math inline">\((X_1,\cdots,X_n)\)</span> is <span class="math display">\[
+\begin{aligned}
+  \widehat{\theta} = \operatorname{argmin}_{\theta\in \Theta} \text{lik}(\theta)
+\end{aligned}
+\]</span></p></li>
+<li><p>Then under some smoothness conditions of <span class="math inline">\(f,\)</span> <span class="math display">\[
+\begin{aligned}
+  \sqrt{n} \big( \widehat{\theta} -\theta_{\text{real}} \big)
+\end{aligned}
+\]</span> tends to a normal distribution.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
 <ul>
 <li><p>We regard <span class="math inline">\((x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})\)</span> as realizations of random variables <span class="math inline">\(X,Y,\)</span> and we assume that <span class="math display">\[
 \begin{aligned}
@@ -565,8 +582,8 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
           display:block!important;
       }</style></aside>
 </section>
-<section id="gd-gradient-descent" class="slide level2">
-<h2>GD (Gradient Descent)</h2>
+<section id="gradient-descentgd" class="slide level2">
+<h2>Gradient Descent(GD)</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
@@ -648,18 +665,15 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 </ul>
 </section></section>
 <section>
-<section id="stochastic-gradient-descent-sgd" class="title-slide slide level1 center">
+<section id="sec-SGD" class="title-slide slide level1 center">
 <h1>Stochastic Gradient Descent (SGD)</h1>
 <ul>
-<li><p><a href="#/sec-SGD2">SGD</a></p>
-<ul>
-<li><p><a href="#/sec-SGD">Stochastic Gradient Descent</a></p></li>
+<li><p><a href="#/sec-SGDsingle">Stochastic Gradient Descent(single)</a></p></li>
 <li><p><a href="#/sec-minibatchSGD">Minibatch Stochastic Gradient Descent</a></p></li>
-</ul></li>
 </ul>
 </section>
 <section id="sec-SGDsingle" class="slide level2">
-<h2>SGD(single)</h2>
+<h2>Stochastic Gradient Descent(single)</h2>
 <ul>
 <li><p>Our goal is to find a local min. of <span class="math display">\[
 \begin{aligned}
@@ -816,8 +830,8 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 - We consider $(\Omega,\mathbf{P})=\Bigl( \bigl\lbrace (x^{(i)},y^{(i)}) \bigr\rbrace_{i=1\sim n} , \mathtt{unif} \Bigr).$
 -->
 <img data-src="images/SGD/GDSGD.png" width="500" class="r-stretch"></section></section>
-<section id="question" class="title-slide slide level1 center">
-<h1>Question?</h1>
+<section id="sec-ques" class="title-slide slide level1 center">
+<h1>Questions</h1>
 <ul>
 <li><p>What kind of <span class="math inline">\(\mathtt{Net}_{\theta}\)</span> can we choose?</p></li>
 <li><p>How to calculate <span class="math inline">\(\nabla_{\theta} L(\theta)\)</span>?</p></li>

@@ -74,7 +74,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nFeb 28, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -585,7 +585,7 @@
     "href": "slides/SGD.html#sec-MLE",
     "title": "Stochastic Gradient Descent",
     "section": "MLE (maximum likelihood function)",
-    "text": "MLE (maximum likelihood function)\n\nWe regard \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) as realizations of random variables \\(X,Y,\\) and we assume that \\[\n\\begin{aligned}\nY=wX+b+\\mathtt{noise},\n\\end{aligned}\n\\] where\n\n\\(w,b\\) are two parameters in \\(\\mathbb R,\\) and\n\\(\\mathtt{noise}\\sim N(0,\\sigma^2)\\) for some fixed \\(\\sigma>0.\\)\n\nIn math, we give the joint density of \\((X,Y)\\) by the following:\n\nAssume that \\(X\\sim \\operatorname{unif}\\bigl(\\bigl[\\min_i x^{(i)}, \\max_i x^{(i)}\\bigr]\\bigr).\\)\n\nThat is, the density of \\(X\\) is \\[\n\\begin{aligned}\n  f_X(x) = \\frac{1}{\\max_i x^{(i)}- \\min_i x^{(i)}} x \\cdot 1_{[\\min_i x^{(i)}, \\max_i x^{(i)}]}(x).\n\\end{aligned}\n\\]\n\nConditioning on \\(X=x,\\) we give the density of \\(\\mathbf E[Y\\vert X]\\) by \\[\n\\begin{aligned}\n  Y-(wx+b) \\sim N(0,\\sigma^2).\n\\end{aligned}\n\\]\n\nThat is, the density of \\(Y,\\) conditioning on \\(X=x,\\) is \\[\n  \\begin{aligned}\nf_{Y\\vert X} (y\\vert x)=\\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y-(wx+b) \\bigr)^2 \\Bigr\\rbrace.\n  \\end{aligned}\n  \\]\n\nThe joint density of \\((X,Y)\\) is \\[\n\\begin{aligned}\n  f_{X,Y}(x,y) = f_{Y\\vert X}(y\\vert x) \\cdot f_X(x).\n\\end{aligned}\n\\]\n\nLet \\((X_i,Y_i)\\) be i.i.d. with \\((X_i,Y_i)\\stackrel{d}{=} (X,Y)\\) and \\(Z_i = \\mathbf E[Y_i\\vert X_i].\\)\nThe likelihood function of \\(\\bigl\\lbrace Z_i:i=1\\sim n \\bigr\\rbrace\\) for the realizations \\((X_i,Y_i)=(x^{(i)},y^{(i)})\\) is \\[\n\\begin{aligned}\n  \\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\n  = \\prod_{i=1}^n \\frac{1}{\\sqrt{2\\pi \\sigma^2}}\\exp\\Bigl\\lbrace - \\frac{1}{2\\sigma^2} \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2 \\Bigr\\rbrace.\n\\end{aligned}\n\\]\nTo maximize \\(\\mathtt{lik}(w,b)\\Big\\vert_{(x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})}\\) \\(\\iff\\) To minimize \\(\\sum_{i=1}^n \\bigl( y^{(i)}-(wx^{(i)}+b) \\bigr)^2.\\)\n\nHow to minimize it?\n\nFor the regression, the best choice of \\(\\ell\\) (in the sense of stastics) is \\(\\ell(y,\\widehat{y})=(y-\\widehat{y})^2.\\)\n\n\n\n此頁的結論與 \\(X\\) 的分布沒關係."
+    "text": "MLE (maximum likelihood function)\n\n\nIf \\(X_1,\\cdots,X_n\\) are i.i.d. from \\(f(\\cdot \\vert \\theta_{\\text{real}}),\\) and let \\[\n\\begin{aligned}\n  \\text{lik}(\\theta) = \\prod_{i=1}^n f(X_i\\vert \\theta).\n\\end{aligned}\n\\]\nMLE of \\((X_1,\\cdots,X_n)\\) is \\[\n\\begin{aligned}\n  \\widehat{\\theta} = \\operatorname{argmin}_{\\theta\\in \\Theta} \\text{lik}(\\theta)\n\\end{aligned}\n\\]\nThen under some smoothness conditions of \\(f,\\) \\[\n\\begin{aligned}\n  \\sqrt{n} \\big( \\widehat{\\theta} -\\theta_{\\text{real}} \\big)\n\\end{aligned}\n\\] tends to a normal distribution."
   },
   {
     "objectID": "slides/SGD.html#temp",
@@ -640,8 +640,8 @@
     "objectID": "slides/SGD.html#sec-SGDsingle",
     "href": "slides/SGD.html#sec-SGDsingle",
     "title": "Stochastic Gradient Descent",
-    "section": "SGD(single)",
-    "text": "SGD(single)\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nLet \\(\\ell_i(\\theta) = \\ell(y^{(i)},\\widehat{y}^{(i)}).\\)\nGiven any initial value \\(\\theta\\in \\mathbb \\Theta\\) and any \\(\\eta\\in (0,\\infty)\\) small enough.\nLet \\(P\\) be a permutation of \\(\\lbrace 1,2,\\cdots, n \\rbrace.\\)\nThen for each \\(j=1,\\cdots, n,\\) we update \\(\\theta\\) by \\[\n\\begin{aligned}\n\\theta \\leftarrow \\theta - \\eta \\cdot \\nabla \\ell_{P(j)}(\\theta).\n\\end{aligned}\n\\]\nAfter repeating the above step several times, the final \\(\\theta\\) may be close to a local min. of \\(L.\\)\n\n\n\nThe SGD(single) can be an effective strategy, even for large datasets (Bottou 2010).\n\n\n\n可想像圖會在那裡抖"
+    "section": "Stochastic Gradient Descent(single)",
+    "text": "Stochastic Gradient Descent(single)\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nLet \\(\\ell_i(\\theta) = \\ell(y^{(i)},\\widehat{y}^{(i)}).\\)\nGiven any initial value \\(\\theta\\in \\mathbb \\Theta\\) and any \\(\\eta\\in (0,\\infty)\\) small enough.\nLet \\(P\\) be a permutation of \\(\\lbrace 1,2,\\cdots, n \\rbrace.\\)\nThen for each \\(j=1,\\cdots, n,\\) we update \\(\\theta\\) by \\[\n\\begin{aligned}\n\\theta \\leftarrow \\theta - \\eta \\cdot \\nabla \\ell_{P(j)}(\\theta).\n\\end{aligned}\n\\]\nAfter repeating the above step several times, the final \\(\\theta\\) may be close to a local min. of \\(L.\\)\n\n\n\nThe SGD(single) can be an effective strategy, even for large datasets (Bottou 2010).\n\n\n\n可想像圖會在那裡抖"
   },
   {
     "objectID": "slides/SGD.html#why-sgdsingle-works",
@@ -704,7 +704,7 @@
     "href": "temp/test.html",
     "title": "Test",
     "section": "",
-    "text": "Alog\n\n\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n\n\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
+    "text": "if A\n\nthen B\nC\n\nend if\n\nINPUT: input;\nOUTPUT: result;\n\nIF this_is_True:\n  do_this;\nELSE\n  select B from input;\n  do something whith input;\n  FOR EACH \\(a_i\\) in B\n    do something with \\(a_i\\);\n\n\n\n\n\n\nAlog\n\n\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n\n\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
   },
   {
     "objectID": "temp/test.html#alog",
@@ -712,5 +712,26 @@
     "title": "Test",
     "section": "Alog",
     "text": "Alog\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n:::\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
+  },
+  {
+    "objectID": "TODO.html#markdown",
+    "href": "TODO.html#markdown",
+    "title": "TODO",
+    "section": "markdown",
+    "text": "markdown\n\nhttps://support.typora.io/Draw-Diagrams-With-Markdown/\nhttps://saswat.padhi.me/pseudocode.js/"
+  },
+  {
+    "objectID": "slides/SGD.html#asd",
+    "href": "slides/SGD.html#asd",
+    "title": "Stochastic Gradient Descent",
+    "section": "ASD",
+    "text": "ASD"
+  },
+  {
+    "objectID": "slides/SGD.html#gradient-descentgd",
+    "href": "slides/SGD.html#gradient-descentgd",
+    "title": "Stochastic Gradient Descent",
+    "section": "Gradient Descent(GD)",
+    "text": "Gradient Descent(GD)\n\n\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nGiven any initial value \\(\\theta_0\\in \\mathbb \\Theta.\\)\nGiven any \\(\\eta\\in (0,\\infty)\\) small enough.\n\n\\(\\eta\\): learning rate.\n\nMomentum, Adam, \\(\\cdots.\\)\n\n\nWe set \\(\\lbrace \\theta_i \\rbrace_{i\\in \\mathbb N}\\) by \\[\n\\begin{aligned}\n\\theta_{i} \\leftarrow \\theta_{i-1} - \\eta \\cdot \\nabla L(\\theta_{i-1}),\\quad i\\in \\mathbb N.\n\\end{aligned}\n\\]\nThen \\(\\theta_i,i\\in \\mathbb N\\) may converges to a local min. of \\(L.\\)\n\n\n\n\n\n\n\n\n\nIn practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful (Liu and Nocedal 1989).\n\nSolution: Stochastic Gradient Descent (SGD).\n\n\n\n\n取 \\(1/n\\) 是之後有個方便地方."
   }
 ]

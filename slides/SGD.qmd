@@ -44,11 +44,14 @@ filters:
 
 ## MODIFIED {-}
 
+
 # Content
 
-- [Regression](#sec-Regression)
+- [Regression](#sec-Regression2)
 
 - [Stochastic Gradient Descent (SGD)](#sec-SGD)
+
+- [Questions](#sec-ques)
 
 # Regression {#sec-Regression}
 
@@ -84,13 +87,33 @@ filters:
 
   - We may use the MLE (maximum likelihood function).
 
-## MLE (maximum likelihood function)
-
-EX 2. 正常骰子 跟 12 面骰
-
-TODO
-
 ## MLE (maximum likelihood function) {#sec-MLE}
+
+- ![](images/SGD/2023-03-01-10-53-13.png)
+
+- If $X_1,\cdots,X_n$ are i.i.d. from $f(\cdot \vert \theta_{\text{real}}),$ and let
+  $$
+  \begin{aligned}
+    \text{lik}(\theta) = \prod_{i=1}^n f(X_i\vert \theta).
+  \end{aligned}
+  $$
+
+- MLE of $(X_1,\cdots,X_n)$ is 
+  $$
+  \begin{aligned}
+    \widehat{\theta} = \operatorname{argmin}_{\theta\in \Theta} \text{lik}(\theta)
+  \end{aligned}
+  $$
+  
+- Then under some smoothness conditions of $f,$
+  $$
+  \begin{aligned}
+    \sqrt{n} \big( \widehat{\theta} -\theta_{\text{real}} \big)
+  \end{aligned}
+  $$
+  tends to a normal distribution.
+  
+---
 
 - We regard $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ as realizations of random variables $X,Y,$ 
 and we assume that
@@ -114,7 +137,6 @@ where
         f_X(x) = \frac{1}{\max_i x^{(i)}- \min_i x^{(i)}} x \cdot 1_{[\min_i x^{(i)}, \max_i x^{(i)}]}(x).
       \end{aligned}
       $$
-    
 
   - Conditioning on $X=x,$
     we give the density of $\mathbf E[Y\vert X]$ by
@@ -208,7 +230,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 :::
 
 
-## GD (Gradient Descent)
+## Gradient Descent(GD)
 
 :::: {.columns}
 ::: {.column width=60%}
@@ -298,18 +320,14 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   for some $\eta\in (0,\infty)$ small.
 
 
-# Stochastic Gradient Descent (SGD)
+# Stochastic Gradient Descent (SGD) {#sec-SGD}
+
+- [Stochastic Gradient Descent(single)](#sec-SGDsingle)
+
+- [Minibatch Stochastic Gradient Descent](#sec-minibatchSGD)
 
 
-
-- [SGD](#sec-SGD2)
-
-  - [Stochastic Gradient Descent](#sec-SGD)
-
-  - [Minibatch Stochastic Gradient Descent](#sec-minibatchSGD)
-
-
-## SGD(single) {#sec-SGDsingle}
+## Stochastic Gradient Descent(single) {#sec-SGDsingle}
 
 - Our goal is to find a local min. of
   $$
@@ -482,7 +500,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 - We consider $(\Omega,\mathbf{P})=\Bigl( \bigl\lbrace (x^{(i)},y^{(i)}) \bigr\rbrace_{i=1\sim n} , \mathtt{unif} \Bigr).$
 -->
 
-# Question?
+# Questions {#sec-ques}
 
 - What kind of $\mathtt{Net}_{\theta}$ can we choose?
 
