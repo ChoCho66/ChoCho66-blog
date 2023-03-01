@@ -1,0 +1,43 @@
+---
+title: "title"
+# subtitle: Last
+author: ChoCho<br><br>
+date-format: iso
+date: last-modified
+institute: MODIFIED
+bibliography: ../references.bib
+slide-number: c/t
+categories: [slide]
+# knitr: true
+# jupyter: python3
+format:
+  revealjs:
+    theme: [serif,custom.scss]    # 像 LaTeX
+    width: 1600
+    height: 900
+    # preview-links: auto
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 2
+      # src: "Chalkboard-2022-12-27.json"
+    scrollable: true
+    echo: true
+    # footer: "foot"
+    # logo: cover.jpg
+    slide-number: true
+    sc-sb-title: true
+    # mermaid:
+      # theme: forest
+
+filters:
+  - reveal-header
+
+---
+
+## Image paste test
+
+::: {.column-margin}
+![A margin image](images/SGD/2023-02-19-22-17-59.png)
+:::
+
+Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.

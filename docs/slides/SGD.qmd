@@ -13,8 +13,8 @@ categories: [slide]
 format:
   revealjs:
     theme: [serif,custom.scss]    # 像 LaTeX
-    width: 1800
-    height: 1200
+    width: 1600
+    height: 900
     # preview-links: auto
     chalkboard:
       theme: whiteboard
@@ -26,8 +26,6 @@ format:
     # logo: cover.jpg
     slide-number: true
     sc-sb-title: true
-    # mermaid:
-      # theme: forest
 
 filters:
   - reveal-header
@@ -91,17 +89,18 @@ filters:
 
 - ![](images/SGD/2023-03-01-10-53-13.png)
 
-- If $X_1,\cdots,X_n$ are i.i.d. from $f(\cdot \vert \theta_{\text{real}}),$ and let
+- Suppose that $X_1,\cdots,X_n$ are i.i.d. from $f(\cdot \vert \theta_{\text{real}}),$ 
+  and let
   $$
   \begin{aligned}
-    \text{lik}(\theta) = \prod_{i=1}^n f(X_i\vert \theta).
+    \mathtt{lik}(\theta) = \prod_{i=1}^n f(X_i\vert \theta).
   \end{aligned}
   $$
 
 - MLE of $(X_1,\cdots,X_n)$ is 
   $$
   \begin{aligned}
-    \widehat{\theta} = \operatorname{argmin}_{\theta\in \Theta} \text{lik}(\theta)
+    \widehat{\theta} = \operatorname{argmin}_{\theta\in \Theta} \mathtt{lik}(\theta)
   \end{aligned}
   $$
   
@@ -111,7 +110,7 @@ filters:
     \sqrt{n} \big( \widehat{\theta} -\theta_{\text{real}} \big)
   \end{aligned}
   $$
-  tends to a normal distribution.
+  converges weakly to a normal distribution.
   
 ---
 
@@ -137,7 +136,6 @@ where
         f_X(x) = \frac{1}{\max_i x^{(i)}- \min_i x^{(i)}} x \cdot 1_{[\min_i x^{(i)}, \max_i x^{(i)}]}(x).
       \end{aligned}
       $$
-    
 
   - Conditioning on $X=x,$
     we give the density of $\mathbf E[Y\vert X]$ by
@@ -231,7 +229,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 :::
 
 
-## Gradient Descent(GD)
+## Gradient Descent (GD)
 
 :::: {.columns}
 ::: {.column width=60%}
@@ -323,12 +321,12 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 
 # Stochastic Gradient Descent (SGD) {#sec-SGD}
 
-- [Stochastic Gradient Descent(single)](#sec-SGDsingle)
+- [Stochastic Gradient Descent (single)](#sec-SGDsingle)
 
 - [Minibatch Stochastic Gradient Descent](#sec-minibatchSGD)
 
 
-## Stochastic Gradient Descent(single) {#sec-SGDsingle}
+## Stochastic Gradient Descent (single) {#sec-SGDsingle}
 
 - Our goal is to find a local min. of
   $$
@@ -350,13 +348,15 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   \theta \leftarrow \theta - \eta \cdot \nabla \ell_{P(j)}(\theta).
   \end{aligned}
   $$
+  
+  - This means that we only optimize $\ell_{P(j)}(\theta),$ not $L(\theta).$
 
 - After repeating the above step several times,
   the final $\theta$ may be close to a local min. of $L.$
 
 <hr style='height:2px;border-width:0;color:gray;background-color:gray'>
   
-- The SGD(single) can be an effective strategy, 
+- The SGD (single) can be an effective strategy, 
   even for large datasets [@bottou2010large].
 
 ::: {.notes}
@@ -404,6 +404,8 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   \end{aligned}
   $$
 
+TODO: 補圖
+
 <!-- 
 - Our goal is to update $w$ such that it is in $[w_*,w^*].$ 
 -->
@@ -414,7 +416,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
     w' = w - \eta \cdot \nabla_w  \ell_i (w),
   \end{aligned}
   $$
-  then $w'$ will try to enter $[w_*,w^*]$ if $w'$ not in this interval.
+  then $w'$ will try to enter $[w_*,w^*]$ if $w$ not in this interval.
 
 ::: {.notes}
 - 補圖
@@ -472,10 +474,10 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
     = \frac{1}{n}  \sum_{i=1}^n \nabla_{\theta} \ell\bigl( y^{(i)} , \mathtt{Net}_{\theta} (x^{(i)}) \bigr) 
     = \nabla_{\theta} L(\theta).
   \end{aligned}
-  $$
-  
+  $$ {#eq-whySGDminibatchwork}
+
 - Let $\bigl\lbrace (X_k,Y_k) \bigr\rbrace_{k=1}^m$ be a simple random sampling with replacement from $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)}).$
-  Then 
+  Then, by @eq-whySGDminibatchwork,
   $$
   \begin{aligned}
     \dfrac{1}{m}\sum_{k=1}^m \nabla_\theta \ell\bigl(Y_k,\mathtt{Net}_\theta(X_k)\bigr)
@@ -490,7 +492,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   \end{aligned}
   $$
   
-- In practive, we use the simple random sampling without replacement for efficiency.
+- In practice, we use the simple random sampling without replacement for efficiency.
 
 ## Comparison of GD and SGD
 
