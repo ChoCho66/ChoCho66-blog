@@ -1,12 +1,37 @@
 ---
-title: "Title"
+title: "Temp"
 author: "ChoCho"
-date: "2023-02-08"
+date: "2023-03-02"
 date-format: iso
 date-modified: last-modified
-categories: [math]
+categories: [python]
 # image: "image.jpg"
 # jupyter: python3
 reference-location: margin
 citation-location: margin
 ---
+
+
+- https://zhuanlan.zhihu.com/p/28626431
+
+- https://mofanpy.com/tutorials/data-manipulation/numpy/numpy-view-copy
+
+- https://zhuanlan.zhihu.com/p/348446597
+
+```{python}
+import numpy as np
+
+x = np.array([1, 2, 3, 4])
+x1 = x
+x2 = x[:]
+x_view = x.view()
+x_copy = x.copy()
+
+x[0] = 4
+
+print(x)
+print(x1)
+print(x2)
+print(x_view)
+print(x_copy)
+```
