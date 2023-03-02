@@ -42,6 +42,9 @@ filters:
 
 ## MODIFIED {-}
 
+- 2022-03-02
+  - Change $\operatorname{argmin}_{\theta}$ to $\underset{\theta}{\operatorname{argmin}}.$
+
 
 # Content
 
@@ -76,7 +79,7 @@ filters:
 - In math, our goal is to find
   $$
   \begin{aligned}
-    \operatorname{argmin}_{w,b\in \mathbb R}\sum_{i=1}^{n} \ell \bigl( y^{(i)} , f(x^{(i)}) \bigr),
+    \underset{w,b\in \mathbb R}{\operatorname{argmin}}\sum_{i=1}^{n} \ell \bigl( y^{(i)} , f(x^{(i)}) \bigr),
   \end{aligned}
   $$
   where $\ell:\mathbb R^2 \longrightarrow [0,\infty)$ is what we need to determine.
@@ -96,11 +99,10 @@ filters:
     \mathtt{lik}(\theta) = \prod_{i=1}^n f(X_i\vert \theta).
   \end{aligned}
   $$
-
-- MLE of $(X_1,\cdots,X_n)$ is 
+  Then the MLE of $(X_1,\cdots,X_n)$ is 
   $$
   \begin{aligned}
-    \widehat{\theta} = \operatorname{argmin}_{\theta\in \Theta} \mathtt{lik}(\theta)
+    \widehat{\theta} = \underset{\theta\in \Theta}{\operatorname{argmin}} \,\mathtt{lik}(\theta)
   \end{aligned}
   $$
   
@@ -115,17 +117,17 @@ filters:
 ---
 
 - We regard $(x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})$ as realizations of random variables $X,Y,$ 
-and we assume that
-$$
-\begin{aligned}
-  Y=wX+b+\mathtt{noise},
-\end{aligned}
-$$
-where 
-    
-  - $w,b$ are two parameters in $\mathbb R,$ and
+  and we assume that
+  $$
+  \begin{aligned}
+    Y=wX+b+\mathtt{noise},
+  \end{aligned}
+  $$
+  where 
+      
+    - $w,b$ are two parameters in $\mathbb R,$ and
 
-  - $\mathtt{noise}\sim N(0,\sigma^2)$ for some fixed $\sigma>0.$
+    - $\mathtt{noise}\sim N(0,\sigma^2)$ for some fixed $\sigma>0.$
 
 - In math, we give the joint density of $(X,Y)$ by the following:
 
@@ -199,7 +201,7 @@ where
 - In math, our goal is to find
   $$
   \begin{aligned}
-    \operatorname{argmin}_{\theta\in \Theta} \sum_{i=1}^{n} \ell \bigl( y^{(i)} , f_\theta(x^{(i)}) \bigr),
+    \underset{\theta\in \Theta}{\operatorname{argmin}} \sum_{i=1}^{n} \ell \bigl( y^{(i)} , f_\theta(x^{(i)}) \bigr),
   \end{aligned}
   $$
   where $\ell(y,\widehat{y}) = (y-\widehat{y})^2.$
@@ -304,7 +306,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   By Cauchy's inequality,
   $$
   \begin{aligned}
-    \operatorname{argmin}_{h\in \mathbb R^n,\left\lVert h \right\rVert = \eta_0}   
+    \underset{h\in \mathbb R^n,\left\lVert h \right\rVert = \eta_0}{\operatorname{argmin}}
     \nabla f(\theta) \cdot h 
     = -\eta_0 \cdot \frac{\nabla f(\theta)}{\left\lVert \nabla f(\theta) \right\rVert}.
   \end{aligned}
@@ -398,7 +400,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   $$
   \begin{aligned}
     w_*  
-    \leq \operatorname{argmin}_{w\in \mathbb R} L(w) 
+    \leq  \underset{w\in \mathbb R}{\operatorname{argmin}}\, L(w) 
     = \frac{\sum_{i}a_i b_i}{\sum_i a_i^2} 
     \leq w^*.
   \end{aligned}

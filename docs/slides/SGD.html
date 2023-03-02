@@ -15,7 +15,7 @@
   <meta name="generator" content="quarto-1.3.159">
 
   <meta name="author" content="ChoCho   ">
-  <meta name="dcterms.date" content="2023-03-01">
+  <meta name="dcterms.date" content="2023-03-02">
   <title>ChoCho66 - Stochastic Gradient Descent</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -366,10 +366,16 @@ ChoCho<br><br><br>
     </div>
 </div>
 
-  <p class="date">2023-03-01</p>
+  <p class="date">2023-03-02</p>
 </section>
 <section id="modified" class="slide level2 unnumbered">
 <h2>MODIFIED</h2>
+<ul>
+<li>2022-03-02
+<ul>
+<li>Change <span class="math inline">\(\operatorname{argmin}_{\theta}\)</span> to <span class="math inline">\(\underset{\theta}{\operatorname{argmin}}.\)</span></li>
+</ul></li>
+</ul>
 </section>
 <section id="content" class="title-slide slide level1 center">
 <h1>Content</h1>
@@ -401,7 +407,7 @@ ChoCho<br><br><br>
 \]</span></p></li>
 <li><p>In math, our goal is to find <span class="math display">\[
 \begin{aligned}
-  \operatorname{argmin}_{w,b\in \mathbb R}\sum_{i=1}^{n} \ell \bigl( y^{(i)} , f(x^{(i)}) \bigr),
+  \underset{w,b\in \mathbb R}{\operatorname{argmin}}\sum_{i=1}^{n} \ell \bigl( y^{(i)} , f(x^{(i)}) \bigr),
 \end{aligned}
 \]</span> where <span class="math inline">\(\ell:\mathbb R^2 \longrightarrow [0,\infty)\)</span> is what we need to determine.</p></li>
 <li><p>What is the best choice for <span class="math inline">\(\ell\)</span> (in some sense)?</p>
@@ -418,10 +424,9 @@ ChoCho<br><br><br>
 \begin{aligned}
   \mathtt{lik}(\theta) = \prod_{i=1}^n f(X_i\vert \theta).
 \end{aligned}
-\]</span></p></li>
-<li><p>MLE of <span class="math inline">\((X_1,\cdots,X_n)\)</span> is <span class="math display">\[
+\]</span> Then the MLE of <span class="math inline">\((X_1,\cdots,X_n)\)</span> is <span class="math display">\[
 \begin{aligned}
-  \widehat{\theta} = \operatorname{argmin}_{\theta\in \Theta} \mathtt{lik}(\theta)
+  \widehat{\theta} = \underset{\theta\in \Theta}{\operatorname{argmin}} \,\mathtt{lik}(\theta)
 \end{aligned}
 \]</span></p></li>
 <li><p>Then under some smoothness conditions of <span class="math inline">\(f,\)</span> <span class="math display">\[
@@ -436,7 +441,7 @@ ChoCho<br><br><br>
 <ul>
 <li><p>We regard <span class="math inline">\((x^{(1)},y^{(1)}), \cdots , (x^{(n)},y^{(n)})\)</span> as realizations of random variables <span class="math inline">\(X,Y,\)</span> and we assume that <span class="math display">\[
 \begin{aligned}
-Y=wX+b+\mathtt{noise},
+  Y=wX+b+\mathtt{noise},
 \end{aligned}
 \]</span> where</p>
 <ul>
@@ -513,7 +518,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 \]</span></p></li>
 <li><p>In math, our goal is to find <span class="math display">\[
 \begin{aligned}
-  \operatorname{argmin}_{\theta\in \Theta} \sum_{i=1}^{n} \ell \bigl( y^{(i)} , f_\theta(x^{(i)}) \bigr),
+  \underset{\theta\in \Theta}{\operatorname{argmin}} \sum_{i=1}^{n} \ell \bigl( y^{(i)} , f_\theta(x^{(i)}) \bigr),
 \end{aligned}
 \]</span> where <span class="math inline">\(\ell(y,\widehat{y}) = (y-\widehat{y})^2.\)</span></p></li>
 </ul>
@@ -652,7 +657,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <li><p>So for <span class="math inline">\(\left\lVert h \right\rVert\)</span> small enough, <span class="math inline">\(f(\theta+h)&lt;f(\theta) \iff \nabla f(\theta) \cdot h &lt; 0.\)</span></p></li>
 <li><p>Given <span class="math inline">\(\eta_0\in (0,\infty)\)</span> small. By Cauchy’s inequality, <span class="math display">\[
 \begin{aligned}
-  \operatorname{argmin}_{h\in \mathbb R^n,\left\lVert h \right\rVert = \eta_0}   
+  \underset{h\in \mathbb R^n,\left\lVert h \right\rVert = \eta_0}{\operatorname{argmin}}
   \nabla f(\theta) \cdot h
   = -\eta_0 \cdot \frac{\nabla f(\theta)}{\left\lVert \nabla f(\theta) \right\rVert}.
 \end{aligned}
@@ -738,7 +743,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <li><p>Note that <span class="math display">\[
 \begin{aligned}
   w_*  
-  \leq \operatorname{argmin}_{w\in \mathbb R} L(w)
+  \leq  \underset{w\in \mathbb R}{\operatorname{argmin}}\, L(w)
   = \frac{\sum_{i}a_i b_i}{\sum_i a_i^2}
   \leq w^*.
 \end{aligned}

@@ -74,7 +74,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nMar 2, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -193,7 +193,7 @@
     "href": "slides/SGD.html#modified",
     "title": "Stochastic Gradient Descent",
     "section": "MODIFIED",
-    "text": "MODIFIED"
+    "text": "MODIFIED\n\n2022-03-02\n\nChange \\(\\operatorname{argmin}_{\\theta}\\) to \\(\\underset{\\theta}{\\operatorname{argmin}}.\\)"
   },
   {
     "objectID": "slides/SGD.html#lieanr-regression",
@@ -585,7 +585,7 @@
     "href": "slides/SGD.html#sec-MLE",
     "title": "Stochastic Gradient Descent",
     "section": "MLE (maximum likelihood function)",
-    "text": "MLE (maximum likelihood function)\n\n\nSuppose that \\(X_1,\\cdots,X_n\\) are i.i.d. from \\(f(\\cdot \\vert \\theta_{\\text{real}}),\\) and let \\[\n\\begin{aligned}\n  \\mathtt{lik}(\\theta) = \\prod_{i=1}^n f(X_i\\vert \\theta).\n\\end{aligned}\n\\]\nMLE of \\((X_1,\\cdots,X_n)\\) is \\[\n\\begin{aligned}\n  \\widehat{\\theta} = \\operatorname{argmin}_{\\theta\\in \\Theta} \\mathtt{lik}(\\theta)\n\\end{aligned}\n\\]\nThen under some smoothness conditions of \\(f,\\) \\[\n\\begin{aligned}\n  \\sqrt{n} \\big( \\widehat{\\theta} -\\theta_{\\text{real}} \\big)\n\\end{aligned}\n\\] converges weakly to a normal distribution."
+    "text": "MLE (maximum likelihood function)\n\n\nSuppose that \\(X_1,\\cdots,X_n\\) are i.i.d. from \\(f(\\cdot \\vert \\theta_{\\text{real}}),\\) and let \\[\n\\begin{aligned}\n  \\mathtt{lik}(\\theta) = \\prod_{i=1}^n f(X_i\\vert \\theta).\n\\end{aligned}\n\\] Then the MLE of \\((X_1,\\cdots,X_n)\\) is \\[\n\\begin{aligned}\n  \\widehat{\\theta} = \\underset{\\theta\\in \\Theta}{\\operatorname{argmin}} \\,\\mathtt{lik}(\\theta)\n\\end{aligned}\n\\]\nThen under some smoothness conditions of \\(f,\\) \\[\n\\begin{aligned}\n  \\sqrt{n} \\big( \\widehat{\\theta} -\\theta_{\\text{real}} \\big)\n\\end{aligned}\n\\] converges weakly to a normal distribution."
   },
   {
     "objectID": "slides/SGD.html#temp",
@@ -627,7 +627,7 @@
     "href": "slides/SGD.html#why-gd-works",
     "title": "Stochastic Gradient Descent",
     "section": "Why GD works?",
-    "text": "Why GD works?\n\nLet \\(f:\\mathbb R^n\\longrightarrow \\mathbb R\\) be any differentiable function.\nFix \\(\\theta\\in \\mathbb \\Theta.\\)\nWe assume that \\(\\nabla f(\\theta) \\neq \\mathbf{0}.\\)\nOur goal is to find some \\(h\\in \\mathbb R^n\\) such that \\(f(\\theta+h) < f(\\theta).\\)\nBy Taylor’s theorem, \\[\n\\begin{aligned}\n  f(\\theta+h) \\approx f(\\theta) +  \\begin{bmatrix}  & \\nabla f(\\theta) &  \\\\\\end{bmatrix} \\cdot \\begin{bmatrix}  \\\\ h \\\\  \\\\\\end{bmatrix}\n\\end{aligned}\n\\] for \\(h\\in \\mathbb R^n\\) with \\(\\left\\lVert h \\right\\rVert\\) small enough.\nSo for \\(\\left\\lVert h \\right\\rVert\\) small enough, \\(f(\\theta+h)<f(\\theta) \\iff \\nabla f(\\theta) \\cdot h < 0.\\)\nGiven \\(\\eta_0\\in (0,\\infty)\\) small. By Cauchy’s inequality, \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{h\\in \\mathbb R^n,\\left\\lVert h \\right\\rVert = \\eta_0}   \n  \\nabla f(\\theta) \\cdot h\n  = -\\eta_0 \\cdot \\frac{\\nabla f(\\theta)}{\\left\\lVert \\nabla f(\\theta) \\right\\rVert}.\n\\end{aligned}\n\\]\nHence, we choose \\[\n\\begin{aligned}\n  h = -\\eta \\cdot \\nabla f(\\theta)\n\\end{aligned}\n\\] for some \\(\\eta\\in (0,\\infty)\\) small."
+    "text": "Why GD works?\n\nLet \\(f:\\mathbb R^n\\longrightarrow \\mathbb R\\) be any differentiable function.\nFix \\(\\theta\\in \\mathbb \\Theta.\\)\nWe assume that \\(\\nabla f(\\theta) \\neq \\mathbf{0}.\\)\nOur goal is to find some \\(h\\in \\mathbb R^n\\) such that \\(f(\\theta+h) < f(\\theta).\\)\nBy Taylor’s theorem, \\[\n\\begin{aligned}\n  f(\\theta+h) \\approx f(\\theta) +  \\begin{bmatrix}  & \\nabla f(\\theta) &  \\\\\\end{bmatrix} \\cdot \\begin{bmatrix}  \\\\ h \\\\  \\\\\\end{bmatrix}\n\\end{aligned}\n\\] for \\(h\\in \\mathbb R^n\\) with \\(\\left\\lVert h \\right\\rVert\\) small enough.\nSo for \\(\\left\\lVert h \\right\\rVert\\) small enough, \\(f(\\theta+h)<f(\\theta) \\iff \\nabla f(\\theta) \\cdot h < 0.\\)\nGiven \\(\\eta_0\\in (0,\\infty)\\) small. By Cauchy’s inequality, \\[\n\\begin{aligned}\n  \\underset{h\\in \\mathbb R^n,\\left\\lVert h \\right\\rVert = \\eta_0}{\\operatorname{argmin}}\n  \\nabla f(\\theta) \\cdot h\n  = -\\eta_0 \\cdot \\frac{\\nabla f(\\theta)}{\\left\\lVert \\nabla f(\\theta) \\right\\rVert}.\n\\end{aligned}\n\\]\nHence, we choose \\[\n\\begin{aligned}\n  h = -\\eta \\cdot \\nabla f(\\theta)\n\\end{aligned}\n\\] for some \\(\\eta\\in (0,\\infty)\\) small."
   },
   {
     "objectID": "slides/SGD.html#sec-Regression1",
@@ -648,7 +648,7 @@
     "href": "slides/SGD.html#why-sgdsingle-works",
     "title": "Stochastic Gradient Descent",
     "section": "Why SGD(single) works",
-    "text": "Why SGD(single) works\n\nWe see the case of linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nFor simplicity, we assume that \\(b\\) is a fixed constant, not a parameter.\nNow our parameters are only \\(w.\\)\nWe rewrite \\[\n\\begin{aligned}\n  L(w)=\\sum_{i=1}^n \\bigl( y^{(i)} - (w x^{(i)} + b) \\bigr)^2\n\\end{aligned}\n\\] to \\[\n\\begin{aligned}\n  L(w) = \\sum_{i=1}^n \\bigl( a_i w - b_i  \\bigr)^2\n  \\stackrel{\\text{denote}}{=}\n  \\sum_{i=1}^n \\ell_i(w).\n\\end{aligned}\n\\]\nLet \\(w_i = b_i/a_i\\) and \\[\n\\begin{aligned}\n  w_* = \\min_i w_i , \\quad w^* = \\max_i w_i.\n\\end{aligned}\n\\]\nNote that \\[\n\\begin{aligned}\n  w_*  \n  \\leq \\operatorname{argmin}_{w\\in \\mathbb R} L(w)\n  = \\frac{\\sum_{i}a_i b_i}{\\sum_i a_i^2}\n  \\leq w^*.\n\\end{aligned}\n\\]\n\nTODO: 補圖\n\n\nFor each \\(i,\\) if we update \\(w\\) by \\[\n\\begin{aligned}\n  w' = w - \\eta \\cdot \\nabla_w  \\ell_i (w),\n\\end{aligned}\n\\] then \\(w'\\) will try to enter \\([w_*,w^*]\\) if \\(w\\) not in this interval.\n\n\n\n補圖\n補救方式就是打包成 minibatch"
+    "text": "Why SGD(single) works\n\nWe see the case of linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nFor simplicity, we assume that \\(b\\) is a fixed constant, not a parameter.\nNow our parameters are only \\(w.\\)\nWe rewrite \\[\n\\begin{aligned}\n  L(w)=\\sum_{i=1}^n \\bigl( y^{(i)} - (w x^{(i)} + b) \\bigr)^2\n\\end{aligned}\n\\] to \\[\n\\begin{aligned}\n  L(w) = \\sum_{i=1}^n \\bigl( a_i w - b_i  \\bigr)^2\n  \\stackrel{\\text{denote}}{=}\n  \\sum_{i=1}^n \\ell_i(w).\n\\end{aligned}\n\\]\nLet \\(w_i = b_i/a_i\\) and \\[\n\\begin{aligned}\n  w_* = \\min_i w_i , \\quad w^* = \\max_i w_i.\n\\end{aligned}\n\\]\nNote that \\[\n\\begin{aligned}\n  w_*  \n  \\leq  \\underset{w\\in \\mathbb R}{\\operatorname{argmin}}\\, L(w)\n  = \\frac{\\sum_{i}a_i b_i}{\\sum_i a_i^2}\n  \\leq w^*.\n\\end{aligned}\n\\]\n\nTODO: 補圖\n\n\nFor each \\(i,\\) if we update \\(w\\) by \\[\n\\begin{aligned}\n  w' = w - \\eta \\cdot \\nabla_w  \\ell_i (w),\n\\end{aligned}\n\\] then \\(w'\\) will try to enter \\([w_*,w^*]\\) if \\(w\\) not in this interval.\n\n\n\n補圖\n補救方式就是打包成 minibatch"
   },
   {
     "objectID": "slides/SGD.html#why-sgdminibatch-works",
@@ -662,14 +662,14 @@
     "href": "slides/SGD.html#sec-Regression-Linear",
     "title": "Stochastic Gradient Descent",
     "section": "Linear Regression",
-    "text": "Linear Regression\n\nFor simplicity, we see linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = wx+b,\\) such that \\[\n\\begin{aligned}\n  f(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{w,b\\in \\mathbb R}\\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(\\ell\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
+    "text": "Linear Regression\n\nFor simplicity, we see linear regression from \\(\\mathbb R\\) to \\(\\mathbb R.\\)\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R\\times \\mathbb R.\\)\n\nWe want to find some linear function \\(f:\\mathbb R\\longrightarrow \\mathbb R,\\) say \\(f(x) = wx+b,\\) such that \\[\n\\begin{aligned}\n  f(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\underset{w,b\\in \\mathbb R}{\\operatorname{argmin}}\\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell:\\mathbb R^2 \\longrightarrow [0,\\infty)\\) is what we need to determine.\nWhat is the best choice for \\(\\ell\\) (in some sense)?\n\nWe may use the MLE (maximum likelihood function)."
   },
   {
     "objectID": "slides/SGD.html#sec-Regression2",
     "href": "slides/SGD.html#sec-Regression2",
     "title": "Stochastic Gradient Descent",
     "section": "Regression",
-    "text": "Regression\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{\\text{in}}\\times \\mathbb R^{\\text{out}}.\\)\n\nWe first need to give a function set \\(\\lbrace f_\\theta: \\theta \\in \\Theta \\rbrace,\\) where each \\(f_\\theta\\) is a function from \\(\\mathbb R^{\\text{in}}\\) to \\(\\mathbb R^{\\text{out}}.\\)\nWe want to find some \\(\\theta\\in \\Theta\\) such that \\[\n\\begin{aligned}\n  f_\\theta(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\operatorname{argmin}_{\\theta\\in \\Theta} \\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f_\\theta(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell(y,\\widehat{y}) = (y-\\widehat{y})^2.\\)"
+    "text": "Regression\n\nSuppose that we have the data \\((x^{(1)},y^{(1)}), \\cdots , (x^{(n)},y^{(n)})\\) in \\(\\mathbb R^{\\text{in}}\\times \\mathbb R^{\\text{out}}.\\)\n\nWe first need to give a function set \\(\\lbrace f_\\theta: \\theta \\in \\Theta \\rbrace,\\) where each \\(f_\\theta\\) is a function from \\(\\mathbb R^{\\text{in}}\\) to \\(\\mathbb R^{\\text{out}}.\\)\nWe want to find some \\(\\theta\\in \\Theta\\) such that \\[\n\\begin{aligned}\n  f_\\theta(x^{(i)}) \\approx y^{(i)} , \\qquad \\forall  i = 1\\sim n.\n\\end{aligned}\n\\]\nIn math, our goal is to find \\[\n\\begin{aligned}\n  \\underset{\\theta\\in \\Theta}{\\operatorname{argmin}} \\sum_{i=1}^{n} \\ell \\bigl( y^{(i)} , f_\\theta(x^{(i)}) \\bigr),\n\\end{aligned}\n\\] where \\(\\ell(y,\\widehat{y}) = (y-\\widehat{y})^2.\\)"
   },
   {
     "objectID": "slides/SGD.html#comparison-of-gd-and-sgd",
