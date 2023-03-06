@@ -4,7 +4,7 @@
     "href": "daily.html",
     "title": "Daily",
     "section": "",
-    "text": "Sakana\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 8, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Temp\n\n\n\n\n\n\n\n\n\n\n\n\nMar 2, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nSakana\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "temp/downloadthis.html",
@@ -74,7 +74,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Stochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nMar 2, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
+    "text": "Mind map\n\n\n2023-03-06\n\n\n\n\n\n\n\n\n\nMar 6, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntitle\n\n\n\n\n\n\n\n\n\n\n\n\nMar 3, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntest\n\n\n\n\n\n\n\n\n\n\n\n\nMar 3, 2023\n\n\nChoCho\n\n\n\n\n\n\n  \n\n\n\n\nStochastic Gradient Descent\n\n\n2023-03-01\n\n\n\n\n\n\n\n\n\nMar 2, 2023\n\n\nChoCho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest css\n\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nChoCho\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -704,7 +704,7 @@
     "href": "temp/test.html",
     "title": "Test",
     "section": "",
-    "text": "if A\n\nthen B\nC\n\nend if\n\nINPUT: input;\nOUTPUT: result;\n\nIF this_is_True:\n  do_this;\nELSE\n  select B from input;\n  do something whith input;\n  FOR EACH \\(a_i\\) in B\n    do something with \\(a_i\\);\n\n\n\n\n\n\nAlog\n\n\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n\n\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
+    "text": "INPUT: input;\nOUTPUT: result;\n\nIF this_is_True:\n  do_this;\nELSE\n  select B from input;\n  do something whith input;\n  FOR EACH \\(a_i\\) in B\n    do something with \\(a_i\\);\n\n\n\n\nif A\n\nthen B\nC\n\nend if\n\n\nif A\n\nthen B | | C\n\n\n\n\n\n\n\n\nAlog\n\n\n\nInputs Given a Network \\(G=(V,E)\\) with flow capacity \\(c\\), a source node \\(s\\), and a sink node \\(t\\)\nOutput Compute a flow \\(f\\) from \\(s\\) to \\(t\\) of maximum value\n\n\\(f(u, v) \\leftarrow 0\\) for all edges \\((u,v)\\)\nWhile there is a path \\(p\\) from \\(s\\) to \\(t\\) in \\(G_{f}\\) such that \\(c_{f}(u,v)>0\\) for all edges \\((u,v) \\in p\\):\n\nFind \\(c_{f}(p)= \\min \\{c_{f}(u,v):(u,v)\\in p\\}\\)\nFor each edge \\((u,v) \\in p\\)\n\n\\(f(u,v) \\leftarrow f(u,v) + c_{f}(p)\\) (Send flow along the path)\n\\(f(u,v) \\leftarrow f(u,v) - c_{f}(p)\\) (The flow might be “returned” later)\n\n\n\n\n\n\n\nst=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op\nAlice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!\npie\n    title Pie Chart\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 150"
   },
   {
     "objectID": "temp/test.html#alog",
@@ -768,5 +768,131 @@
     "title": "Stochastic Gradient Descent",
     "section": "Gradient Descent (GD)",
     "text": "Gradient Descent (GD)\n\n\n\nOur goal is to find a local min. of \\[\n\\begin{aligned}\n  L(\\theta) = \\frac{1}{n}\\sum_{i=1}^n\\ell(y^{(i)},\\widehat{y}^{(i)}).\n\\end{aligned}\n\\]\nGiven any initial value \\(\\theta_0\\in \\mathbb \\Theta.\\)\nGiven any \\(\\eta\\in (0,\\infty)\\) small enough.\n\n\\(\\eta\\): learning rate.\n\nMomentum, Adam, \\(\\cdots.\\)\n\n\nWe set \\(\\lbrace \\theta_i \\rbrace_{i\\in \\mathbb N}\\) by \\[\n\\begin{aligned}\n\\theta_{i} \\leftarrow \\theta_{i-1} - \\eta \\cdot \\nabla L(\\theta_{i-1}),\\quad i\\in \\mathbb N.\n\\end{aligned}\n\\]\nThen \\(\\theta_i,i\\in \\mathbb N\\) may converges to a local min. of \\(L.\\)\n\n\n\n\n\n\n\n\n\nIn practice, this can be extremely slow: we must pass over the entire dataset before making a single update, even if the update steps might be very powerful (Liu and Nocedal 1989).\n\nSolution: Stochastic Gradient Descent (SGD).\n\n\n\n\n取 \\(1/n\\) 是之後有個方便地方."
+  },
+  {
+    "objectID": "slides/test.html#download",
+    "href": "slides/test.html#download",
+    "title": "title",
+    "section": "download",
+    "text": "download"
+  },
+  {
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "Test",
+    "section": "",
+    "text": "Download"
+  },
+  {
+    "objectID": "daily/2023-03-02.html",
+    "href": "daily/2023-03-02.html",
+    "title": "Temp",
+    "section": "",
+    "text": "https://zhuanlan.zhihu.com/p/28626431\nhttps://mofanpy.com/tutorials/data-manipulation/numpy/numpy-view-copy\nhttps://zhuanlan.zhihu.com/p/348446597\n\n\nimport numpy as np\n\nx = np.array([1, 2, 3, 4])\nx1 = x\nx2 = x[:]\nx_view = x.view()\nx_copy = x.copy()\n\nx[0] = 4\n\nprint(x)\nprint(x1)\nprint(x2)\nprint(x_view)\nprint(x_copy)\n\n[4 2 3 4]\n[4 2 3 4]\n[4 2 3 4]\n[4 2 3 4]\n[1 2 3 4]"
+  },
+  {
+    "objectID": "slides/slide-test.html#downloadthis",
+    "href": "slides/slide-test.html#downloadthis",
+    "title": "title",
+    "section": "downloadthis",
+    "text": "downloadthis"
+  },
+  {
+    "objectID": "slides/test.html",
+    "href": "slides/test.html",
+    "title": "test",
+    "section": "",
+    "text": "Download"
+  },
+  {
+    "objectID": "slides/mindmap.html#modified",
+    "href": "slides/mindmap.html#modified",
+    "title": "Mind map",
+    "section": "MODIFIED",
+    "text": "MODIFIED"
+  },
+  {
+    "objectID": "slides/mindmap.html#what-is-bookdown",
+    "href": "slides/mindmap.html#what-is-bookdown",
+    "title": "Mind map",
+    "section": "What is ‘bookdown’",
+    "text": "What is ‘bookdown’"
+  },
+  {
+    "objectID": "slides/mindmap.html#what-is-bookdownplus",
+    "href": "slides/mindmap.html#what-is-bookdownplus",
+    "title": "Mind map",
+    "section": "What is ‘bookdownplus’",
+    "text": "What is ‘bookdownplus’"
+  },
+  {
+    "objectID": "slides/mindmap.html#why-bookdownplus",
+    "href": "slides/mindmap.html#why-bookdownplus",
+    "title": "Mind map",
+    "section": "Why ‘bookdownplus’",
+    "text": "Why ‘bookdownplus’"
+  },
+  {
+    "objectID": "slides/mindmap.html#giants-shoulders",
+    "href": "slides/mindmap.html#giants-shoulders",
+    "title": "Mind map",
+    "section": "Giants’ Shoulders",
+    "text": "Giants’ Shoulders"
+  },
+  {
+    "objectID": "slides/mindmap.html#preparation",
+    "href": "slides/mindmap.html#preparation",
+    "title": "Mind map",
+    "section": "Preparation",
+    "text": "Preparation"
+  },
+  {
+    "objectID": "slides/mindmap.html#installation-of-bookdownplus",
+    "href": "slides/mindmap.html#installation-of-bookdownplus",
+    "title": "Mind map",
+    "section": "Installation of ‘bookdownplus’",
+    "text": "Installation of ‘bookdownplus’"
+  },
+  {
+    "objectID": "slides/mindmap.html#how-to-use",
+    "href": "slides/mindmap.html#how-to-use",
+    "title": "Mind map",
+    "section": "How to use",
+    "text": "How to use"
+  },
+  {
+    "objectID": "slides/mindmap.html#more-output-formats",
+    "href": "slides/mindmap.html#more-output-formats",
+    "title": "Mind map",
+    "section": "More output formats",
+    "text": "More output formats"
+  },
+  {
+    "objectID": "slides/mindmap.html#more-templates",
+    "href": "slides/mindmap.html#more-templates",
+    "title": "Mind map",
+    "section": "More templates",
+    "text": "More templates"
+  },
+  {
+    "objectID": "slides/mindmap.html#a-magic-trick",
+    "href": "slides/mindmap.html#a-magic-trick",
+    "title": "Mind map",
+    "section": "A magic trick",
+    "text": "A magic trick"
+  },
+  {
+    "objectID": "slides/mindmap.html#recommendations",
+    "href": "slides/mindmap.html#recommendations",
+    "title": "Mind map",
+    "section": "Recommendations",
+    "text": "Recommendations"
+  },
+  {
+    "objectID": "slides/mindmap.html#markdown-syntax",
+    "href": "slides/mindmap.html#markdown-syntax",
+    "title": "Mind map",
+    "section": "Markdown Syntax",
+    "text": "Markdown Syntax\nWhat is Markdown\nBasic syntax\nChapters\nFigures and tables\nReferences\nTheorems, lemma, definitions, etc.\nExport Word document\nEquations numbering"
   }
 ]

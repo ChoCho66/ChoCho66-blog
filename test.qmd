@@ -1,5 +1,5 @@
 ---
-title: "test"
+title: "Test"
 author: "ChoCho"
 date: "2023-03-03"
 date-format: iso
@@ -13,5 +13,4 @@ citation-location: margin
 
 ## downloadthis
 
-{{< downloadthis ../docs/cover.jpg label="Download" >}}
-
+{{< downloadthis cover.jpg label="Download" >}}

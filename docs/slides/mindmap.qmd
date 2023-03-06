@@ -1,0 +1,75 @@
+---
+title: "Mind map"
+subtitle: <br>2023-03-06
+author: ChoCho<br><br><br>
+date-format: iso
+date: last-modified
+institute: MODIFIED
+bibliography: ../references.bib
+slide-number: c/t
+categories: [slide]
+# knitr: true
+# jupyter: python3
+format:
+  revealjs:
+    theme: [serif,custom.scss]    # 像 LaTeX
+    width: 1600
+    height: 900
+    # preview-links: auto
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 2
+      # src: "Chalkboard-2022-12-27.json"
+    scrollable: true
+    echo: true
+    # footer: "foot"
+    # logo: cover.jpg
+    slide-number: true
+    sc-sb-title: true
+
+filters:
+  - reveal-header
+# slide-level: 3
+# number-sections: true
+# callout-appearance: minimal
+# callout-icon: false
+# crossref:
+  # eq-prefix: - (1)    # (default is "Figure")
+---
+
+
+```{r}
+input_text <- readLines(knitr::current_input(), encoding = "UTF-8")
+mindr::markmap(input_text, widget_width = "2000px", widget_height = "2000px")
+```
+
+## MODIFIED {-}
+
+
+# Introduction 
+## What is 'bookdown' 
+## What is 'bookdownplus' 
+## Why 'bookdownplus' 
+## Giants' Shoulders 
+# Quick Start 
+## Preparation 
+## Installation of 'bookdownplus' 
+## How to use 
+## More output formats
+## More templates
+## A magic trick
+## Recommendations
+# Basic 
+## Markdown Syntax 
+### What is Markdown 
+### Basic syntax 
+### Chapters 
+### Figures and tables 
+### References 
+### Theorems, lemma, definitions, etc. 
+### Export Word document 
+### Equations numbering 
+
+
+
+
