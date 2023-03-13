@@ -14,8 +14,8 @@
 <link href="../site_libs/quarto-contrib/sc-sb-title-1.0.0/sc_sb_title.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.159">
 
-  <meta name="author" content="ChoCho   ">
-  <meta name="dcterms.date" content="2023-03-13">
+  <meta name="author" content="ChoCho    ">
+  <meta name="dcterms.date" content="2023-03-10">
   <title>ChoCho66 - Stochastic Gradient Descent</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -55,6 +55,7 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="styles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -352,13 +353,13 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Stochastic Gradient Descent</h1>
+  <h1 class="title"><br><br>Stochastic Gradient Descent</h1>
   <p class="subtitle"><br>2023-03-01</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-ChoCho<br><br><br> 
+ChoCho<br><br><br><br> 
 </div>
         <p class="quarto-title-affiliation">
             MODIFIED
@@ -366,18 +367,14 @@ ChoCho<br><br><br>
     </div>
 </div>
 
-  <p class="date">2023-03-13</p>
+  <p class="date">2023-03-10</p>
 </section>
 <section id="modified" class="slide level2 unnumbered">
 <h2>MODIFIED</h2>
 <ul>
-<li><p>2022-03-02</p>
+<li>2022-03-02
 <ul>
 <li>Change <span class="math inline">\(\operatorname{argmin}_{\theta}\)</span> to <span class="math inline">\(\underset{\theta}{\operatorname{argmin}}.\)</span></li>
-</ul></li>
-<li><p>2022-03-12</p>
-<ul>
-<li>Add graph in <a href="#/sec-whySGDsinglework">Why SGD (single) works</a>.</li>
 </ul></li>
 </ul>
 </section>
@@ -722,8 +719,8 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
           display:block!important;
       }</style></aside>
 </section>
-<section id="sec-whySGDsinglework" class="slide level2">
-<h2>Why SGD (single) works</h2>
+<section id="why-sgdsingle-works" class="slide level2">
+<h2>Why SGD(single) works</h2>
 <ul>
 <li><p>We see the case of linear regression from <span class="math inline">\(\mathbb R\)</span> to <span class="math inline">\(\mathbb R.\)</span></p></li>
 <li><p>For simplicity, we assume that <span class="math inline">\(b\)</span> is a fixed constant, not a parameter.</p></li>
@@ -753,18 +750,7 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 \end{aligned}
 \]</span></p></li>
 </ul>
-<!-- 
-<iframe src="https://www.geogebra.org/classic/vya22vht?embed" width="1200" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> 
--->
-<ul>
-<li><img data-src="images/SGD/2023-03-13-00-54-17.png" style="width:60.0%"></li>
-</ul>
-<!--
-- ![](images/SGD/2023-03-13-00-49-11.png) 
--->
-<!-- 
-- ![](images/SGD/2023-03-13-00-51-40.png) 
--->
+<p>TODO: 補圖</p>
 <!-- 
 - Our goal is to update $w$ such that it is in $[w_*,w^*].$ 
 -->
@@ -816,8 +802,8 @@ f_{Y\vert X} (y\vert x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\Bigl\lbrace - \frac{1
 <li><p><img data-src="images/SGD/rFI1tIk.gif"></p></li>
 </ul>
 </section>
-<section id="why-sgd-minibatch-works" class="slide level2">
-<h2>Why SGD (minibatch) works</h2>
+<section id="why-sgdminibatch-works" class="slide level2">
+<h2>Why SGD(minibatch) works</h2>
 <ul>
 <li><p>Fix <span class="math inline">\(\theta\in \Theta.\)</span></p></li>
 <li><p>The main idea here is to pick some random vector <span class="math inline">\(X\)</span> such that <span class="math inline">\(\mathbf E[X]=\nabla_{\theta} L(\theta).\)</span></p></li>

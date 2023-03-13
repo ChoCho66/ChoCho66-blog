@@ -1,7 +1,7 @@
 ---
-title: "Stochastic Gradient Descent"
+title: <br><br>Stochastic Gradient Descent
 subtitle: <br>2023-03-01
-author: ChoCho<br><br><br>
+author: ChoCho<br><br><br><br>
 date-format: iso
 date: last-modified
 institute: MODIFIED
@@ -13,8 +13,8 @@ categories: [slide]
 format:
   revealjs:
     theme: [serif,custom.scss]    # 像 LaTeX
-    # theme: custom_old.scss
-    # margin: 0.05
+    css: styles.css
+    # theme: custom.scss
     # width: 1600
     # height: 900
     # preview-links: auto
@@ -45,12 +45,8 @@ filters:
 ## MODIFIED {-}
 
 - 2022-03-02
-  
   - Change $\operatorname{argmin}_{\theta}$ to $\underset{\theta}{\operatorname{argmin}}.$
 
-- 2022-03-12
-
-  - Add graph in [Why SGD (single) works](#sec-whySGDsinglework).
 
 # Content
 
@@ -371,7 +367,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 - 可想像圖會在那裡抖
 :::
 
-## Why SGD (single) works {#sec-whySGDsinglework}
+## Why SGD(single) works 
 
 - We see the case of linear regression from $\mathbb R$ to $\mathbb R.$
 
@@ -412,18 +408,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
   \end{aligned}
   $$
 
-<!-- 
-<iframe src="https://www.geogebra.org/classic/vya22vht?embed" width="1200" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> 
--->
-
-- ![](images/SGD/2023-03-13-00-54-17.png){width=60%}
-
-<!--
-- ![](images/SGD/2023-03-13-00-49-11.png) 
--->
-<!-- 
-- ![](images/SGD/2023-03-13-00-51-40.png) 
--->
+TODO: 補圖
 
 <!-- 
 - Our goal is to update $w$ such that it is in $[w_*,w^*].$ 
@@ -472,7 +457,7 @@ optimize parameters | Min. $\sum_{i=1}^n\ell(y^{(i)},\widehat{y}^{(i)}),$ where 
 - ![](images/SGD/rFI1tIk.gif)
 
 
-## Why SGD (minibatch) works
+## Why SGD(minibatch) works
 
 - Fix $\theta\in \Theta.$
 

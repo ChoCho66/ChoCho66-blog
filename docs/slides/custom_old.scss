@@ -1,37 +1,17 @@
+
 // See here example
 // https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/html/bootstrap/themes
 
 
 /*-- scss:defaults --*/
 
-// .reveal .quarto-title-block .quarto-title-authors .quarto-title-author .quarto-title-author-name {
-//     margin-bottom: 20em;
-// }
-
-// .quarto-title-author-name {
-//     margin-bottom: 3em;
-// }
-
 .reveal .slide ul,
 .reveal .slide ol {
     margin-left: 1.3em;
 }
 
-// reference 的間距
-div.csl-entry {
-    margin-bottom: 1em;
-}
-
-// .reveal .slides {
-//     margin-top: 0;
-//     }
-
-
 
 // $presentation-h1-font-size:	2.0em;
-
-// 字體大小
-$presentation-font-size-root: 26px;
 
 // svg#mindmap.root {
 //     width: 2000px;

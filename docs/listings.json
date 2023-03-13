@@ -9,16 +9,18 @@
   {
     "listing": "/slides.html",
     "items": [
-      "/slides/mindmap.html",
-      "/slides/slide-test.html",
-      "/slides/test.html",
       "/slides/SGD.html",
+      "/slides/slide-test.html",
+      "/slides/sizetest.html",
+      "/slides/mindmap.html",
+      "/slides/test.html",
       "/slides/css-test.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/deep-learning/pytorch.html",
       "/posts/decorator.html",
       "/posts/observable-JS/ojs.html",
       "/posts/post-with-code/index.html",

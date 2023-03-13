@@ -1,0 +1,25 @@
+---
+title: "PyTorch 基本操作"
+author: "ChoCho"
+date: "2023-03-08"
+date-format: iso
+date-modified: last-modified
+categories: [PyTorch]
+image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+## Fix seed
+
+```{python}
+import torch
+torch.manual_seed(2)
+```
+
+```{python}
+torch.manual_seed(2)
+print(torch.randn(5))
+print(torch.randn(5))
+```

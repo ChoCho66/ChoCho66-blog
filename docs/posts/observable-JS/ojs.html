@@ -214,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2023-02-24</p>
+      <p class="date-modified">2023-03-12</p>
     </div>
   </div>
     
@@ -360,12 +360,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-startfrom="126" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 125;"><span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@observablehq/plot"</span><span class="op">;</span></span>
+<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="dv">5</span><span class="op">,</span> <span class="dv">5</span>]}<span class="op">,</span></span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>({<span class="dt">x</span><span class="op">:</span> {<span class="dt">range</span><span class="op">:</span> [<span class="op">-</span><span class="dv">5</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> x <span class="kw">=&gt;</span> x <span class="op">*</span> x})</span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
 
 
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"functionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"{\n  let target = DOM.element('div')\n  functionPlot({\n    target: '#butterfly-curve',\n    yAxis: {domain: [-4.428571429, 4.428571429]},\n    xAxis: {domain: [-7, 7]},\n    data: [{\n      x: 'sin(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',\n      y: 'cos(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',\n      range: [-10 * Math.PI, 10 * Math.PI],\n      fnType: 'parametric',\n      graphType: 'polyline'\n    }],\n    target\n  });\n  return target\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"targetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        // fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          fn: 'x * x - 4 * x + 3',\n          // fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"functionPlot = require(\"function-plot@1.22.2/dist/function-plot\")\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"{\n  let target = DOM.element('div')\n  functionPlot({\n    target: '#butterfly-curve',\n    yAxis: {domain: [-4.428571429, 4.428571429]},\n    xAxis: {domain: [-7, 7]},\n    data: [{\n      x: 'sin(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',\n      y: 'cos(t) * (exp(cos(t)) - 2 cos(4t) - sin(t/12)^5)',\n      range: [-10 * Math.PI, 10 * Math.PI],\n      fnType: 'parametric',\n      graphType: 'polyline'\n    }],\n    target\n  });\n  return target\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"{\n  let target = DOM.element('div')\n  functionPlot({\n    title: 'y = x²',\n    data: [{\n      fn: 'x^2'\n    }],\n    target\n  });\n  return target\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"targetA = {\n  let target = DOM.element('div')\n  return target\n}\ntargetB = {\n  let target = DOM.element('div')\n  return target\n}\njoinTargets = {\n  let a = functionPlot({\n    target: targetA,\n    xAxis: { domain: [-6, 6] },\n    yAxis: { domain: [-6, 6] },\n    annotations: [\n      {\n        y: 1,\n        text: 'max'\n      },\n      {\n        y: -1,\n        text: 'min'\n      }\n    ],\n    data: [\n      {\n        fn: '(x^3) / 3 - 2 * x * x + 3 * x + 2',\n        // fn: 'sin(x)',\n        graphType: 'polyline',\n        derivative: {\n          fn: 'x * x - 4 * x + 3',\n          // fn: 'cos(x)',\n          updateOnMouseMove: true\n        }\n      }\n    ]\n  })\n  let b = functionPlot({\n    target: targetB,\n    xAxis: { domain: [-4, 8] },\n    yAxis: { domain: [-4, 8] },\n    annotations: [\n      {\n        x: 1,\n        text: 'intercept'\n      },\n      {\n        x: 3,\n        text: 'intercept'\n      }\n    ],\n    data: [\n      {\n        fn: 'x * x - 4 * x + 3',\n        graphType: 'polyline'\n      }\n    ]\n  })\n  a.addLink(b)\n  b.addLink(a)\n  return \"targets joined!\"\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"import {Plot} from \"@observablehq/plot\";\n\nPlot.plot({\n  x: {domain: [-5, 5]},\n  marks: [\n    Plot.line({x: {range: [-5, 5], step: 0.1}, y: x => x * x})\n  ]\n})\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

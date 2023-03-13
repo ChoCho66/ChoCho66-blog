@@ -1,7 +1,7 @@
 ---
-title: "title"
-# subtitle: Last
-author: ChoCho<br><br>
+title: "Title"
+subtitle: <br>2023-03-01
+author: ChoCho<br><br><br>
 date-format: iso
 date: last-modified
 institute: MODIFIED
@@ -13,8 +13,8 @@ categories: [slide]
 format:
   revealjs:
     theme: [serif,custom.scss]    # 像 LaTeX
-    width: 1600
-    height: 900
+      # width: 1600
+      # height: 900
     # preview-links: auto
     chalkboard:
       theme: whiteboard
@@ -26,14 +26,39 @@ format:
     # logo: cover.jpg
     slide-number: true
     sc-sb-title: true
-    # mermaid:
-      # theme: forest
 
 filters:
   - reveal-header
-
+slide-level: 3
+number-sections: true
+# callout-appearance: minimal
+# callout-icon: false
+# crossref:
+  # eq-prefix: - (1)    # (default is "Figure")
 ---
 
-## downloadthis
+## MODIFIED {-}
 
-{{< downloadthis ../docs/cover.jpg label="Download" >}}
+# A 
+
+## a 
+
+<iframe src="https://www.geogebra.org/graphing/eyjrfj4h?embed" width="1600" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+# B 
+
+## b 
+
+`r paste(stringi::stri_rand_lipsum(5, start_lipsum = FALSE), collapse = '\n\n')`
+
+### bb 
+
+`r paste(stringi::stri_rand_lipsum(5, start_lipsum = FALSE), collapse = '\n\n')`
+
+### bb2 
+
+# C
+
+## c
+
+### cc

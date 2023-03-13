@@ -1,0 +1,33 @@
+---
+title: "Mind map"
+author: "ChoCho"
+date: "2023-03-06"
+date-format: iso
+date-modified: last-modified
+# categories: [news, code, analysis]
+# image: "image.jpg"
+# jupyter: python3
+reference-location: margin
+citation-location: margin
+---
+
+
+
+```{r}
+input_text <- readLines(knitr::current_input(), encoding = "UTF-8")
+mindr::markmap(input_text)
+# , widget_width = "2000px", widget_height = "2000px")
+```
+
+
+# A 
+
+# a 
+
+- aa 
+
+- bb 
+
+- cc
+
+# B
